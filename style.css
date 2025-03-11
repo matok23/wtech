@@ -18,6 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    height:100px
 }
 
 .dropdowns {
@@ -62,8 +63,18 @@ header {
     color: black;
 }
 
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .logo img {
-    max-width: 70%;
+    height: 80px;
+    width: auto;
 }
 
 .searchButtons {
@@ -193,4 +204,22 @@ footer {
 
 .socialMedia a:hover {
     text-decoration: underline;
+}
+
+
+/* Landing page */
+
+.landImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landImgContainer img {
+    flex: 1 1 0;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    min-width: 300px;
 }
