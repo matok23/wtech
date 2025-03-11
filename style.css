@@ -218,19 +218,49 @@ footer {
 
 /* Landing page */
 
-.landImgContainer {
+.landingContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
     gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.landImgContainer {
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.landImgContainer .imageOverlay {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: opacity 0.15 ease-in-out;
+    pointer-events: none;
+}
+
+.landImgContainer:hover .imageOverlay {
+    opacity: 1;
+    text-align: center;
+    font-size: 1000%;
+    font-weight: bold;
+    font-family: Garamond (serif) ;
 }
 
 .landImgContainer img {
-    flex: 1 1 0;
     aspect-ratio: 1 / 1;
     width: 100%;
     height: auto;
     object-fit: cover;
     min-width: 300px;
+    transition: filter 0.15s ease-in-out;
+}
+
+.landImgContainer img:hover {
+    filter:brightness(20%);
 }
