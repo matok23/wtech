@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name":"bagane",
+        "img":"https://i.etsystatic.com/46361038/r/il/ebf3f0/5275208120/il_570xN.5275208120_is95.jpg",
+        "category":""
+    },
+    {
+        "id":2,
+        "name":"slipky",
+        "img":"https://i1.sndcdn.com/artworks-000533533326-t8iqir-t240x240.jpg",
+        "category":""
+    },
+    {
+        "id":3,
+        "name":"gate",
+        "img":"https://paom.com/cdn/shop/products/print_all_over_me_3_relaxed-pant_0000000p-pepperoni-pants.jpg?v=1578609835",
+        "category":""
+    }    
+]
