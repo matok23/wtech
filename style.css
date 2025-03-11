@@ -11,6 +11,7 @@ header {
     background-color: #333;
     color: white;
     padding: 10px 0;
+    min-width: 900px;
 }
 
 .headerContainer {
@@ -63,13 +64,20 @@ header {
     color: black;
 }
 
+.dropdowns, .searchButtons {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+
 .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    flex: 0 ;
+    position: center;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo img {
@@ -80,6 +88,7 @@ header {
 .searchButtons {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .searchbar {
