@@ -249,7 +249,7 @@ footer {
 .landImgContainer:hover .imageOverlay {
     opacity: 1;
     text-align: center;
-    font-size: 1000%;
+    font-size: clamp(20px, 10vw, 400px);
     font-weight: bold;
     font-family: Garamond (serif) ;
 }
