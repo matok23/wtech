@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: rgb(145, 145, 145);
+    min-width: 800px;
 }
 
 /* Header Section */
@@ -11,7 +12,7 @@ header {
     background-color: #333;
     color: white;
     padding: 10px 0;
-    min-width: 900px;
+    /* min-width: 900px; */
 }
 
 .headerContainer {
@@ -198,6 +199,10 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Feet_boy.jpg/1200px-Feet_boy.jpg');
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100%;
 }
 
 .footerContent {
@@ -224,19 +229,52 @@ footer {
 
 /* Landing page */
 
-.landImgContainer {
+.landingContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
     gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.landImgContainer {
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    
+}
+
+.landImgContainer .imageOverlay {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: opacity 0.15 ease-in-out;
+    pointer-events: none;
+}
+
+.landImgContainer:hover .imageOverlay {
+    opacity: 1;
+    text-align: center;
+    font-size: clamp(20px, 10vw, 400px);
+    font-weight: bold;
+    font-family: Garamond (serif) ;
 }
 
 .landImgContainer img {
-    flex: 1 1 0;
     aspect-ratio: 1 / 1;
     width: 100%;
     height: auto;
     object-fit: cover;
-    min-width: 300px;
+    /* min-width: 300px; */
+    transition: filter 0.15s ease-in-out;
+    border-radius: 5px;
+}
+
+.landImgContainer img:hover {
+    filter:brightness(20%);
 }
