@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>VoguePoint - Registrácia / Prihlásenie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+    <header class="auth-header">
+        <div class="authheaderContainer">
+            <div class="dropdowns">
+                <div class="dropdown">
+                    <button class="dropbtn">Men</button>
+                    <div class="dropdown-content">
+                        <a href="#">Shirts</a>
+                        <a href="#">Pants</a>
+                        <a href="#">Shoes</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Women</button>
+                    <div class="dropdown-content">
+                        <a href="#">Dresses</a>
+                        <a href="#">Tops</a>
+                        <a href="#">Shoes</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Kids</button>
+                    <div class="dropdown-content">
+                        <a href="#">T-Shirts</a>
+                        <a href="#">Jeans</a>
+                        <a href="#">Shoes</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo">
+                <img src="pictures\logo.png" alt="VoguePointLogo">
+            </div>
+
+            <!-- Search and Buttons -->
+            <div class="searchButtons">
+                <input type="text" placeholder="Search..." class="searchbar">
+                <button class="loginBtn">Login</button>
+                <button class="cartBtn">Cart</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Auth Container -->
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-toggle">
+                <button class="auth-btn active" onclick="toggleAuthForm('register')">Registrácia</button>
+                <button class="auth-btn" onclick="toggleAuthForm('login')">Prihlásenie</button>
+            </div>
+            <form id="register-form" class="auth-form">
+                <h2>Registrácia</h2>
+                <input type="text" placeholder="Meno" required>
+                <input type="text" placeholder="Mesto" required>
+                <input type="text" placeholder="Adresa" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Heslo" required>
+                <button type="submit" class="submit-btn">Zaregistrovať</button>
+            </form>
+            <form id="login-form" class="auth-form" style="display:none;">
+                <h2>Prihlásenie</h2>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Heslo" required>
+                <button type="submit" class="submit-btn">Prihlásiť</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleAuthForm(type) {
+            if (type === 'register') {
+                document.getElementById('register-form').style.display = 'block';
+                document.getElementById('login-form').style.display = 'none';
+                document.querySelector('.auth-btn.active').classList.remove('active');
+                document.querySelector('.auth-btn:nth-child(1)').classList.add('active');
+            } else {
+                document.getElementById('register-form').style.display = 'none';
+                document.getElementById('login-form').style.display = 'block';
+                document.querySelector('.auth-btn.active').classList.remove('active');
+                document.querySelector('.auth-btn:nth-child(2)').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

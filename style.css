@@ -73,13 +73,14 @@ header {
 
 
 .logo {
-    flex: 0 ;
+    flex: 0;
     position: center;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 .logo img {
     height: 80px;
@@ -277,4 +278,173 @@ footer {
 
 .landImgContainer img:hover {
     filter:brightness(20%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------- */
+/*registracia*/
+/* General Auth Container */
+.auth-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column; /* Umiestnime header a formulár vertikálne */
+    justify-content: flex-start; /* Zarovnáme začiatok */
+    height: 100vh;
+}
+
+/* Header Styles */
+.auth-header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px 0; /* Vytvoríme medzeru nad headerom */
+}
+
+.authheaderContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100px; /* add this to match index.html */
+}
+
+
+
+
+.loginBtn, .cartBtn {
+    padding: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Auth Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px; /* Priestor okolo formulára */
+    flex-grow: 1; /* Rovnako roztiahne auth-container do voľného miesta */
+}
+
+.auth-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Auth Form */
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.auth-form input:focus {
+    border: 1px solid #27ae60;
+    outline: none;
+}
+
+/* Buttons */
+.auth-btn {
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 48%;
+}
+
+.auth-btn:hover {
+    background-color: #219150;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #219150;
+}
+
+/* Auth Toggle */
+.auth-toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .auth-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .auth-btn {
+        width: 48%;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .headerContainer, .authheaderContainer {
+        flex-direction: column; /* Stacks the logo, searchbar, and cart vertically */
+        align-items: center;
+    }
+
+    .searchButtons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 60px; /* Reduce logo size on smaller screens */
+    }
 }
