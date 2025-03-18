@@ -114,7 +114,7 @@ button:hover {
 /* Banner Section */
 .banner img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -198,11 +198,9 @@ button:hover {
 footer {
     background-color: #333;
     color: white;
-    padding: 20px;
     text-align: center;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Feet_boy.jpg/1200px-Feet_boy.jpg');
     background-size: 100% 100%;
-    height: 100px;
     width: 100%;
 }
 
@@ -304,22 +302,6 @@ footer {
     height: 100vh;
 }
 
-/* Header Styles */
-.auth-header {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 20px 0; /* Vytvoríme medzeru nad headerom */
-}
-
-.authheaderContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 100px; /* add this to match index.html */
-}
 
 
 
@@ -338,7 +320,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px; /* Priestor okolo formulára */
+    /* padding: 20px; Priestor okolo formulára */
     flex-grow: 1; /* Rovnako roztiahne auth-container do voľného miesta */
 }
 
