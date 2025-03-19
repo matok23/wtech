@@ -50,23 +50,65 @@
         </div>
     </header>
 
-    <section class="categoriesContainer">
-        <div class="categoryDropdown">
-            <button class="categoryBtn">cat</button>
-            <div class="categoryContent">
-                <a href="#">T-Shirts</a>
-                <a href="#">Jeans</a>
-                <a href="#">Shoes</a>
+    <section class="mainContent">
+        <div class="left-sidebar">
+            <div class="categoryDropdown">
+                <button class="categoryBtn">Shirts</button>
+                <div class="categoryContent">
+                    <a href="#">T-Shirts</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shoes</a>
+                </div>
+            </div>
+            <div class="categoryDropdown">
+                <button class="categoryBtn">Pants</button>
+                <div class="categoryContent">
+                    <a href="#">T-Shirts</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shoes</a>
+                </div>
+            </div>
+            <div class="categoryDropdown">
+                <button class="categoryBtn">Shoes</button>
+                <div class="categoryContent">
+                    <a href="#">T-Shirts</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shoes</a>
+                </div>
+            </div>
+            <div class="categoryDropdown">
+                <button class="categoryBtn">Accessories</button>
+                <div class="categoryContent">
+                    <a href="#">T-Shirts</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shoes</a>
+                </div>
+            </div>
+            <div class="categoryDropdown">
+                <button class="categoryBtn">Hovno</button>
+                <div class="categoryContent">
+                    <a href="#">T-Shirts</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shoes</a>
+                </div>
+            </div>
+            <div class="categoryDropdown">
+                <button class="categoryBtn">Hats</button>
+                <div class="categoryContent">
+                    <a href="#">T-Shirts</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shoes</a>
+                </div>
             </div>
         </div>
-    </section>
-    
-    <section class="productPageRight">
-        <div class="productContainer">
-            jj
-        </div>
-        <div class="suggestedItemsCntainer">
-            cc
+        
+        <div class="productPageRight">
+            <div class="productContainer">
+                jj
+            </div>
+            <div class="suggestedItemsCntainer">
+                cc
+            </div>
         </div>
     </section>
 
@@ -88,7 +130,7 @@
     <script>
         document.querySelectorAll('.categoryBtn').forEach((node)=>{
             node.addEventListener('click',()=>{
-                node.closest('.categoryDropdown').querySelector('.categoryContent').classList.toggle('visible')
+                node.closest('.categoryDropdown').querySelector('.categoryContent').classList.toggle('categoryVisible')
             })
         })
     </script>
