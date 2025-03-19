@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoguePoint</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./product.css">
 </head>
 <body>
     <header>
@@ -48,8 +49,19 @@
             </div>
         </div>
     </header>
+
+    <section class="categoriesContainer">
+        <div class="categoryDropdown">
+            <button class="categoryBtn">cat</button>
+            <div class="categoryContent">
+                <a href="#">T-Shirts</a>
+                <a href="#">Jeans</a>
+                <a href="#">Shoes</a>
+            </div>
+        </div>
+    </section>
     
-    <section class="productPageMain">
+    <section class="productPageRight">
         <div class="productContainer">
             jj
         </div>
@@ -73,5 +85,12 @@
         </div>
     </footer>
 
+    <script>
+        document.querySelectorAll('.categoryBtn').forEach((node)=>{
+            node.addEventListener('click',()=>{
+                node.closest('.categoryDropdown').querySelector('.categoryContent').classList.toggle('visible')
+            })
+        })
+    </script>
 </body>
 </html>

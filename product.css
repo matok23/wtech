@@ -1,0 +1,25 @@
+.categoryDropdown {
+    position: relative;
+    margin-right: 15px;
+}
+
+.categoryBtn {
+    background-color: #444;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.categoryContent {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.visible {
+    display: block;
+}
