@@ -105,6 +105,7 @@ button {
     padding: 10px 15px;
     cursor: pointer;
     margin-left: 5px;
+    border-radius: 4px;
 }
 
 button:hover {
@@ -155,6 +156,7 @@ button:hover {
     width: 80%;
     flex-direction: column;
     align-self: flex-end;
+    border-radius: 4px;
 }
 
 .categoryContent a {
