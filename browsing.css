@@ -1,0 +1,57 @@
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+.left-sidebar {
+    width: 20%; /* Left sidebar takes 20% of the width */
+    padding-right: 20px; /* Space between left sidebar and the right section */
+    height: 100vh; /* Ensure it spans the full height of the screen */
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%; /* Right section takes 80% of the width */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    height: 100vh; /* Full height for scrolling */
+    padding: 10px;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.product h3 {
+    color: #333;
+}
+
+.product p {
+    font-size: 14px;
+    color: #777;
+}
+
+.product button {
+    background-color: #ff75cf;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.product button:hover {
+    background-color: #ffabe9;
+}
