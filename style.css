@@ -123,6 +123,21 @@ button:hover {
     background-color: #ffabe9;
 }
 
+a.btn.btn-primary {
+    background-color: #ff75cf;
+    border-color: transparent;
+}
+
+a.btn.btn-primary:hover {
+    background-color: #ffabe9;
+    border-color: transparent;
+}
+
+a.btn.btn-primary:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /* sidebar section */
 
 .left-sidebar {
@@ -239,7 +254,7 @@ footer {
 
 
 /* Responsiveness */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .auth-box {
         width: 90%;
         padding: 30px;
@@ -248,7 +263,7 @@ footer {
     .auth-btn {
         width: 48%;
     }
-}
+} */
 
 
 
