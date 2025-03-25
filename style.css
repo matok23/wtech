@@ -123,12 +123,12 @@ button:hover {
     background-color: #ffabe9;
 }
 
-a.btn.btn-primary {
+.btn.btn-primary {
     background-color: #ff75cf;
     border-color: transparent;
 }
 
-a.btn.btn-primary:hover {
+.btn.btn-primary:hover {
     background-color: #ffabe9;
     border-color: transparent;
 }
