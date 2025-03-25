@@ -4,7 +4,7 @@
 }
 
 .left-sidebar {
-    width: 20%; /* Left sidebar takes 20% of the width */
+    width: 20%; 
     padding-right: 20px; /* Space between left sidebar and the right section */
     height: 100vh; /* Ensure it spans the full height of the screen */
 }
@@ -13,8 +13,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 80%; /* Right section takes 80% of the width */
-    overflow-y: scroll; /* Enable vertical scrolling */
+    width: 80%; 
+    overflow-y: scroll;
     height: 100vh; /* Full height for scrolling */
     padding: 10px;
 }
