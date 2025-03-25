@@ -1,0 +1,37 @@
+.cartItem {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cartItem:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cartItem a img{
+    aspect-ratio: 1 / 1;
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    flex: 1 1 0;
+}
+
+.productLogo img{
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex: 1 1 0;
+}
+
+.cartItem input,select {
+    width: 50px;
+    height: 35px;
+    /* padding: 10px;
+    font-size: 16px; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.cartItem tr {
+    height: 40px;
+}
