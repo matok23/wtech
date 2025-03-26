@@ -189,15 +189,15 @@
                 <div class="d-flex flex-column gap-2 p-2">
                     <div class="d-flex justify-content-between align-items-center px-2">
                         <div class="mb-0 text-start">Coupon</div>
-                        <button class="btn btn-primary">ADD</button>
+                        <button class="btn btn-primary" id="coupon-btn">ADD</button>
                     </div>
                     <div class="d-flex justify-content-between align-items-center px-2">
                         <div class="mb-0 text-start">Delivery method</div>
-                        <button class="btn btn-primary">ADD</button>
+                        <button class="btn btn-primary" id="delivery-btn">ADD</button>
                     </div>
                     <div class="d-flex justify-content-between align-items-center px-2">
-                        <span class="mb-0 text-start">Payment method</span>
-                        <button class="btn btn-primary">ADD</button>
+                        <div class="mb-0 text-start">Payment method</div>
+                        <button class="btn btn-primary" id="payment-btn">ADD</button>
                     </div>
                 </div>
                 <hr>
@@ -207,6 +207,33 @@
             </div>
         </div>
     </section>
+
+    <div class="cartOverlay align-items-center justify-content-center" id="coupon-ol">
+        <div class="cartPopup roundedContainer flex-column gap-4">
+            <h2>Add your coupon</h2>
+            <div class="d-flex justify-content-evenly gap-2">
+                <input><button>Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cartOverlay align-items-center justify-content-center" id="delivery-ol">
+        <div class="cartPopup roundedContainer flex-column gap-4">
+            <h2>Add your delivery</h2>
+            <div class="d-flex justify-content-evenly gap-2">
+                <input><button>Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cartOverlay align-items-center justify-content-center" id="payment-ol">
+        <div class="cartPopup roundedContainer flex-column gap-4">
+            <h2>Add your payment</h2>
+            <div class="d-flex justify-content-evenly gap-2">
+                <input><button>Submit</button>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footerContent">
@@ -225,8 +252,25 @@
 
     <script>
         document.querySelector('.cartItem table td input[type=number]').addEventListener('change',ev=>{
-            ev.target.value=Math.max(1,Math.round(ev.target.value))
-        })
+            ev.target.value=Math.max(1,Math.round(ev.target.value));
+        });
+
+        ['coupon','delivery','payment'].forEach((el)=>{
+            console.log(el);
+            let button = document.getElementById(`${el}-btn`);
+            let overlay = document.getElementById(`${el}-ol`);
+            let popup = overlay.querySelector('div.cartPopup');
+            
+            button.addEventListener('click',()=>{
+                overlay.classList.add('d-flex');
+            })
+
+            overlay.addEventListener('click',(ev)=>{
+                if(!popup.contains(ev.target)){
+                    overlay.classList.remove('d-flex');
+                }
+            })
+        });
     </script>
 </body>
 </html>

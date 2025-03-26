@@ -36,3 +36,27 @@
 .cartItem tr {
     height: 40px;
 }
+
+.cartOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: none;
+    backdrop-filter: blur(10px);
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.cartPopup {
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%; */
+    text-align: center;
+    padding: 50px;
+    z-index: 11;
+}
+
+input {
+    outline: none;
+}
