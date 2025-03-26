@@ -29,7 +29,7 @@
 }
 
 .suggestedItems::-webkit-scrollbar {
-  height: 12px; /* visible scrollbar at the bottom */
+  height: 12px;
 }
 
 .suggestedItems::-webkit-scrollbar-thumb {
