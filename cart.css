@@ -1,5 +1,6 @@
 .cartItem {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
 }
 
 .cartItem:hover {
@@ -19,7 +20,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    flex: 1 1 0;
+    /* flex: 1 1 0; */
 }
 
 .cartItem input,select {
