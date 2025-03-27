@@ -28,22 +28,6 @@
     overflow-x: scroll;
 }
 
-.suggestedItems::-webkit-scrollbar {
-  height: 12px;
-}
-
-.suggestedItems::-webkit-scrollbar-thumb {
-  background-color: #646464;
-  border-radius: 4px;
-  border: 2px solid transparent;
-  background-clip: content-box;
-}
-
-.suggestedItems::-webkit-scrollbar-track {
-  background: transparent;
-  /* margin: 4px; */
-}
-
 .suggested-item{
     display: flex;
     flex-direction: column;
@@ -112,7 +96,7 @@
 }
 
 .productCart input {
-    width: 50px;
+    width: 70px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;

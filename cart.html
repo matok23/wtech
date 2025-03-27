@@ -194,6 +194,8 @@
                         <input class="form-control border-secondary-subtle" name="firstName" placeholder="first name *" type="text" maxlength="50" required>
                         <input class="form-control border-secondary-subtle" name="lastName" placeholder="last name *" type="text" maxlength="50" required>
                     </div>
+                    <input class="form-control border-secondary-subtle" name="email" placeholder="email *" type="text" pattern="*" maxlength="100" required>
+                    <input class="form-control border-secondary-subtle" name="phoneNumber" placeholder="phone number *" type="tel" pattern="\+?[0-9 ]*" inputmode="numeric" maxlength="20" required>
                     <div class="d-flex gap-2">
                         <input class="form-control border-secondary-subtle" name="country" placeholder="country *" type="text" maxlength="50" required>
                         <input class="form-control border-secondary-subtle" name="city" placeholder="city *" type="text" maxlength="50" required>
@@ -298,7 +300,8 @@
             const output = document.getElementById('deliveryOutput');
             output.classList.remove('d-none');
             output.classList.add('d-flex')
-            output.innerHTML = `<strong>${formData.get('firstName')} ${formData.get('lastName')}<br>${formData.get('address1')}<br>${formData.get('address2') ? formData.get('address2'):''}
+            output.innerHTML = `<strong>${formData.get('firstName')} ${formData.get('lastName')}<br>${formData.get('email')}<br>${formData.get('phoneNumber')}
+            <br>${formData.get('address1')}<br>${formData.get('address2') ? formData.get('address2'):''}
             <br>${formData.get('zipCode')} ${formData.get('city')} ${formData.get('country')}<br>${formData.get('deliveryRadio')}</strong>`;
             ev.target.reset();
         });
