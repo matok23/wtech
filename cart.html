@@ -60,48 +60,9 @@
                 <div class="p-1"><h2>Shopping Cart</h2></div>
             </div>
         </div>
+
         <div class="row my-3 justify-content-evenly align-items-start">
             <div class="col-6 p-2 d-flex flex-column gap-2 roundedContainer">
-                <!-- <div class="cartItem container-fluid text-center p-2">
-                    <div class="row justify-content-center justify-content-xl-between">
-                        <div class="col-4 d-none d-xl-block align-self-center">
-                            <a href="#"><img class="border border-black border-opacity-50 rounded" src="https://i.etsystatic.com/46361038/r/il/ebf3f0/5275208120/il_570xN.5275208120_is95.jpg"></a>
-                        </div>
-                        <div class="col-10 col-xl-5 text-start d-flex flex-column justify-content-evenly gap-2">
-                            <table>
-                                <thead><h3>Bagane</h3></thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Price</td>
-                                        <td><strong class="productPrice">$999999</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Size</td>
-                                        <td><select class="">
-                                                <option value=""></option>
-                                                <option value="38">38</option>
-                                                <option value="39">39</option>
-                                                <option value="40">40</option>
-                                                <option value="41">41</option>
-                                                <option value="42">42</option>
-                                                <option value="43">43</option>
-                                                <option value="44">44</option>
-                                            </select></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Amount</td>
-                                        <td><input type="number" min="1" value="1" step="1"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="productLogo col-3 col-lg-2 d-flex flex-column align-items-end justify-content-end justify-content-xl-between">
-                            <img class="rounded-5 border border-black border-opacity-50 d-none d-xl-block" src="https://i.ytimg.com/vi/m_0gBvsRppk/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE4gVihlMA8=&rs=AOn4CLAJ6A6pd7pRU72zZ14px4ie6r4CUA">
-                            <button class="p-1 w-100"><i class="zmdi zmdi-delete fs-4"></i></button>
-                        </div>
-                    </div>
-                </div> -->
-
                 <div class="cartItem container-fluid text-center p-2">
                     <div class="row justify-content-center justify-content-xl-between">
                         <div class="col-4 d-none d-xl-block align-self-center">
@@ -191,14 +152,19 @@
                         <div class="mb-0 text-start">Coupon</div>
                         <button class="btn btn-primary" id="coupon-btn">ADD</button>
                     </div>
+                    <div id="couponOutput" class="text-start d-none px-2"></div>
+
                     <div class="d-flex justify-content-between align-items-center px-2">
                         <div class="mb-0 text-start">Delivery method</div>
                         <button class="btn btn-primary" id="delivery-btn">ADD</button>
                     </div>
+                    <div id="deliveryOutput" class="text-start d-none px-2"></div>
+
                     <div class="d-flex justify-content-between align-items-center px-2">
                         <div class="mb-0 text-start">Payment method</div>
                         <button class="btn btn-primary" id="payment-btn">ADD</button>
                     </div>
+                    <div id="paymentOutput" class="text-start d-none px-2"></div>
                 </div>
                 <hr>
                 <div class="">
@@ -209,29 +175,72 @@
     </section>
 
     <div class="cartOverlay align-items-center justify-content-center" id="coupon-ol">
-        <div class="cartPopup roundedContainer flex-column gap-4">
+        <div class="cartPopup roundedContainer">
             <h2>Add your coupon</h2>
-            <div class="d-flex justify-content-evenly gap-2">
-                <input><button>Submit</button>
-            </div>
+            <form id="couponForm">
+                <div class="d-flex justify-content-evenly gap-2">
+                    <input class="form-control border-secondary-subtle" name="coupon" type="text" maxlength="50" required><button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 
     <div class="cartOverlay align-items-center justify-content-center" id="delivery-ol">
-        <div class="cartPopup roundedContainer flex-column gap-4">
-            <h2>Add your delivery</h2>
-            <div class="d-flex justify-content-evenly gap-2">
-                <input><button>Submit</button>
+        <form id="deliveryForm">
+            <div class="cartPopup roundedContainer">
+                <h2>Delivery</h2>
+                <div class="d-flex flex-column justify-content-evenly gap-4">
+                    <div class="d-flex gap-2">
+                        <input class="form-control border-secondary-subtle" name="firstName" placeholder="first name *" type="text" maxlength="50" required>
+                        <input class="form-control border-secondary-subtle" name="lastName" placeholder="last name *" type="text" maxlength="50" required>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <input class="form-control border-secondary-subtle" name="country" placeholder="country *" type="text" maxlength="50" required>
+                        <input class="form-control border-secondary-subtle" name="city" placeholder="city *" type="text" maxlength="50" required>
+                    </div>
+                    <input class="form-control border-secondary-subtle" name="address1" placeholder="address line 1 *" type="text" maxlength="100" required>
+                    <input class="form-control border-secondary-subtle" name="address2" placeholder="address line 2" type="text" maxlength="100">
+                    <input class="form-control border-secondary-subtle w-25" style="min-width: 90px;" name="zipCode" placeholder="zip code *" type="tel" pattern="[0-9]{5}" inputmode="numeric" maxlength="5" required
+                    oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                    <div class="d-flex flex-column align-items-start">
+                        <div class="form-check">
+                            <input class="form-check-input border border-secondary-subtle" type="radio" id="deliveryRadio1" name="deliveryRadio" value="Deliver to address" checked>
+                            <label class="form-check-label" for="deliveryRadio1">Deliver to address</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-secondary-subtle" type="radio" id="deliveryRadio2" name="deliveryRadio" value="Deliver to pick-up point">
+                            <label class="form-check-label" for="deliveryRadio2">Deliver to nearest pick-up point</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-secondary-subtle" type="radio" id="deliveryRadio3" name="deliveryRadio" value="Pick-up in person">
+                            <label class="form-check-label" for="deliveryRadio3">Pick-up in person</label>
+                        </div>
+                    </div>
+                    <button type="submit">Submit</button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 
     <div class="cartOverlay align-items-center justify-content-center" id="payment-ol">
-        <div class="cartPopup roundedContainer flex-column gap-4">
-            <h2>Add your payment</h2>
-            <div class="d-flex justify-content-evenly gap-2">
-                <input><button>Submit</button>
-            </div>
+        <div class="cartPopup roundedContainer">
+            <h2>Payment method</h2>
+            <form id="paymentForm">
+                <div class="d-flex flex-column justify-content-evenly gap-4">
+                    <input class="form-control border-secondary-subtle" name="cardNumber" placeholder="card number" type="tel" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" inputmode="numeric" maxlength="19" required 
+                                oninput="this.value = this.value.replace(/[^\d /]|^ |( ) /g, '$1').replace(/(\d{4})(?=\d)/g,'$1 ')">
+                    <div class="container px-0">
+                        <div class="row justify-content-between">
+                            <div class="col-4"><input class="form-control border-secondary-subtle" name="expDate" placeholder="expiration" type="tel" pattern="[0-9]{2}\/[0-9]{2}" inputmode="numeric" maxlength="5" required 
+                                oninput="this.value = this.value.replace(/[^0-9/]/g, '').replace(/(^\d{2})(?=\d)/g,'$1/')"></div>
+                            <div class="col-4">
+                                <input class="form-control border-secondary-subtle" name="cvvNumber" placeholder="CVV" type="tel" pattern="[0-9]{3}" inputmode="numeric" maxlength="3" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -256,21 +265,55 @@
         });
 
         ['coupon','delivery','payment'].forEach((el)=>{
-            console.log(el);
-            let button = document.getElementById(`${el}-btn`);
-            let overlay = document.getElementById(`${el}-ol`);
-            let popup = overlay.querySelector('div.cartPopup');
+            const button = document.getElementById(`${el}-btn`);
+            const overlay = document.getElementById(`${el}-ol`);
+            const popup = overlay.querySelector('div.cartPopup');
             
             button.addEventListener('click',()=>{
                 overlay.classList.add('d-flex');
-            })
+            });
 
             overlay.addEventListener('click',(ev)=>{
                 if(!popup.contains(ev.target)){
                     overlay.classList.remove('d-flex');
                 }
-            })
+            });
         });
+
+        document.getElementById('couponForm').addEventListener('submit',(ev)=>{
+            ev.preventDefault();
+            ev.target.closest('.cartOverlay').classList.remove('d-flex');
+            const formData = new FormData(ev.target);
+            const output = document.getElementById('couponOutput');
+            output.classList.remove('d-none');
+            output.classList.add('d-flex')
+            output.innerHTML = `<strong>${formData.get('coupon')}</strong>`;
+            ev.target.reset();
+        });
+
+        document.getElementById('deliveryForm').addEventListener('submit',(ev)=>{
+            ev.preventDefault();
+            ev.target.closest('.cartOverlay').classList.remove('d-flex');
+            const formData = new FormData(ev.target);
+            const output = document.getElementById('deliveryOutput');
+            output.classList.remove('d-none');
+            output.classList.add('d-flex')
+            output.innerHTML = `<strong>${formData.get('firstName')} ${formData.get('lastName')}<br>${formData.get('address1')}<br>${formData.get('address2') ? formData.get('address2'):''}
+            <br>${formData.get('zipCode')} ${formData.get('city')} ${formData.get('country')}<br>${formData.get('deliveryRadio')}</strong>`;
+            ev.target.reset();
+        });
+
+        document.getElementById('paymentForm').addEventListener('submit',(ev)=>{
+            ev.preventDefault();
+            ev.target.closest('.cartOverlay').classList.remove('d-flex');
+            const formData = new FormData(ev.target);
+            const output = document.getElementById('paymentOutput');
+            output.classList.remove('d-none');
+            output.classList.add('d-flex')
+            output.innerHTML = `<strong>Card ending with *</strong><i style="font-style: italic;">${formData.get('cardNumber').toString().slice(-4)}<i>`;
+                ev.target.reset();
+        });
+
     </script>
 </body>
 </html>
