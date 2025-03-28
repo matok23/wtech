@@ -5,7 +5,8 @@
         "img":"https://i.etsystatic.com/46361038/r/il/ebf3f0/5275208120/il_570xN.5275208120_is95.jpg",
         "category":"",
         "price":999999,
-        "description":"A whimsical woven masterpiece, the Bagane adds a splash of charm to any space. This handcrafted hanging piece, adorned with colorful threads and playful shapes, brings texture and personality to your room. Perfect for boho vibes, it's part wall art, part happy spell."
+        "description":"A whimsical woven masterpiece, the Bagane adds a splash of charm to any space. This handcrafted hanging piece, adorned with colorful threads and playful shapes, brings texture and personality to your room. Perfect for boho vibes, it's part wall art, part happy spell.",
+        "manufacturer":""
     },
     {
         "id":2,
@@ -13,7 +14,8 @@
         "img":"https://i1.sndcdn.com/artworks-000533533326-t8iqir-t240x240.jpg",
         "category":"",
         "price":999999,
-        "description":"Mysterious and moody, Slipky is a sonic enigma wrapped in glitchy visuals. A digital art cover with retro-futuristic appeal, it hints at ambient beats and experimental sounds—perfect for late-night headphone sessions or as a statement visual on your digital playlists."
+        "description":"Mysterious and moody, Slipky is a sonic enigma wrapped in glitchy visuals. A digital art cover with retro-futuristic appeal, it hints at ambient beats and experimental sounds—perfect for late-night headphone sessions or as a statement visual on your digital playlists.",
+        "manufacturer":""
     },
     {
         "id":3,
@@ -21,7 +23,8 @@
         "price":999999,
         "img":"https://paom.com/cdn/shop/products/print_all_over_me_3_relaxed-pant_0000000p-pepperoni-pants.jpg?v=1578609835",
         "category":"",
-        "description":"Make way for Gate—the pants that don't hold back. Loud, proud, and unapologetically pepperoni, these relaxed-fit trousers are a bold declaration of pizza love. Ideal for lounging or grabbing attention at casual hangs, these are pants with personality."
+        "description":"Make way for Gate—the pants that don't hold back. Loud, proud, and unapologetically pepperoni, these relaxed-fit trousers are a bold declaration of pizza love. Ideal for lounging or grabbing attention at casual hangs, these are pants with personality.",
+        "manufacturer":""
     },
     {
         "id":4,
@@ -29,6 +32,7 @@
         "price":999999,
         "img":"https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/images/methode/2018/07/16/a6e48a02-889d-11e8-8608-b7163509a377_1280x720_113228.jpg?itok=4yqTzJmy",
         "category":"",
-        "description":"Channel your inner icon with Boratky, the legendary mankini that broke the internet (and maybe your fashion sense). Equal parts shocking and hilarious, it's the ultimate party piece or dare outfit for the brave. Proceed with confidence... and caution."
+        "description":"Channel your inner icon with Boratky, the legendary mankini that broke the internet (and maybe your fashion sense). Equal parts shocking and hilarious, it's the ultimate party piece or dare outfit for the brave. Proceed with confidence... and caution.",
+        "manufacturer":""
     }
 ]
