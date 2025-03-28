@@ -322,4 +322,8 @@ footer {
         display: block;
         margin: auto;
     }
+
+    .footerContent {
+        display: block;
+    }
 }
