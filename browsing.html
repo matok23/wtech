@@ -109,172 +109,195 @@
         <div class="container">
 
             <div class="categorySection row pb-3">
-                <h1 class="categoryTitle">Category name - Woman trousers</h1>
+                <h1 class="categoryTitle">Category - Women's Shoes</h1>
                 <div class="filterButtons">
-                    <button class="filterBtn">Size</button>
-                    <button class="filterBtn">Color</button>
-                    <button class="filterBtn">Brand</button>
-                    <button class="filterBtn">Price</button>
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    <div class="dropdown">
+                        <button class="filterBtn" onclick="toggleDropdown('sizeDropdown')">Size</button>
+                        <div id="sizeDropdown" class="dropdown-content">
+                            <label><input type="checkbox" value="S"> S</label>
+                            <label><input type="checkbox" value="M"> M</label>
+                            <label><input type="checkbox" value="L"> L</label>
+                            <label><input type="checkbox" value="XL"> XL</label>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <button class="filterBtn" onclick="toggleDropdown('colorDropdown')">Color</button>
+                        <div id="colorDropdown" class="dropdown-content">
+                            <label><input type="checkbox" value="Red"> Red</label>
+                            <label><input type="checkbox" value="Blue"> Blue</label>
+                            <label><input type="checkbox" value="Green"> Green</label>
+                            <label><input type="checkbox" value="Black"> Black</label>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <button class="filterBtn" onclick="toggleDropdown('brandDropdown')">Brand</button>
+                        <div id="brandDropdown" class="dropdown-content">
+                            <label><input type="checkbox" value="Nike"> Nike</label>
+                            <label><input type="checkbox" value="Adidas"> Adidas</label>
+                            <label><input type="checkbox" value="Puma"> Puma</label>
+                            <label><input type="checkbox" value="Reebok"> Reebok</label>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <button class="filterBtn" onclick="toggleDropdown('priceDropdown')">Price</button>
+                        <div id="priceDropdown" class="dropdown-content">
+                            <input type="range" min="1" max="500" value="100" class="slider" id="priceRange" style="accent-color: #8e5bf3b5;">
+                            <span id="priceValue">100€</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="container products roundedContainer">
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 1">
-                    <h3>Stylish Dress</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-cassandra-0094503940022736_front.jpg" alt="Product 1">
+                    <h3>Timeless Chic Heels
+                    </h3>
                     <p>$49.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 2">
-                    <h3>Casual Shirt</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-chronicle-0095507980001517_front.jpg" alt="Product 2">
+                    <h3>Sleek Essence Heels
+                    </h3>
                     <p>$29.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-chronicle-0095507980001484_front.jpg" alt="Product 3">
+                    <h3>Eternal Charm Stilettos
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-context-0095500620004502_front.jpg" alt="Product 3">
+                    <h3>Refined Silhouette Heels
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-escapade-2026510780006134_front.jpg" alt="Product 3">
+                    <h3>Urban Elegance Sneakers
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-context-0095500620004919_front.jpg" alt="Product 3">
+                    <h3>Refined Silhouette Heels
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-classical-0094503940261919_front.jpg" alt="Product 3">
+                    <h3>Sculpted Beauty Heels
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
 
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-asteria-0084500620001028_front.jpg" alt="Product 3">
+                    <h3>Sophisticated Allure Heels
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-carla-0094503940019393_front.jpg" alt="Product 3">
+                    <h3>Effortless Glam Heels
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-althea-0084503940001310_front.jpg" alt="Product 3">
+                    <h3>Graceful Poise Pumps
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-althea-0084503940001393_front.jpg" alt="Product 3">
+                    <h3>Bold Step Sneakers
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-eilisia-2026506660039081_front.jpg" alt="Product 3">
+                    <h3>Performance Flow Sneakers
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-electrolite-2026510780004179_front.jpg" alt="Product 3">
+                    <h3>Momentum Boost Trainers
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-escapade-2026510780006028_front.jpg" alt="Product 3">
+                    <h3>Athletic Spirit Sneakers
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
+                    <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-ciana-0094500620010167_front.jpg" alt="Product 3">
+                    <h3>Everyday Energy Kicks
+                    </h3>
                     <p>$59.99</p>
                     <button>Add to Cart</button>
                 </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
-                    <p>$59.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
-                    <p>$59.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
-                    <p>$59.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
-                    <p>$59.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
-                    <p>$59.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
-                    <p>$59.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
-                    <p>$59.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
-                    <p>$59.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 3">
-                    <h3>Trendy Shoes</h3>
-                    <p>$59.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product d-flex flex-column justify-content-between">
-                    <img src="pictures/pepefrog.jpg" alt="Product 4">
-                    <h3>Shoes</h3>
-                    <p>$50.99</p>
-                    <button>Add to Cart</button>
-                </div>
-            
             </div>
         
         </div>
     </div>
+
+
+
+
+
+
+
+
+    <script>
+        function toggleDropdown(id) {
+        let dropdown = document.getElementById(id);
+        let isVisible = dropdown.style.display === "block";
+        document.querySelectorAll('.dropdown-content').forEach(el => el.style.display = "none");
+        dropdown.style.display = isVisible ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+                dropdown.style.display = "none";
+            });
+        }
+    }
+
+    document.getElementById('priceRange').oninput = function() {
+        document.getElementById('priceValue').innerText = this.value + "€" ;
+    };
+    </script>
+    
+
+
+
+
+
+
+
+
 
     <footer>
         <div class="footerContent">

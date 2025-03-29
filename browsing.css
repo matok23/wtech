@@ -36,12 +36,12 @@
 
 .product p {
     font-size: 14px;
-    color: #777;
+    color: #acacac;
 }
 
 .product button {
-    background-color: #ff75cf;
-    color: white;
+    background-color: #8e5bf3b5;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -49,5 +49,32 @@
 }
 
 .product button:hover {
-    background-color: #ffabe9;
+    background-color: #a57ef5b5;
+}  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1;
+}
+
+.dropdown-content label {
+    display: block;
+    padding: 5px;
+}
+
+.dropdown-content input {
+    margin-right: 5px;
 }

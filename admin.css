@@ -1,0 +1,61 @@
+body {
+    font-family: "Raleway", Arial, sans-serif;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 50px;
+}
+
+/* Admin Content Section */
+/* Admin Content Sections */
+.admin-content {
+    display: flex;
+    gap: 100px;  /* Adjust the gap to a smaller value for better alignment */
+    margin-top: 50px;
+    justify-content: center; /* Align items at the start of the container */
+    width: 100%; /* Ensures the container fills available space */
+}
+
+
+.admLbl-content {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; 
+    min-width: 300px; 
+}
+
+h2 {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.overview p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px; /* Reduced padding for mobile */
+    }
+
+    .admin-content {
+        flex-direction: column; /* Stacks the elements vertically */
+        align-items: center; /* Centers content on small screens */
+    }
+
+    .admLbl-content {
+        width: 100%; /* Makes the admin content boxes take full width on small screens */
+        margin-bottom: 20px; /* Adds spacing between elements on small screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+}
