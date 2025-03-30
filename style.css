@@ -191,7 +191,7 @@ a.btn.btn-primary:focus {
     font-size: 100%;
     cursor: pointer;
     background-color: #b7b7b7;
-    color: white;
+    color: rgb(53, 53, 53);
     width: 100%;
 }
 
@@ -244,7 +244,7 @@ a.btn.btn-primary:focus {
 /* Footer Section */
 footer {
     background-color: #c0c0c0;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Feet_boy.jpg/1200px-Feet_boy.jpg'); */
     background-size: 100% 100%;
@@ -269,7 +269,7 @@ footer {
 }
 
 .socialMedia a {
-    color: white;
+    color: inherit;
     margin: 0 10px;
     text-decoration: none;
     display: inline-flex;
@@ -311,6 +311,7 @@ footer {
     }
 
     .searchButtons {
+        color: inherit;
         justify-content: center;
         margin-top: 10px;
     }
