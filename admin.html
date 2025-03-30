@@ -8,29 +8,9 @@
     <link rel="stylesheet" href="./admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-        /* Add custom styles for the login form */
-        #login-form {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-        }
-        .login-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            width: 300px;
-        }
-    </style>
+
 </head>
 <body class="admin-page">
-
     <header>
         <div class="headerContainer">
             <div class="dropdowns">
@@ -177,12 +157,10 @@
     </footer>
 
     <script>
-        // Show login form when login button is clicked
         document.getElementById('login-btn').addEventListener('click', function() {
             document.getElementById('login-form').style.display = 'flex';
         });
 
-        // Close login form
         document.getElementById('close-login').addEventListener('click', function() {
             document.getElementById('login-form').style.display = 'none';
         });

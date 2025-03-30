@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: "Arvo",Arial, sans-serif;
     margin: 0;
@@ -19,7 +18,6 @@ body {
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
 }
 
 ::-webkit-scrollbar {
@@ -40,15 +38,12 @@ body {
 
 ::-webkit-scrollbar-track {
   background: transparent;
-  /* margin: 4px; */
 }
 
-/* Header Section */
 header {
     background-color: #d8d6d6;
     color: white;
     padding: 10px 0;
-    /* min-width: 900px; */
 }
 
 .headerContainer {
@@ -66,7 +61,6 @@ header {
 
 .dropdown {
     position: relative;
-    /* margin-right: 15px; */
 }
 
 .dropbtn {
@@ -91,7 +85,6 @@ header {
     z-index: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 0 10px;
-    /* border: 2px solid white; */
 }
 
 .dropdown-content a {
@@ -137,7 +130,6 @@ header {
 
 .searchbar {
     padding: 8px;
-    /* margin-right: 10px; */
     outline: none;
 }
 
@@ -147,7 +139,6 @@ button {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    /* margin-left: 5px; */
     border-radius: 4px;
 }
 
@@ -171,11 +162,11 @@ a.btn.btn-primary:focus {
   box-shadow: none;
 }
 
-/* sidebar section */
+
+
 
 .left-sidebar {
     width: 17%;
-    /* padding-right: 20px; */
     min-width: 150px;
     max-width: 200px;
 }
@@ -205,15 +196,11 @@ a.btn.btn-primary:focus {
 
 .categoryDropdown {
     position: relative;
-    /* margin-right: 15px; */
 }
 
 .categoryContent {
     display: none;
-    /* position: absolute; */
     background-color: #8e5bf3b5;
-    /* min-width: 160px; */
-    /* z-index: 1; */
     width: 80%;
     flex-direction: column;
     align-self: flex-end;
@@ -241,12 +228,13 @@ a.btn.btn-primary:focus {
     display: flex;
 }
 
-/* Footer Section */
+
+
+
 footer {
     background-color: #c0c0c0;
     color: rgb(0, 0, 0);
     text-align: center;
-    /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Feet_boy.jpg/1200px-Feet_boy.jpg'); */
     background-size: 100% 100%;
     width: 100%;
     padding: 10px;
@@ -255,7 +243,6 @@ footer {
 .footerContent {
     display: flex;
     justify-content: space-between;
-    /* max-width: 1200px; */
     margin: 0 10px;
 }
 
@@ -277,27 +264,6 @@ footer {
     gap: 5px;
 }
 
-/* .socialMedia a:hover {
-    text-decoration: underline;
-} */
-
-/* a i {
-    margin-right: 5px;
-    vertical-align: ;
-} */
-
-
-/* Responsiveness */
-/* @media (max-width: 768px) {
-    .auth-box {
-        width: 90%;
-        padding: 30px;
-    }
-
-    .auth-btn {
-        width: 48%;
-    }
-} */
 
 
 
@@ -305,7 +271,7 @@ footer {
 
 @media (max-width: 768px) {
     .headerContainer, .authheaderContainer {
-        flex-direction: column; /* Stacks the logo, searchbar, and cart vertically */
+        flex-direction: column; 
         align-items: center;
         gap: 10px;
     }
@@ -317,7 +283,7 @@ footer {
     }
 
     .logo img {
-        height: 60px; /* Reduce logo size on smaller screens */
+        height: 60px; 
     }
     .banner img {
         width: auto;

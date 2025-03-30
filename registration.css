@@ -2,15 +2,11 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* background-color: rgb(240, 240, 240); */
     display: flex;
-    flex-direction: column; /* Umiestnime header a formulár vertikálne */
-    justify-content: flex-start; /* Zarovnáme začiatok */
+    flex-direction: column; 
+    justify-content: flex-start;
     height: 100vh;
 }
-
-
-
 
 
 .loginBtn, .cartBtn {
@@ -21,14 +17,12 @@
     cursor: pointer;
 }
 
-/* Auth Container */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* padding: 20px; Priestor okolo formulára */
-    flex-grow: 1; /* Rovnako roztiahne auth-container do voľného miesta */
+    flex-grow: 1; 
 }
 
 .auth-box {
@@ -40,7 +34,6 @@
     text-align: center;
 }
 
-/* Auth Form */
 .auth-form input {
     width: 100%;
     padding: 12px;
@@ -57,7 +50,6 @@
     outline: none;
 }
 
-/* Buttons */
 .auth-btn {
     padding: 10px 20px;
     margin: 10px 0;
@@ -92,7 +84,6 @@
     background-color: #a57ef5b5;
 }
 
-/* Auth Toggle */
 .auth-toggle {
     display: flex;
     justify-content: space-between;
