@@ -147,7 +147,9 @@
                     </div>
                 </div>
             </div>
+                <!-- container > obsah do šírok s pevnou šírkou na desktopoch, flexibilne na menších) -->
             <div class="container products roundedContainer">
+                <!--Medzi každým prvkom bude rovnaký priestor,bez medzery na začiatku a na konci -->
                 <div class="product d-flex flex-column justify-content-between">
                     <img src="https://d1q03ajwgi7cv2.cloudfront.net/media/catalog/product/cache/e051e343fbed6099e8c148bd11733e32/d/u/du-cassandra-0094503940022736_front.jpg" alt="Product 1">
                     <h3>Timeless Chic Heels
@@ -265,13 +267,17 @@
 
     <script>
         function toggleDropdown(id) {
-        let dropdown = document.getElementById(id);
-        let isVisible = dropdown.style.display === "block";
-        document.querySelectorAll('.dropdown-content').forEach(el => el.style.display = "none");
-        dropdown.style.display = isVisible ? "none" : "block";
+            let dropdown = document.getElementById(id);
+            //zisti viditelnost
+            let isVisible = dropdown.style.display === "block";
+            //Skryje všetky ostatné dropdowny, keď sa jeden zobrazuje
+            document.querySelectorAll('.dropdown-content').forEach(el => el.style.display = "none");
+            dropdown.style.display = isVisible ? "none" : "block";
     }
 
     window.onclick = function(event) {
+        //bol kliknuty element vramci .dropdown?
+        //ak kliknes mimo tak sa skryju
         if (!event.target.closest('.dropdown')) {
             document.querySelectorAll('.dropdown-content').forEach(dropdown => {
                 dropdown.style.display = "none";

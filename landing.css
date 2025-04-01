@@ -11,6 +11,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    /*upraví pozíciu tak, že sa vycentruje horizontálne aj vertikálne v strede elementu*/
     transform: translate(-50%, -50%);
     color: white;
     transition: opacity 0.15 ease-in-out;

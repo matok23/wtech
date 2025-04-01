@@ -3,7 +3,9 @@ body {
 }
 
 .main-content {
+    /*prvky su flexibilne kontajnery*/
     display: flex;
+    /*prvky sa zalamuju na novy riadok*/
     flex-wrap: wrap; 
     padding: 50px;
 }
@@ -23,6 +25,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    /*Prvok zaberie dostupný priestor rovnomerne s ostatnými prvkami*/
     flex: 1; 
     min-width: 300px; 
 }
@@ -41,12 +44,15 @@ h2 {
 #login-form {
     display: none;
     position: fixed;
+    /*Rozprestrie prvok na celú obrazovku*/
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    /*zarovna obsah horizontalne na stred*/
     justify-content: center;
+    /*zarovna obsah vertikalne na stred*/
     align-items: center;
 }
 .login-content {

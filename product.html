@@ -211,7 +211,7 @@
                 node.closest('.categoryDropdown').querySelector('.categoryContent').classList.toggle('categoryVisible')
             })
         })
-
+            //pri zadávaní množstva produktov v nákupnom košíku
         document.querySelector('.productCart input[type=number]').addEventListener('change',ev=>{
             ev.target.value=Math.max(1,Math.round(ev.target.value))
         })

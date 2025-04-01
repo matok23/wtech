@@ -8,10 +8,13 @@
 }
 
 .cartItem a img{
+    /*štvorcový tvar*/
     aspect-ratio: 1 / 1;
     width: 150px;
     height: auto;
+    /*môže byť orezaný obrazok, aby sa zachoval pomer strán*/
     object-fit: cover;
+    /*prisposobenie velkosti podla volneho priestiru*/
     flex: 1 1 0;
 }
 
@@ -36,6 +39,7 @@
 
 .cartOverlay {
     position: fixed;
+    /*right,top,bottom a left = 0 */
     inset: 0;
     z-index: 10;
     display: none;
