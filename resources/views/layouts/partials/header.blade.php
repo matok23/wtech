@@ -27,14 +27,14 @@
     </div>
 
     <div class="logo">
-        <a href="./landing.html"><img src="pictures\logo.png" alt="VoguePointLogo"></a>
+        <a href="/landing"><img src="/pictures/logo.png" alt="VoguePointLogo"></a>
     </div>
 
 
     <!-- Search and Buttons -->
     <div class="searchButtons">
         <input type="text" placeholder="Search..." class="searchbar h-100">
-        <a href="./registration.html" class="btn btn-primary">Login</a>
-        <a href="./cart.html" class="btn btn-primary d-flex align-items-center justify-content-center gap-2">Cart<i class="zmdi zmdi-shopping-cart"></i></a>
+        <a href="/registration" class="btn btn-primary">Login</a>
+        <a href="/cart" class="btn btn-primary d-flex align-items-center justify-content-center gap-2">Cart<i class="zmdi zmdi-shopping-cart"></i></a>
     </div>
 </div>

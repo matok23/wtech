@@ -26,5 +26,5 @@
         <footer>
             @include('layouts.partials.footer')
         </footer>
-</main>
+    </main>
 @endsection
