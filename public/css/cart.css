@@ -1,0 +1,59 @@
+.cartItem {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.cartItem:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cartItem a img{
+    /*štvorcový tvar*/
+    aspect-ratio: 1 / 1;
+    width: 150px;
+    height: auto;
+    /*môže byť orezaný obrazok, aby sa zachoval pomer strán*/
+    object-fit: cover;
+    /*prisposobenie velkosti podla volneho priestiru*/
+    flex: 1 1 0;
+}
+
+.productLogo img{
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cartItem input,select {
+    width: 50px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.cartItem tr {
+    height: 40px;
+}
+
+.cartOverlay {
+    position: fixed;
+    /*right,top,bottom a left = 0 */
+    inset: 0;
+    z-index: 10;
+    display: none;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.cartPopup {
+    text-align: center;
+    padding: 50px;
+    z-index: 11;
+}
+
+input {
+    outline: none;
+}

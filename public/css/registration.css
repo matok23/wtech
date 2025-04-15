@@ -1,0 +1,99 @@
+.auth-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    /*zarovnané na začiatok hlavnej osi , ak column tak hore*/
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+
+.loginBtn, .cartBtn {
+    padding: 10px;
+    background-color: #ff75cf;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1; 
+}
+
+.auth-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.auth-form input:focus {
+    border: 1px solid #8e5bf3b5;
+    outline: none;
+}
+
+.auth-btn {
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #8e5bf3b5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 48%;
+}
+
+.auth-btn:hover {
+    background-color: #a57ef5b5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #8e5bf3b5;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #a57ef5b5;
+}
+
+.auth-toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
