@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products=Product::all();
+        // $products=Product::all();
+        $products=Product::with(['manufacturer','stock'])->get();
         return view('products.index',compact('products'));
     }
 
@@ -40,7 +41,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {   
         $products=Product::all();
-        return view('products.product-view',['productSingle'=>$product,'products'=>$products]);
+        return view('products.product-view',['productSingle'=>$product->load('stock'),'products'=>$products]);
     }
 
     /**

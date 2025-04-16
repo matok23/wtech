@@ -11,7 +11,10 @@
             @foreach($products as $product)
                 <div class="row">
                     <div class="col-6">
-                        <div>{{$product->name}} {{$product->price}}</div>
+                        <div>{{$product->name}} {{$product->manufacturer->name}} {{$product->price}}</div>
+                        @foreach($product->stock as $stock)
+                            <div>{{$stock->size}} {{$stock->stock_left}}</div>
+                        @endforeach
                         <img src="{{$product->image}}">
                         <div>{{$product->description}}</div>
                     </div>

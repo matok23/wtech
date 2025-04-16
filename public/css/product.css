@@ -81,12 +81,12 @@
     flex: 1 1 0;
 }
 
-.productInfo {
+/* .productInfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
-}
+} */
 
 .productCart {
     display: flex;
@@ -97,6 +97,14 @@
     width: 70px;
     padding: 10px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.sizeSelect input,select {
+    /* width: 70px;
+    height: 35px; */
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
