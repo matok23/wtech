@@ -15,14 +15,14 @@ class ProductSeeder extends Seeder
     {
         Product::insert([
             [
-            'id' => 1,
-            'name' => 'Bagane',
-            'image' => 'https://i.etsystatic.com/46361038/r/il/ebf3f0/5275208120/il_570xN.5275208120_is95.jpg',
-            'price' => 11.11,
-            'description' => 'A whimsical woven masterpiece, the Bagane adds a splash of charm to any space. This handcrafted hanging piece, adorned with colorful threads and playful shapes, brings texture and personality to your room. Perfect for boho vibes, it\'s part wall art, part happy spell.',
-            'manufacturer_id'=>1,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'id' => 1,
+                'name' => 'Bagane',
+                'image' => 'https://i.etsystatic.com/46361038/r/il/ebf3f0/5275208120/il_570xN.5275208120_is95.jpg',
+                'price' => 11.11,
+                'description' => 'A whimsical woven masterpiece, the Bagane adds a splash of charm to any space. This handcrafted hanging piece, adorned with colorful threads and playful shapes, brings texture and personality to your room. Perfect for boho vibes, it\'s part wall art, part happy spell.',
+                'manufacturer_id'=>1,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'id' => 2,

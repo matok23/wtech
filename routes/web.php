@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\IndexController;
 
 // Route::get('/', function () {
 //     // return view('welcome');
@@ -14,3 +15,5 @@ Route::resource('landing',LandingController::class);
 Route::resource('/',LandingController::class);
 
 Route::resource('products',ProductController::class);
+
+Route::resource('index',IndexController::class);

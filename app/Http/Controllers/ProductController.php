@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
+use App\Models\SizeStock;
+use App\Models\Category;
+
 class ProductController extends Controller
 {
     /**
@@ -15,8 +18,10 @@ class ProductController extends Controller
     public function index()
     {
         // $products=Product::all();
-        $products=Product::with(['manufacturer','stock'])->get();
-        return view('products.index',compact('products'));
+        $products=Product::with(['manufacturer','stock','categories'])->get();
+        $sizestock=SizeStock::with('product')->get();
+        $categories=Category::with('products')->get();
+        return view('products.index',compact('products','sizestock','categories')); //->with(['sizestock'=>$sizestock->load('product')]);
     }
 
     /**

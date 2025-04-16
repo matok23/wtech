@@ -17,4 +17,8 @@ class Product extends Model
     function stock(){
         return $this->hasMany('App\Models\SizeStock');
     }
+
+    function categories(){
+        return $this->belongsToMany('App\Models\Category')->withTimestamps();
+    }
 }

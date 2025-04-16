@@ -1,7 +1,7 @@
 <div class="headerContainer">
     <div class="dropdowns">
         <div class="dropdown">
-            <button class="dropbtn">Men</button>
+            <button class="dropbtn"><a class='text-decoration-none color-inherit text-reset' href='/index/men'>Men</a></button>
             <div class="dropdown-content">
                 <a href="#">Shirts</a>
                 <a href="#">Pants</a>
@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="dropdown">
-            <button class="dropbtn">Women</button>
+            <button class="dropbtn"><a class='text-decoration-none color-inherit text-reset' href='/index/women'>Women</a></button>
             <div class="dropdown-content">
                 <a href="#">Dresses</a>
                 <a href="#">Tops</a>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="dropdown">
-            <button class="dropbtn">Kids</button>
+            <button class="dropbtn"><a class='text-decoration-none color-inherit text-reset' href='/index/kids'>Kids</a></button>
             <div class="dropdown-content">
                 <a href="#">T-Shirts</a>
                 <a href="#">Jeans</a>
