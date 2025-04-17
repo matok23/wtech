@@ -11,16 +11,12 @@ use App\Http\Controllers\BrowsingController;
 //     return view('layouts.app');
 // });
 
-Route::resource('landing',LandingController::class);
+Route::resource('/landing',LandingController::class);
 
 Route::resource('/',LandingController::class);
 
-Route::resource('products',ProductController::class);
+Route::resource('/products',ProductController::class);
 
-Route::resource('index',IndexController::class);
+Route::resource('/index',IndexController::class);
 
-Route::resource('browsing',BrowsingController::class);
-
-Route::get('/test-livewire', function () {
-    return view('test');
-});
+Route::resource('/browsing',BrowsingController::class);

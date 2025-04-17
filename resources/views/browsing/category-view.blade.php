@@ -62,8 +62,8 @@
                 </div>
             </div>
 
-            {{-- @livewire('product-filters', ['category'=>$category]) --}}
-            <livewire:product-filters :category="$category" />
+            @livewire('product-filters', ['category'=>$category, 'manufacturers'=>$manufacturers, 'colors'=>$colors, 'sizes'=>$sizes, 'priceMin'=>$priceMin, 'priceMax'=>$priceMax])
+            {{-- <livewire:product-filters :category="$category" /> --}}
 
         </section>
 

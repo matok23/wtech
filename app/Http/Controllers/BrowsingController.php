@@ -37,8 +37,16 @@ class BrowsingController extends Controller
      * Display the specified resource.
      */
     public function show(string $category)
-    {
-        return view('browsing.category-view',compact('category'));
+    {   
+        $products=Category::where('slug', $category)->firstOrFail()->products();
+        $manufacturers=$products
+        ->with('manufacturer')->get()->pluck('manufacturer.name')->unique()->sort()->values()->all();
+        $colors=$products->pluck('color')->unique()->sort()->values()->all();
+        $sizes=$products->with('stock')->get()->pluck('stock')->flatten()->pluck('size')->unique()->sort()->values()->all();
+        $priceMax=ceil($products->max('price'));
+        $priceMin=ceil($products->min('price'));
+        
+        return view('browsing.category-view',compact('category','manufacturers','colors','sizes','priceMax','priceMin'));
     }
 
     /**

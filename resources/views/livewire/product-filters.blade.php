@@ -5,46 +5,39 @@
             <div class="dropdown">
                 <button class="filterBtn" >Size</button>
                 <div id="sizeDropdown" class="dropdown-content">
-                    <label><input type="checkbox" value="S"> S</label>
-                    <label><input type="checkbox" value="M"> M</label>
-                    <label><input type="checkbox" value="L"> L</label>
-                    <label><input type="checkbox" value="XL"> XL</label>
+                    @foreach($sizes as $size)
+                        <label><input type="checkbox" wire:model.lazy='size' value="{{ $size }}">{{ $size }}</label>
+                    @endforeach
                 </div>
             </div>
             
             <div class="dropdown">
                 <button class="filterBtn" >Color</button>
                 <div id="colorDropdown" class="dropdown-content">
-                    <label><input type="checkbox" value="Red"> Red</label>
-                    <label><input type="checkbox" value="Blue"> Blue</label>
-                    <label><input type="checkbox" value="Green"> Green</label>
-                    <label><input type="checkbox" value="Black"> Black</label>
+                    @foreach($colors as $color)
+                        <label><input type="checkbox" wire:model.lazy='color' value="{{ $color }}">{{ $color }}</label>
+                    @endforeach
                 </div>
             </div>
             
             <div class="dropdown">
-                <button class="filterBtn" >Brand</button> {{-- onclick="toggleDropdown('brandDropdown')" --}}
+                <button class="filterBtn" >Brand</button>
                 <div id="brandDropdown" class="dropdown-content">
-                    <label><input type="checkbox" wire:model="brand" value="Adidas"> Adidas</label>
-                    <label><input type="checkbox" wire:model="brand" value="Puma"> Puma</label>
-                    <label><input type="checkbox" wire:model="brand" value="Reebok"> Reebok</label>
+                    @foreach($manufacturers as $manufacturer)
+                        <label><input type="checkbox" wire:model.lazy="brand" value="{{ $manufacturer }}">{{ $manufacturer }}</label>
+                    @endforeach
                 </div>
             </div>
             
             <div class="dropdown">
                 <button class="filterBtn" >Price</button>
                 <div id="priceDropdown" class="dropdown-content">
-                    <input type="range" min="1" max="500" value="100" class="slider" id="priceRange" style="accent-color: #8e5bf3b5;">
-                    <span id="priceValue">100€</span>
+                    <input type="range" wire:model.lazy="price" min="{{ $priceMin }}" max="{{ $priceMax }}" class="slider" id="priceRange" style="accent-color: #8e5bf3b5;">
+                    <span id="priceValue">${{ $price }}</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <pre>{{ var_dump($brand) }}</pre>
-
-    <input type="text" wire:model="test">
-    <p>You typed: {{ $test }}</p>
 
     <div class="products container roundedContainer">
         @foreach($products as $product)
@@ -56,4 +49,10 @@
             </div>
         @endforeach
     </div>
+
+    <script>
+        document.getElementById('priceRange').oninput = function() {
+            document.getElementById('priceValue').innerText = '$' + this.value ;
+        };
+    </script>
 </div>
