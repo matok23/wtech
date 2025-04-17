@@ -2,6 +2,7 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/browsing.css') }}">
+    @livewireStyles
 @endpush
 
 @section('content')
@@ -61,7 +62,8 @@
                 </div>
             </div>
 
-            @livewire('product-filters', ['category'=>$category])
+            {{-- @livewire('product-filters', ['category'=>$category]) --}}
+            <livewire:product-filters :category="$category" />
 
         </section>
 
@@ -69,4 +71,6 @@
             @include('layouts.partials.footer')
         </footer>
     </main>
+
+    @livewireScripts {{-- (['nprogress' => false]) --}}
 @endsection

@@ -20,3 +20,7 @@ Route::resource('products',ProductController::class);
 Route::resource('index',IndexController::class);
 
 Route::resource('browsing',BrowsingController::class);
+
+Route::get('/test-livewire', function () {
+    return view('test');
+});
