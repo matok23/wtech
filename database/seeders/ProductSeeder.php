@@ -23,6 +23,7 @@ class ProductSeeder extends Seeder
                 'manufacturer_id'=>1,
                 'created_at' => now(),
                 'updated_at' => now(),
+                'color' => 'off white'
             ],
             [
                 'id' => 2,
@@ -33,6 +34,7 @@ class ProductSeeder extends Seeder
                 'manufacturer_id'=>1,
                 'created_at' => now(),
                 'updated_at' => now(),
+                'color' => 'off white'
             ],
             [
                 'id' => 3,
@@ -43,6 +45,7 @@ class ProductSeeder extends Seeder
                 'manufacturer_id'=>2,
                 'created_at' => now(),
                 'updated_at' => now(),
+                'color' => 'pizza'
             ],
             [
                 'id' => 4,
@@ -53,6 +56,7 @@ class ProductSeeder extends Seeder
                 'manufacturer_id'=>3,
                 'created_at' => now(),
                 'updated_at' => now(),
+                'color' => 'green'
             ]
         ]);
     }

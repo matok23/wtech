@@ -20,6 +20,7 @@ return new class extends Migration
 
         Schema::table('products' ,function (Blueprint $table) {
             $table->foreignId('manufacturer_id')->constrained();
+            $table->string('color',255);
         });
     }
 

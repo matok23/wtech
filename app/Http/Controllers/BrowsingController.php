@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
-use App\Models\Products;
+use App\Models\Product;
 
-class IndexController extends Controller
+class BrowsingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -38,9 +38,7 @@ class IndexController extends Controller
      */
     public function show(string $category)
     {
-        $categoryProds=Category::with('products')->where('slug',$category)->firstOrFail();
-        $products=$categoryProds->products;
-        return view('index.category-view',compact('products'));
+        return view('browsing.category-view',compact('category'));
     }
 
     /**
