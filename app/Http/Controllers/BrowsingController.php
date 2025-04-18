@@ -38,15 +38,37 @@ class BrowsingController extends Controller
      */
     public function show(string $category)
     {   
-        $products=Category::where('slug', $category)->firstOrFail()->products();
-        $manufacturers=$products
-        ->with('manufacturer')->get()->pluck('manufacturer.name')->unique()->sort()->values()->all();
-        $colors=$products->pluck('color')->unique()->sort()->values()->all();
-        $sizes=$products->with('stock')->get()->pluck('stock')->flatten()->pluck('size')->unique()->sort()->values()->all();
-        $priceMax=ceil($products->max('price'));
-        $priceMin=ceil($products->min('price'));
+        $subcategory=request()->query('subcategory');
+        $term=request()->query('term');
+
+        // $products=Category::where('slug', $category)->firstOrFail()->products();
+        $productsQuery=Product::query()
+        ->whereHas('categories', function ($query) use ($category){
+            $query->where('slug',$category);
+        })
+        ->when($subcategory, function ($query) use ($subcategory){
+            $query->whereHas('categories',function($q) use ($subcategory) {$q->where('slug',$subcategory);});
+        })
+        ->when($term, function($query) use ($term){
+            $query->where(function ($q) use ($term){
+                $q->where('name','ilike','%'.$term.'%')
+                ->orWhereHas('manufacturer',function($qq) use ($term) {$qq->where('name','ilike','%'.$term.'%');});
+            });
+        });
         
-        return view('browsing.category-view',compact('category','manufacturers','colors','sizes','priceMax','priceMin'));
+        $manufacturers=$productsQuery
+        ->with('manufacturer')->get()->pluck('manufacturer.name')->unique()->sort()->values()->all();
+        
+        $colors=$productsQuery->pluck('color')->unique()->sort()->values()->all();
+        
+        $sizes=$productsQuery->with('stock')->get()->pluck('stock')->flatten()->pluck('size')->unique()->sort()->values()->all();
+        
+        $priceMax=ceil($productsQuery->max('price'));
+        $priceMin=ceil($productsQuery->min('price'));
+
+        $catName= isset($subcategory) ? Category::where('slug',$subcategory)->firstOrFail()->name : null;
+        
+        return view('browsing.category-view',compact('category','manufacturers','colors','sizes','priceMax','priceMin','subcategory','term','catName'));
     }
 
     /**

@@ -40,7 +40,7 @@ class IndexController extends Controller
     {
         $categoryProds=Category::with('products')->where('slug',$category)->firstOrFail();
         $products=$categoryProds->products;
-        return view('index.category-view',compact('products'));
+        return view('index.category-view',compact('products','category'));
     }
 
     /**

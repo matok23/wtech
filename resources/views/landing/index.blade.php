@@ -7,7 +7,11 @@
 @section('content')
     <main class="d-flex flex-column min-vh-100">
         <header>
-            @include('layouts.partials.header')
+            <div class="headerContainer justify-content-center">
+                <div class="logo">
+                    <a href="/landing"><img src="pictures/logo.png" alt="VoguePointLogo"></a>
+                </div>
+            </div>
         </header>
 
         <section class="landingContainer container flex-fill d-flex flex-column justify-content-center">

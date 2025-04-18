@@ -59,3 +59,29 @@
     background-color: #a57ef5b5;
 }
 
+.suggested-item{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    margin: 5px;
+    border-radius: 4px;
+    gap: 5px;
+}
+
+.suggested-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.suggested-item img {
+    aspect-ratio: 1 / 1;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.suggested-item span{
+    display: block;
+    text-align: center;
+}
