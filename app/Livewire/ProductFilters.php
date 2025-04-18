@@ -5,13 +5,16 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Product;
+use Livewire\WithPagination;
 
 class ProductFilters extends Component
 {   
+    use WithPagination;
     public $brand=[];
     public $size=[];
     public $color=[];
     public $price;
+    public $sortPrice;
     
     public $category;
     public $manufacturers;
@@ -65,10 +68,41 @@ class ProductFilters extends Component
             ->when($this->brand, function ($query) {
                 $query->whereHas('manufacturer',function ($q){$q->whereIn('name',$this->brand);});
             })
-            ->get();
+            ->when($this->sortPrice, fn ($query) => $query->orderBy('price', $this->sortPrice))
+            ->paginate(10);
 
 
         return view('livewire.product-filters',
             ['products'=>$products, 'manufacturers'=>$this->manufacturers, 'colors'=>$this->colors, 'sizes'=>$this->sizes, 'priceMin'=>$this->priceMin, 'priceMax'=>$this->priceMax, 'catName'=>$this->catName]);
+    }
+
+    public function updatedBrand()
+    {
+        $this->resetPage();
+    }
+
+    public function updatedColor()
+    {
+        $this->resetPage();
+    }
+
+    public function updatedSize()
+    {
+        $this->resetPage();
+    }
+
+    public function updatedPrice()
+    {
+        $this->resetPage();
+    }
+
+    public function sortByPrice(){
+        if($this->sortPrice==='asc'){
+            $this->sortPrice='desc';
+        }
+        else{
+            $this->sortPrice='asc';
+        }
+        $this->resetPage();
     }
 }

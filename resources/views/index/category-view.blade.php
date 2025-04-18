@@ -26,6 +26,8 @@
                     </div>
                 @endforeach
             </div> --}}
+
+            <div class="container">
             <div class="products container roundedContainer">
                 @foreach($products as $product)
                     <div class="suggested-item d-flex flex-column justify-content-between">
@@ -36,6 +38,12 @@
                     </div>
                 @endforeach
             </div>
+
+            <div class="d-flex justify-content-center mt-4">
+                {{ $products->links('layouts.partials.paginator') }}
+            </div>
+            </div>
+
         </section>
 
         <footer>

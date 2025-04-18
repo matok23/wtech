@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Category;
-use App\Models\Products;
 
-class IndexController extends Controller
+class RegisterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,11 +34,9 @@ class IndexController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $category)
+    public function show(string $id)
     {
-        $categoryProds=Category::with('products')->where('slug',$category)->firstOrFail();
-        $products=$categoryProds->products()->simplePaginate(10);
-        return view('index.category-view',compact('products','category'));
+        //
     }
 
     /**

@@ -6,8 +6,12 @@
 </head>
 
 <body>
-    {{-- @include('layouts.partials.nav') --}}
-  
+    @if(session('message'))
+        <script>
+            alert("{{ session('message') }}");
+        </script>
+    @endif
+
     @yield('content')
 </body>
 </html>

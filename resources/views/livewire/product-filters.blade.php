@@ -49,6 +49,16 @@
                         </span>
                     </div>
                 </div>
+
+                <button wire:click="sortByPrice" class="filterBtn">
+                    Sort by Price
+                    @if ($sortPrice === 'asc')
+                        ↑
+                    @elseif ($sortPrice === 'desc')
+                        ↓
+                    @endif
+                </button>
+
             </div>
         </div>
 
@@ -67,6 +77,10 @@
                     <button><i class="zmdi zmdi-shopping-cart-plus"></i></button>
                 </div>
             @endforeach
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+            {{ $products->links('livewire.paginator') }}
         </div>
 
         <script>
