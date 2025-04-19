@@ -10,6 +10,9 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\CategoryProduct;
 use App\Models\SizeStock;
+use App\Models\Order;
+use App\Models\OrderItem;
+use App\Models\CartItem;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,6 +34,9 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             CategoryProductSeeder::class,
             SizeStockSeeder::class,
+            OrderSeeder::class,
+            OrderItemSeeder::class,
+            CartItemSeeder::class,
         ]);
     }
 }

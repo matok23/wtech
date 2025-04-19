@@ -28,6 +28,7 @@ Route::get('/login', function() {
 
 Route::post('/login', [LoginController::class, 'login']);
 
+// middleware to force login when accessing cart!!!!
 // Route::get('/cart', function() {
 //     return view('cart.index');
 // })->middleware('isloggedin');
