@@ -70,5 +70,27 @@ class CartController extends Controller
 
         return redirect()->route('cart.index');
     }
+
+
+
+    // CartController.php
+public function updateCoupon(Request $request)
+{
+    session()->put('coupon', $request->input('coupon'));
+    return response()->json(['success' => true]);
+}
+
+public function updateDelivery(Request $request)
+{
+    session()->put('deliveryMethod', ['method' => $request->input('delivery')]);
+    return response()->json(['success' => true]);
+}
+
+public function updatePayment(Request $request)
+{
+    session()->put('paymentMethod', ['type' => $request->input('payment')]);
+    return response()->json(['success' => true]);
+}
+
 }
 

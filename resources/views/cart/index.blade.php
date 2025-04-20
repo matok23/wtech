@@ -81,19 +81,19 @@
                     <div class="d-flex flex-column gap-2 p-2">
                         <div class="d-flex justify-content-between align-items-center px-2">
                             <div class="mb-0 text-start">Coupon</div>
-                            <button class="btn btn-primary" id="coupon-btn">ADD</button>
+                            <button type="button" class="btn btn-primary" id="coupon-btn">ADD</button>
                         </div>
                         <div id="couponOutput" class="text-start d-none px-2"></div>
 
                         <div class="d-flex justify-content-between align-items-center px-2">
                             <div class="mb-0 text-start">Delivery method</div>
-                            <button class="btn btn-primary" id="delivery-btn">ADD</button>
+                            <button type="button" class="btn btn-primary" id="delivery-btn">ADD</button>
                         </div>
                         <div id="deliveryOutput" class="text-start d-none px-2"></div>
 
                         <div class="d-flex justify-content-between align-items-center px-2">
                             <div class="mb-0 text-start">Payment method</div>
-                            <button class="btn btn-primary" id="payment-btn">ADD</button>
+                            <button type="button" class="btn btn-primary" id="payment-btn">ADD</button>
                         </div>
                         <div id="paymentOutput" class="text-start d-none px-2"></div>
                     </div>
@@ -104,6 +104,110 @@
                 </div>
             </div>
         </section>
+
+
+
+        @push('scripts')
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+    const couponBtn = document.getElementById('coupon-btn');
+    const deliveryBtn = document.getElementById('delivery-btn');
+    const paymentBtn = document.getElementById('payment-btn');
+
+    couponBtn.addEventListener('click', () => {
+        // Otvor formulár pre kupon
+        const couponOutput = document.getElementById('couponOutput');
+        couponOutput.classList.remove('d-none');
+        couponOutput.innerHTML = `
+            <label for="couponInput" class="form-label mt-2">Enter coupon code:</label>
+            <input type="text" maxlength="5" class="form-control" id="couponInput" name="coupon" placeholder="Max 5 characters">
+        `;
+
+        // Uložíme kupon do session cez AJAX
+        const input = document.getElementById('couponInput');
+        input.addEventListener('change', () => {
+            fetch('{{ route('cart.updateCoupon') }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                body: JSON.stringify({
+                    coupon: input.value
+                })
+            });
+        });
+    });
+
+    deliveryBtn.addEventListener('click', () => {
+        // Otvor formulár pre doručenie
+        const deliveryOutput = document.getElementById('deliveryOutput');
+        deliveryOutput.classList.remove('d-none');
+        const selectedDelivery = "{{ session('deliveryMethod.method', 'GLS') }}"; // Predvolená hodnota je 'GLS', ak nie je v session
+
+        deliveryOutput.innerHTML = `
+            <label for="deliverySelect" class="form-label mt-2">Choose delivery method:</label>
+            <select class="form-select" id="deliverySelect" name="delivery">
+                <option value="GLS" ${selectedDelivery === 'GLS' ? 'selected' : ''}>GLS</option>
+                <option value="POSTA" ${selectedDelivery === 'POSTA' ? 'selected' : ''}>Pošta</option>
+                <option value="POBOCKA" ${selectedDelivery === 'POBOCKA' ? 'selected' : ''}>Na pobočke</option>
+            </select>
+        `;
+
+        // Uložíme doručenie do session cez AJAX
+        const select = document.getElementById('deliverySelect');
+        select.addEventListener('change', () => {
+            fetch('{{ route('cart.updateDelivery') }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                body: JSON.stringify({
+                    delivery: select.value
+                })
+            });
+        });
+    });
+
+    paymentBtn.addEventListener('click', () => {
+        // Otvor formulár pre platbu
+        const paymentOutput = document.getElementById('paymentOutput');
+        paymentOutput.classList.remove('d-none');
+        const selectedPayment = "{{ session('paymentMethod.method', 'DOBIERKA') }}"; // Predvolená hodnota je 'DOBIERKA', ak nie je v session
+
+        paymentOutput.innerHTML = `
+            <label for="paymentSelect" class="form-label mt-2">Choose payment method:</label>
+            <select class="form-select" id="paymentSelect" name="payment">
+                <option value="DOBIERKA" ${selectedPayment === 'DOBIERKA' ? 'selected' : ''}>Na dobierku</option>
+                <option value="APPLE PAY" ${selectedPayment === 'APPLE PAY' ? 'selected' : ''}>Apple Pay</option>
+                <option value="VISA" ${selectedPayment === 'VISA' ? 'selected' : ''}>Visa</option>
+            </select>
+        `;
+
+        // Uložíme platbu do session cez AJAX
+        const select = document.getElementById('paymentSelect');
+        select.addEventListener('change', () => {
+            fetch('{{ route('cart.updatePayment') }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                body: JSON.stringify({
+                    payment: select.value
+                })
+            });
+        });
+    });
+});
+
+        </script>
+        @endpush
+        
+        
+
+
 
         <footer>
             @include('layouts.partials.footer')

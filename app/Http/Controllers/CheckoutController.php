@@ -63,6 +63,16 @@ class CheckoutController extends Controller
 
 public function completeOrder(Request $request)
 {
+    // Uložíme hodnoty do session
+    $coupon = $request->input('coupon');
+    $deliveryMethod = $request->input('deliveryMethod');
+    $paymentMethod = $request->input('paymentMethod');
+    
+    $request->session()->put('coupon', $coupon);
+    $request->session()->put('deliveryMethod', $deliveryMethod);
+    $request->session()->put('paymentMethod', $paymentMethod);
+
+
     // Spracovanie objednávky
     // Tu môžete pridať logiku na uloženie objednávky, zníženie zásob a podobne.
 
@@ -70,8 +80,10 @@ public function completeOrder(Request $request)
     $request->session()->flash('order_success', 'Your order has been successfully placed!');
 
     // Presmerovanie na stránku prehliadania produktov
-    return redirect()->route('/browsing');
+    return redirect()->route('index', ['category' => 'men']);
 }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -81,6 +93,12 @@ public function completeOrder(Request $request)
         //
     }
 
+
+
+
+
+
+    
     /**
      * Store a newly created resource in storage.
      */

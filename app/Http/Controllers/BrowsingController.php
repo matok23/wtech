@@ -14,7 +14,8 @@ class BrowsingController extends Controller
      */
     public function index()
     {
-        //
+        return view('browsing.category-view',compact('category','manufacturers','colors','sizes','priceMax','priceMin','subcategory','term','catName'));
+
     }
 
     /**

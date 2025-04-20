@@ -9,7 +9,18 @@
         <header>
             @include('layouts.partials.header')
         </header>
-
+        @if(session('order_success'))
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Objednávka bola úspešná!',
+                    text: '{{ session('order_success') }}',
+                    confirmButtonText: 'Pokračovať',
+                });
+            });
+        </script>
+    @endif
         @include('layouts.partials.banner')
 
         <section class="main-content flex-fill">

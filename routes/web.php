@@ -24,7 +24,9 @@ Route::resource('/products',ProductController::class);
 
 Route::resource('/index',IndexController::class);
 
-Route::get('/browsing', [ProductController::class, 'index'])->name('browsing');
+Route::resource('/browsing',LoginController::class);
+Route::resource('/browsing',BrowsingController::class);
+Route::get('/index/{category}', [IndexController::class, 'show'])->name('index');
 
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
@@ -34,7 +36,10 @@ Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/checkout', [CheckoutController::class, 'completeOrder'])->name('checkout.complete');
 
 
-Route::resource('/browsing',LoginController::class);
+// web.php
+Route::post('/cart/updateCoupon', [CartController::class, 'updateCoupon'])->name('cart.updateCoupon');
+Route::post('/cart/updateDelivery', [CartController::class, 'updateDelivery'])->name('cart.updateDelivery');
+Route::post('/cart/updatePayment', [CartController::class, 'updatePayment'])->name('cart.updatePayment');
 
 
 Route::get('/login', function() {

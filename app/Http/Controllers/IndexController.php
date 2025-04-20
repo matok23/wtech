@@ -38,10 +38,11 @@ class IndexController extends Controller
      */
     public function show(string $category)
     {
-        $categoryProds=Category::with('products')->where('slug',$category)->firstOrFail();
-        $products=$categoryProds->products()->simplePaginate(10);
-        return view('index.category-view',compact('products','category'));
+        $categoryProds = Category::with('products')->where('slug', $category)->firstOrFail();
+        $products = $categoryProds->products()->simplePaginate(10);
+        return view('index.category-view', compact('products', 'category'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.
