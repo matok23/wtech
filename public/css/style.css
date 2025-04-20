@@ -269,30 +269,36 @@ footer {
 
 
 
-@media (max-width: 768px) {
-    .headerContainer, .authheaderContainer {
-        flex-direction: column; 
-        align-items: center;
-        gap: 10px;
-    }
 
-    .searchButtons {
-        color: inherit;
-        justify-content: center;
-        margin-top: 10px;
+    @media (max-width: 500px) {
+        .headerContainer, .authheaderContainer {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%; /* Ensures the header container spans full screen width */
+        }
+    
+        .searchButtons {
+            color: inherit;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    
+        .logo img {
+            height: 60px;
+            width: auto;
+            max-width: 100%; /* Ensures logo width adapts to screen size */
+        }
+    
+        .banner img {
+            width: 100%; /* Make sure the banner image covers the full screen width */
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    
+        .footerContent {
+            display: block;
+            width: 100%; /* Ensures the footer spans full screen width */
+        }
     }
-
-    .logo img {
-        height: 60px; 
-    }
-    .banner img {
-        width: auto;
-        height: auto;
-        display: block;
-        margin: auto;
-    }
-
-    .footerContent {
-        display: block;
-    }
-}

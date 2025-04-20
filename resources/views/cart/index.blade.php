@@ -9,7 +9,18 @@
         <header>
             @include('layouts.partials.header')
         </header>
-
+        @if(session('order_success'))
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Objednávka bola úspešná!',
+                    text: '{{ session('order_success') }}', // Here session is correctly passed
+                    confirmButtonText: 'Pokračovať',
+                });
+            });
+        </script>
+        @endif
         <section class="container text-center flex-fill d-flex flex-column justify-content-center">
             <div class="row my-3 justify-content-center">
                 <div class="col-4">
@@ -21,6 +32,12 @@
                 {{ session('success') }}
             </div>
         @endif
+        <div class="info-box">
+            <p><strong>{{ session('order_success') }}</strong></p>
+        </div>
+        
+   
+        
             <div class="row my-3 justify-content-evenly align-items-start">
                 <div class="col-6 p-2 d-flex flex-column gap-2 roundedContainer">
                     @if(count($cartItems) > 0)  {{-- Zmeň 'cart' na 'cartItems' --}}
@@ -71,7 +88,22 @@
                             <i class="ms-2 zmdi zmdi-assignment-check"></i>
                         </a>
                                             @else
-                        <p>Your cart is empty.</p>
+                                            <p style="font-size: 1.5rem; color: red; ">Your cart is empty.</p>
+                                            @if(session('order_products'))
+                        <div class="info-box">
+                            <p><strong>Order Summary:</strong></p>
+                            <ul class="mb-0">
+                                @foreach(session('order_products') as $product)
+                                    <li>
+                                        <strong>{{ $product['name'] }}</strong>: ordered {{ $product['ordered'] }}, 
+                                        <span style="color: {{ $product['stock_left'] == 0 ? 'red' : 'green' }}">
+                                            stock left: {{ $product['stock_left'] }}
+                                        </span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     @endif
                 </div>
 

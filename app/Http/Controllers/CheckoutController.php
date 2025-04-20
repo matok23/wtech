@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\CartItem;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+
 
 class CheckoutController extends Controller
 {
@@ -73,15 +75,20 @@ public function completeOrder(Request $request)
     $request->session()->put('paymentMethod', $paymentMethod);
 
 
+    
     // Spracovanie objednávky
     // Tu môžete pridať logiku na uloženie objednávky, zníženie zásob a podobne.
 
     // Vytvorte flash správu pre úspešnú objednávku
     $request->session()->flash('order_success', 'Your order has been successfully placed!');
 
+    // Log for debugging
+    Log::info('Order success message flashed: ' . $request->session()->get('order_success'));
+
     // Presmerovanie na stránku prehliadania produktov
-    return redirect()->route('index', ['category' => 'men']);
+    return redirect()->route('checkout');
 }
+
 
 
 

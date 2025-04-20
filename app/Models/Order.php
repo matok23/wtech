@@ -6,6 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
+
+    protected $fillable = [
+        'user_id',
+        'status',
+        // sem pridaj ďalšie, ktoré povoľuješ
+    ];
+    
     public function user(){
         return $this->belongsTo('App\Models\User');
     }

@@ -8,6 +8,8 @@ use App\Http\Controllers\BrowsingController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
+
 
 
 
@@ -35,6 +37,8 @@ Route::get('/cart/remove/{productId}', [CartController::class, 'removeFromCart']
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/checkout', [CheckoutController::class, 'completeOrder'])->name('checkout.complete');
 
+Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
+Route::post('/checkout/complete', [OrderController::class, 'checkout'])->name('checkout.complete');
 
 // web.php
 Route::post('/cart/updateCoupon', [CartController::class, 'updateCoupon'])->name('cart.updateCoupon');

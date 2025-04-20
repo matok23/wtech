@@ -8,7 +8,7 @@
             border: 2px solid rgba(0, 128, 0, 0.3); /* Zelený okraj */
             border-radius: 8px;
             margin-bottom: 10px;
-             }
+        }
 
         .info-box strong {
             color: #006400; /* Zelená farba pre text */
@@ -21,7 +21,7 @@
         <header>
             @include('layouts.partials.header')
         </header>
-
+  
         <section class="container text-center flex-fill d-flex flex-column justify-content-center">
             <div class="row my-3 justify-content-evenly">
                 <div class="col-4">
@@ -29,10 +29,9 @@
                 </div>
             </div>
 
+
             <div class="row my-3 justify-content-evenly align-items-start">
                 <div class="col-6 p-2 d-flex flex-column gap-2 roundedContainer">
-
-                    {{-- Iterácia cez produkty v košíku --}}
                     @foreach($cartItems as $item)
                     <div class="cartItem container-fluid text-center p-2">
                         <div class="row justify-content-center justify-content-xl-between">
@@ -64,10 +63,8 @@
                         </div>
                     </div>
                     @endforeach
-                    
                 </div>
 
-                {{-- Box pre zhrnutie objednávky --}}
                 <div class="col-5 col-md-4 p-2 roundedContainer">
                     @if(session('order_success'))
                     <div class="alert alert-success">
@@ -105,22 +102,16 @@
                                     <label for="postal_code" class="form-label">Postal Code</label>
                                     <input type="text" id="postal_code" name="postal_code" class="form-control form-control-sm" required>
                                 </div>
-                            
-                                <!-- Info Boxes -->
                                 <div class="info-box">
                                     <p><strong>Coupon:</strong> {{ session('coupon', 'No coupon applied') }}</p>
                                 </div>
-                            
                                 <div class="info-box">
                                     <p><strong>Delivery Method:</strong> {{ session('deliveryMethod.method', 'Not selected') }}</p>
                                 </div>
-                            
                                 <div class="info-box">
                                     <p><strong>Payment Method:</strong> {{ session('paymentMethod.type', 'Not selected') }}</p>
                                 </div>
-                            
                                 <hr>
-                            
                                 <div class="d-flex gap-2">
                                     <a href="{{ route('cart.index') }}" class="w-100 btn btn-primary d-flex align-items-center justify-content-center">
                                         Return<i class="ms-2 zmdi zmdi-assignment-return"></i>
@@ -130,10 +121,18 @@
                                     </button>
                                 </div>
                             </form>
-                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-       
+
+        @foreach (session('order_products', []) as $productSummary)
+        <div class="info-box">
+            <p><strong>{{ $productSummary['name'] }} - Ordered:</strong> {{ $productSummary['ordered'] }} - Remaining stock: {{ $productSummary['stock_left'] }}</p>
+        </div>
+        @endforeach
+
         <footer>
             @include('layouts.partials.footer')
         </footer>
