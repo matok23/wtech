@@ -265,9 +265,10 @@ footer {
 }
 
 
-
-
-
+.responsive-banner {
+    width: 100%;  /* Pri štandardnej veľkosti zariadenia sa obrázok roztiahne na 100% šírky */
+    height: auto; /* Zachová pôvodný pomer strán */
+}
 
 
     @media (max-width: 500px) {
@@ -275,7 +276,7 @@ footer {
             flex-direction: column;
             align-items: center;
             gap: 10px;
-            width: 100%; /* Ensures the header container spans full screen width */
+            width: 60%; /* Ensures the header container spans full screen width */
         }
     
         .searchButtons {
@@ -290,15 +291,36 @@ footer {
             max-width: 100%; /* Ensures logo width adapts to screen size */
         }
     
-        .banner img {
-            width: 100%; /* Make sure the banner image covers the full screen width */
-            height: auto;
-            display: block;
-            margin: auto;
+
+
+        header {
+           width: 60%;
+
+
         }
-    
-        .footerContent {
-            display: block;
-            width: 100%; /* Ensures the footer spans full screen width */
+        .headerContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height:auto;
+            width: 100%;
         }
+
+
+
+
+/*wtf                     ddddddddddddddddddddddddddddddddddddddddddddddd*/
+
+
+
+        .responsive-banner {
+            width: 10%;  /* Zmenší šírku na 80% obrazovky pri mobiloch */
+        }
+
+        footer {
+            background-size: 100% 100%;
+            width:60%;
+        }
+        
+     
     }

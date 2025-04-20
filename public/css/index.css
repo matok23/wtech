@@ -85,14 +85,16 @@
     display: block;
     text-align: center;
 }
+
+
+
 @media (max-width: 500px) {
     .main-content {
         padding: 10px;
     }
 
     .products {
-        justify-content: center;
-        width: 100%; /* Allow products to fill the container on small screens */
+        width: 60%; /* Allow products to fill the container on small screens */
     }
 
     .suggested-item {
@@ -101,9 +103,14 @@
         text-align: center;
     }
 
+    .container {
+        max-width: 60%;
+        margin-left:10px;
+    }
+
     /* Make image smaller on mobile */
     .suggested-item img {
-        width: 50%; /* Adjust image size for mobile */
+        width: 60%; /* Adjust image size for mobile */
         height: auto;
         margin: 0 auto; /* Center the image */
     }
