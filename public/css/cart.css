@@ -7,6 +7,21 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.btn-change {
+    background-color: #8e5bf3b5;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-change:hover {
+    background-color: #a57ef5b5;
+    color: #fff;
+}
+
+.btn-change a i {
+    color: #fff;
+}
+
 .cartItem a img{
     /*štvorcový tvar*/
     aspect-ratio: 1 / 1;

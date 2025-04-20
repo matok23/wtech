@@ -1,65 +1,74 @@
 <?php
 
+// app/Http/Controllers/CartController.php
+
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\CartItem;
+use Illuminate\Support\Facades\Auth;
+
 
 class CartController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function add(Request $request)
+    {
+        $validated = $request->validate([
+            'product_id' => 'required|exists:products,id',
+            'amount' => 'required|integer|min:1',
+            'size' => 'required|integer'
+        ]);
+
+        $userId = Auth::id();
+        $sessionId = session()->getId();
+
+        // Načítaj produkt so všetkými jeho veľkosťami
+        $product = Product::with('stock')->findOrFail($validated['product_id']);
+        
+        $cartItem = CartItem::firstOrNew([
+            'product_id' => $validated['product_id'],
+            'user_id' => $userId,
+            'session_id' => $userId ? null : $sessionId,
+            'size' => $validated['size'],
+        ]);
+
+        $cartItem->amount += $validated['amount'];
+        $cartItem->save();
+
+        return redirect()->route('cart.index')->with('success', 'Product added to cart.');
+    }
+    
     public function index()
     {
-        //
+        $userId = Auth::id();
+        $sessionId = session()->getId();
+
+    // Načítaj všetky položky v košíku so všetkými veľkosťami
+    $cartItems = CartItem::with('product.stock')  // Použi 'stock', nie 'size'
+        ->where(function ($query) use ($userId, $sessionId) {
+            $query->when($userId, fn ($q) => $q->where('user_id', $userId))
+                  ->when(!$userId, fn ($q) => $q->where('session_id', $sessionId));
+        })
+        ->get();
+
+    return view('cart.index', compact('cartItems'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function removeFromCart($productId)
     {
-        //
-    }
+        $query = CartItem::where('product_id', $productId);
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        if (Auth::check()) {
+            $query->where('user_id', Auth::id());
+        } else {
+            $query->where('session_id', session()->getId());
+        }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+        $query->delete();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return redirect()->route('cart.index');
     }
 }
+

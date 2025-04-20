@@ -23,7 +23,7 @@ return new class extends Migration
             $table->timestamps();
             $table->integer('amount');
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->foreignId('order_id')->constrained()->odDelete('cancade');
+            $table->foreignId('order_id')->constrained()->onDelete('cascade');
         });
 
         Schema::create('cart_items', function (Blueprint $table) {
@@ -31,7 +31,9 @@ return new class extends Migration
             $table->timestamps();
             $table->integer('amount');
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->odDelete('cancade');
+            $table->integer('size')->after('product_id');
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
+            $table->string('session_id')->nullable()->after('user_id'); // nový stĺpec pre anonymných
         });
     }
 

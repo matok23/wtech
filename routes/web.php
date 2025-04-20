@@ -6,6 +6,10 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\BrowsingController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+
+
 
 // Route::get('/', function () {
 //     // return view('welcome');
@@ -20,7 +24,18 @@ Route::resource('/products',ProductController::class);
 
 Route::resource('/index',IndexController::class);
 
-Route::resource('/browsing',BrowsingController::class);
+Route::get('/browsing', [ProductController::class, 'index'])->name('browsing');
+
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::get('/cart/remove/{productId}', [CartController::class, 'removeFromCart'])->name('cart.remove');
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+Route::post('/checkout', [CheckoutController::class, 'completeOrder'])->name('checkout.complete');
+
+
+Route::resource('/browsing',LoginController::class);
+
 
 Route::get('/login', function() {
     return view('login.index');

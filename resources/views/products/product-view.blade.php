@@ -10,10 +10,10 @@
         <header>
             @include('layouts.partials.header')
         </header>
-
+      
         <section class="mainContent">
             {{-- @include('layouts.partials.navbar') --}}
-            
+          
             <div class="col-1 productPageRight">
                 <div class="productContainer roundedContainer">
                     <div class="productImg">
@@ -25,35 +25,59 @@
                         <div class="productInfo d-flex align-items-stretch justify-content-between gap-2">
                             <div class="productPrice d-flex align-items-center"><strong>${{$productSingle->price}}</strong></div>
                             <div class="sizeSelect d-flex align-items-center gap-2">
-                                <div>Size:</div>
-                                <select class="h-100 w-auto">
-                                    <option value=""></option>
-                                    @foreach($productSingle->stock as $stock)
-                                        <option value="{{$stock->size}}">
-                                            {{$stock->size}}:
-                                            @if($stock->stock_left<=5)
-                                                {{$stock->stock_left}}
-                                            @else
-                                                >5
-                                            @endif
-                                            left
-                                        </option>
-                                    @endforeach
-                                </select>
+                                <div>Amount:</div>
+                                <!-- Select size is moved into the form below, removed from here -->
                             </div>
                             <div class="productCart">
-                                <input type="number" min="1" value="1" step="1">
-                                <button><i class="zmdi zmdi-shopping-cart-plus"></i></button>
+                                <!-- Formulár s POST metódou -->
+                                <form method="POST" action="{{ route('cart.add') }}" class="d-flex align-items-center gap-2">
+                                    @csrf
+                                    <input type="hidden" name="product_id" value="{{ $productSingle->id }}">
+                                    <input type="number" name="amount" min="1" value="1" step="1" class="form-control w-auto">
+                                    
+                                    <!-- Select size inside the form -->
+                                    <select name="size" class="h-100 w-auto">
+                                        dd($request->all());
+
+                                        <option value="" selected disabled>Select Size</option>
+                                        @foreach($productSingle->stock as $stock)
+                                            <option value="{{ $stock->size }}">
+                                                {{$stock->size}}:
+                                                @if($stock->stock_left <= 5)
+                                                    {{$stock->stock_left}}
+                                                @else
+                                                    >5
+                                                @endif
+                                                left
+                                            </option>
+                                        @endforeach
+
+                                    </select>
+                                    
+
+                                    <!-- Button to submit the form -->
+                                    <button type="submit" class="btn btn-primary">Add to cart</button>
+                                    <i class="zmdi zmdi-shopping-cart-plus"></i>
+                                </form>
                             </div>
                         </div>
                         <hr>
                         <div class="productDescription">
+                            @if ($errors->any())
+                                <div class="alert alert-danger mt-2">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <h3>Product description</h3>
                             <p>{{$productSingle->description}}</p>
                         </div>
                     </div>
                 </div>
-
+             
                 <div class="suggestedItemsContainer">
                     <h2 class="suggestedHeader">
                         Similar items
