@@ -52,6 +52,14 @@ Route::get('/login', function() {
 
 Route::post('/login', [LoginController::class, 'login']);
 
+Route::get('/register', function() {
+    return view('register.index');
+});
+
+Route::post('/register', [LoginController::class, 'register']);
+
+Route::post('/logout', [LoginController::class, 'logout']);
+
 // middleware to force login when accessing cart!!!!
 // Route::get('/cart', function() {
 //     return view('cart.index');
