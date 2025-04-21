@@ -16,49 +16,66 @@ class ProductSeeder extends Seeder
         Product::insert([
             [
                 'id' => 1,
-                'name' => 'Bagane',
-                'image' => 'https://i.etsystatic.com/46361038/r/il/ebf3f0/5275208120/il_570xN.5275208120_is95.jpg',
-                'price' => 11.11,
-                'description' => 'A whimsical woven masterpiece, the Bagane adds a splash of charm to any space. This handcrafted hanging piece, adorned with colorful threads and playful shapes, brings texture and personality to your room. Perfect for boho vibes, it\'s part wall art, part happy spell.',
+                'name' => 'Stripe Lahinch',
+                'image' => 'https://hats.com/cdn/shop/files/Mykonos_Blue_e090b3b5-e19b-401b-ab9f-0cd048a9c592.jpg?v=1742233214&width=1200',
+                'price' => 13.99,
+                'description' => 'The Stripe Lahinch is an updated version of the classic back in the days cotton bucket hat. It has a 2-colour stripe band & a pop color underbrim with matching taped seams. The quintessential bucket hat to protect you from the sun.',
                 'manufacturer_id'=>1,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'color' => 'off white'
+                'color' => 'blue'
             ],
             [
                 'id' => 2,
-                'name' => 'Slipky',
-                'image' => 'https://i1.sndcdn.com/artworks-000533533326-t8iqir-t240x240.jpg',
-                'price' => 22.22,
-                'description' => 'Mysterious and moody, Slipky is a sonic enigma wrapped in glitchy visuals. A digital art cover with retro-futuristic appeal, it hints at ambient beats and experimental sounds—perfect for late-night headphone sessions or as a statement visual on your digital playlists.',
+                'name' => 'Stripe Lahinch',
+                'image' => 'https://hats.com/cdn/shop/files/Grey_4a56b3a2-c081-4835-8d73-f5fb09827dd5.jpg?v=1742233214&width=1200',
+                'price' => 13.99,
+                'description' => 'The Stripe Lahinch is an updated version of the classic back in the days cotton bucket hat. It has a 2-colour stripe band & a pop color underbrim with matching taped seams. The quintessential bucket hat to protect you from the sun.',
                 'manufacturer_id'=>1,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'color' => 'off white'
+                'color' => 'white'
             ],
             [
                 'id' => 3,
-                'name' => 'Gate',
-                'image' => 'https://paom.com/cdn/shop/products/print_all_over_me_3_relaxed-pant_0000000p-pepperoni-pants.jpg?v=1578609835',
-                'price' => 33.33,
-                'description' => 'Make way for Gate—the pants that don\'t hold back. Loud, proud, and unapologetically pepperoni, these relaxed-fit trousers are a bold declaration of pizza love. Ideal for lounging or grabbing attention at casual hangs, these are pants with personality.',
-                'manufacturer_id'=>2,
+                'name' => 'Utility Cords Jungle Hat',
+                'image' => 'https://hats.com/cdn/shop/files/81c08ce389701c04a62d58e97ec19cff.jpg?v=1742234900&width=1200',
+                'price' => 13.99,
+                'description' => 'The Utility Cords Jungle Hat by Kangol is a cotton canvas wider brim bucket. It features utility loops and a chin cord, so you can always make sure you wherever you go. The cords are finished with a dipped color tip for an added touch of fun. The Utility Cords Jungle Hat will be your new summer-time favorite while you explore your own personal jungles.',
+                'manufacturer_id'=>1,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'color' => 'pizza'
+                'color' => 'blue'
             ],
             [
                 'id' => 4,
-                'name' => 'Boratky',
-                'image' => 'https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/images/methode/2018/07/16/a6e48a02-889d-11e8-8608-b7163509a377_1280x720_113228.jpg?itok=4yqTzJmy',
-                'price' => 44.44,
-                'description' => 'Channel your inner icon with Boratky, the legendary mankini that broke the internet (and maybe your fashion sense). Equal parts shocking and hilarious, it\'s the ultimate party piece or dare outfit for the brave. Proceed with confidence... and caution.',
+                'name' => 'Cotton Bucket Hat',
+                'image' => 'https://hats.com/cdn/shop/files/f549dede95a8e97bf210f858bce3072f.jpg?v=1741742500&width=1200',
+                'price' => 14.99,
+                'description' => 'The Cotton Bucket by Kangol is made from lightweight twill fabric with poplin Lining & a pop color underbrim & matching the circle logo color. A stylish, portable Bucket hat to protect you from the sun.',
                 'manufacturer_id'=>3,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'color' => 'green'
-            ]
-            
+                'color' => 'black'
+            ],
+            [
+                'id' => 5,
+                'name' => 'Bermuda Stripe Bucket',
+                'image' => 'https://hats.com/cdn/shop/files/cedb1d974331049cff26d908cc755110.jpg?v=1741884671&width=1200',
+                'price' => 12.99,
+                'description' => 'The Bermuda Stripe Bucket by Kangol is a fresh version of Kangols quintessential Bermuda bucket hat. Featuring a color blocked crown with a stripe around the base & embroidered logo, these details are sure to make this a classic Kangol style.',
+                'manufacturer_id'=>1,
+                'created_at' => now(),
+                'updated_at' => now(),
+                'color' => 'black'
+            ],
+
+
+
+
+
+
+
         ]);
     }
 }

@@ -21,94 +21,53 @@ class CategoryProductSeeder extends Seeder
                 'created_at'=>now(),
                 'updated_at'=>now(),
                 'product_id'=>1,
-                'category_id'=>2
+                'category_id'=>3
             ],
+            
             [
                 'id'=>2,
                 'created_at'=>now(),
                 'updated_at'=>now(),
                 'product_id'=>1,
-                'category_id'=>1
+                'category_id'=>8
             ],
             [
                 'id'=>3,
                 'created_at'=>now(),
                 'updated_at'=>now(),
                 'product_id'=>2,
-                'category_id'=>2
+                'category_id'=>3
             ],
             [
                 'id'=>4,
                 'created_at'=>now(),
                 'updated_at'=>now(),
-                'product_id'=>2,
-                'category_id'=>5
+                'product_id'=>3,
+                'category_id'=>3
             ],
             [
                 'id'=>5,
-                'created_at'=>now(),
-                'updated_at'=>now(),
-                'product_id'=>3,
-                'category_id'=>2
-            ],
-            [
-                'id'=>6,
-                'created_at'=>now(),
-                'updated_at'=>now(),
-                'product_id'=>3,
-                'category_id'=>4
-            ],
-            [
-                'id'=>7,
-                'created_at'=>now(),
-                'updated_at'=>now(),
-                'product_id'=>4,
-                'category_id'=>2
-            ],
-            [
-                'id'=>8,
                 'created_at'=>now(),
                 'updated_at'=>now(),
                 'product_id'=>4,
                 'category_id'=>3
             ],
             [
-                'id'=>9,
+                'id'=>6,
                 'created_at'=>now(),
                 'updated_at'=>now(),
-                'product_id'=>1,
-                'category_id'=>7
-            ],[
-                'id'=>10,
-                'created_at'=>now(),
-                'updated_at'=>now(),
-                'product_id'=>2,
-                'category_id'=>7
-            ],[
-                'id'=>11,
-                'created_at'=>now(),
-                'updated_at'=>now(),
-                'product_id'=>3,
-                'category_id'=>7
-            ],[
-                'id'=>12,
-                'created_at'=>now(),
-                'updated_at'=>now(),
-                'product_id'=>4,
-                'category_id'=>7
-            ],[
-                'id'=>13,
-                'created_at'=>now(),
-                'updated_at'=>now(),
-                'product_id'=>1,
-                'category_id'=>6
-            ],[
-                'id'=>14,
-                'created_at'=>now(),
-                'updated_at'=>now(),
-                'product_id'=>3,
-                'category_id'=>6
+                'product_id'=>5,
+                'category_id'=>3
             ],
+            [
+                'id'=>7,
+                'created_at'=>now(),
+                'updated_at'=>now(),
+                'product_id'=>5,
+                'category_id'=>1
+            ],
+      
+          
         ]);
     }
 }
