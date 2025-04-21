@@ -166,7 +166,7 @@ class CategorySeeder extends Seeder
     
     
 
- 
+
     /** subkategorie  */
 
         ]);
