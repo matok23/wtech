@@ -74,7 +74,7 @@
                     <a href="/products/{{$product->id}}"><img class="border border-black rounded border-opacity-50" src="{{$product->image}}"></a>
                     <span>{{$product->name}}</span>
                     <span class="productPrice"><strong>${{$product->price}}</strong></span>
-                    <button><i class="zmdi zmdi-shopping-cart-plus"></i></button>
+                    {{-- <button><i class="zmdi zmdi-shopping-cart-plus"></i></button> add this back !!! --}}
                 </div>
             @endforeach
         </div>

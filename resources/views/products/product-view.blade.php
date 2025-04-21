@@ -10,6 +10,7 @@
         <header>
             @include('layouts.partials.header')
         </header>
+
       
         <section class="mainContent">
             {{-- @include('layouts.partials.navbar') --}}
@@ -30,7 +31,7 @@
                             </div>
                             <div class="productCart">
                                 <!-- Formulár s POST metódou -->
-                                <form method="POST" action="{{ route('cart.add') }}" class="d-flex align-items-center gap-2">
+                                <form method="POST" action="{{ url('cart/add') }}" class="d-flex align-items-center gap-2">
                                     @csrf
                                     <input type="hidden" name="product_id" value="{{ $productSingle->id }}">
                                     <input type="number" name="amount" min="1" value="1" step="1" class="form-control w-auto">
@@ -39,7 +40,7 @@
                                     <select name="size" class="h-100 w-auto">
                                         dd($request->all());
 
-                                        <option value="" selected disabled>Select Size</option>
+                                        <option value="" selected>Select Size</option>
                                         @foreach($productSingle->stock as $stock)
                                             <option value="{{ $stock->size }}">
                                                 {{$stock->size}}:
@@ -56,13 +57,17 @@
                                     
 
                                     <!-- Button to submit the form -->
-                                    <button type="submit" class="btn btn-primary">Add to cart</button>
-                                    <i class="zmdi zmdi-shopping-cart-plus"></i>
+                                    <button type="submit" class="btn btn-primary h-100">Add to cart <i class="zmdi zmdi-shopping-cart-plus"></i></button>
                                 </form>
                             </div>
                         </div>
                         <hr>
                         <div class="productDescription">
+                            @if(session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             @if ($errors->any())
                                 <div class="alert alert-danger mt-2">
                                     <ul>
@@ -89,7 +94,7 @@
                                 <a href="/products/{{$product->id}}"><img class="border border-black rounded border-opacity-50" src="{{$product->image}}"></a>
                                 <span>{{$product->name}}</span>
                                 <span class="productPrice"><strong>${{$product->price}}</strong></span>
-                                <button><i class="zmdi zmdi-shopping-cart-plus"></i></button>
+                                {{-- <button><i class="zmdi zmdi-shopping-cart-plus"></i></button> add this back !!!--}}
                             </div>
                         @endforeach
                     </div>

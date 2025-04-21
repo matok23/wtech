@@ -46,8 +46,8 @@ class ProductFilters extends Component
         // $categoryProds=Category::with('products')->where('slug',$this->category)->firstOrFail();
         // $products=$categoryProds->products()
         $productsQuery=Product::query()
-        ->whereHas('categories', function ($query){
-            $query->where('slug',$this->category);
+        ->when(!empty($this->category), function ($query){
+            $query->whereHas('categories',function($q){$q->where('slug',$this->category);});
         })
         ->when($this->subcategory, function ($query){
             $query->whereHas('categories',function($q){$q->where('slug',$this->subcategory);});

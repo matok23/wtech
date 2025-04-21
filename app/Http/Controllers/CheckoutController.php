@@ -15,53 +15,58 @@ class CheckoutController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-{
-    $userId = Auth::id();
-    $sessionId = session()->getId();
+    {
+        $userId = Auth::id();
+        $sessionId = session()->getId();
 
-    if ($userId) {
-        // For authenticated users
-        $cartItems = CartItem::with('product')
-            ->where('user_id', $userId)
-            ->get()
-            ->map(function ($item) {
-                $sizeStock = \App\Models\SizeStock::where('product_id', $item->product_id)
-                    ->where('size', $item->size)
-                    ->first();
+        if ($userId) {
+            // For authenticated users
+            $cartItems = CartItem::with('product')
+                ->where('user_id', $userId)
+                ->get()
+                ->map(function ($item) {
+                    $sizeStock = \App\Models\SizeStock::where('product_id', $item->product_id)
+                        ->where('size', $item->size)
+                        ->first();
 
-                return [
-                    'product' => $item->product,
-                    'quantity' => $item->amount,
-                    'size' => $sizeStock ? $sizeStock->size : $item->size,
-                    'stock_left' => $sizeStock ? $sizeStock->stock_left : 0,
-                ];
-            });
-    } else {
-        // For guest users
-        $cartItems = CartItem::with('product')
-            ->where('session_id', $sessionId)
-            ->get()
-            ->map(function ($item) {
-                $sizeStock = \App\Models\SizeStock::where('product_id', $item->product_id)
-                    ->where('size', $item->size)
-                    ->first();
+                    return [
+                        'product' => $item->product,
+                        'quantity' => $item->amount,
+                        'size' => $sizeStock ? $sizeStock->size : $item->size,
+                        'stock_left' => $sizeStock ? $sizeStock->stock_left : 0,
+                    ];
+                });
+        } else {
+            // For guest users
+            $cartItems = CartItem::with('product')
+                ->where('session_id', $sessionId)
+                ->get()
+                ->map(function ($item) {
+                    $sizeStock = \App\Models\SizeStock::where('product_id', $item->product_id)
+                        ->where('size', $item->size)
+                        ->first();
 
-                return [
-                    'product' => $item->product,
-                    'quantity' => $item->amount,
-                    'size' => $sizeStock ? $sizeStock->size : $item->size,
-                    'stock_left' => $sizeStock ? $sizeStock->stock_left : 0,
-                ];
-            });
+                    return [
+                        'product' => $item->product,
+                        'quantity' => $item->amount,
+                        'size' => $sizeStock ? $sizeStock->size : $item->size,
+                        'stock_left' => $sizeStock ? $sizeStock->stock_left : 0,
+                    ];
+                });
+        }
+
+        // Calculate total price
+        // dd($cartItems);
+        if(!count($cartItems)){
+            return back()->with('message','No items in cart');
+        }
+
+        $total = $cartItems->sum(function ($item) {
+            return $item['product']->price * $item['quantity'];
+        });
+
+        return view('checkout.index', compact('cartItems', 'total'));
     }
-
-    // Calculate total price
-    $total = $cartItems->sum(function ($item) {
-        return $item['product']->price * $item['quantity'];
-    });
-
-    return view('checkout.index', compact('cartItems', 'total'));
-}
 
 public function completeOrder(Request $request)
 {

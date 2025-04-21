@@ -15,14 +15,25 @@ use App\Models\SizeStock;
 
 
 class OrderController extends Controller
-{public function checkout(Request $request)
+{
+    public function checkout(Request $request)
     {
         // Skontrolujeme, či je používateľ prihlásený
-        if (!Auth::check()) {
-            return response()->json(['error' => 'User not authenticated'], 401);
-        }
+        // if (!Auth::check()) {
+        //     return response()->json(['error' => 'User not authenticated'], 401);
+        // }
     
         // Začneme transakciu, aby sme zabezpečili, že všetky operácie prebehnú úspešne.
+
+        $userId = Auth::id();
+        $sessionId = session()->getId();
+
+        // Načítaj všetky položky v košíku so všetkými veľkosťami
+        $cartItems = CartItem::where(function ($query) use ($userId, $sessionId) {
+            $query->when($userId, fn ($q) => $q->where('user_id', $userId))
+                ->when(!$userId, fn ($q) => $q->where('session_id', $sessionId));
+        })->get();
+
         DB::beginTransaction();
     
         try {
@@ -33,7 +44,7 @@ class OrderController extends Controller
             ]);
     
             // 2. Získame položky z košíka
-            $cartItems = CartItem::where('user_id', Auth::user()->id)->get();
+            // $cartItems = CartItem::where('user_id', Auth::user()->id)->get();
     
             // 3. Pripravíme dáta pre `order_items`
             $orderItems = [];

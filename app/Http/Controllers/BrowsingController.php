@@ -14,8 +14,7 @@ class BrowsingController extends Controller
      */
     public function index()
     {
-        return view('browsing.category-view',compact('category','manufacturers','colors','sizes','priceMax','priceMin','subcategory','term','catName'));
-
+        return $this->show('');
     }
 
     /**
@@ -43,9 +42,14 @@ class BrowsingController extends Controller
         $term=request()->query('term');
 
         // $products=Category::where('slug', $category)->firstOrFail()->products();
+
+        // ->whereHas('categories', function ($query) use ($category){
+        //     $query->where('slug',$category);
+        // })
+
         $productsQuery=Product::query()
-        ->whereHas('categories', function ($query) use ($category){
-            $query->where('slug',$category);
+        ->when(!empty($category), function ($query) use ($category){
+            $query->whereHas('categories',function($q) use ($category) {$q->where('slug',$category);});
         })
         ->when($subcategory, function ($query) use ($subcategory){
             $query->whereHas('categories',function($q) use ($subcategory) {$q->where('slug',$subcategory);});

@@ -37,7 +37,7 @@ class CartController extends Controller
         $cartItem->amount += $validated['amount'];
         $cartItem->save();
 
-        return redirect()->route('cart.index')->with('success', 'Product added to cart.');
+        return back()->with('success', 'Product added to cart.');
     }
     
     public function index()
@@ -45,20 +45,20 @@ class CartController extends Controller
         $userId = Auth::id();
         $sessionId = session()->getId();
 
-    // Načítaj všetky položky v košíku so všetkými veľkosťami
-    $cartItems = CartItem::with('product.stock')  // Použi 'stock', nie 'size'
-        ->where(function ($query) use ($userId, $sessionId) {
-            $query->when($userId, fn ($q) => $q->where('user_id', $userId))
-                  ->when(!$userId, fn ($q) => $q->where('session_id', $sessionId));
-        })
-        ->get();
+        // Načítaj všetky položky v košíku so všetkými veľkosťami
+        $cartItems = CartItem::with('product.stock')  // Použi 'stock', nie 'size'
+            ->where(function ($query) use ($userId, $sessionId) {
+                $query->when($userId, fn ($q) => $q->where('user_id', $userId))
+                    ->when(!$userId, fn ($q) => $q->where('session_id', $sessionId));
+            })
+            ->get();
 
-    return view('cart.index', compact('cartItems'));
+        return view('cart.index', compact('cartItems'));
     }
 
-    public function removeFromCart($productId)
+    public function removeFromCart($product,$size)
     {
-        $query = CartItem::where('product_id', $productId);
+        $query = CartItem::where('product_id', $product)->where('size', $size);
 
         if (Auth::check()) {
             $query->where('user_id', Auth::id());

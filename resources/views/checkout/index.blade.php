@@ -21,6 +21,7 @@
         <header>
             @include('layouts.partials.header')
         </header>
+
   
         <section class="container text-center flex-fill d-flex flex-column justify-content-center">
             <div class="row my-3 justify-content-evenly">
@@ -58,7 +59,7 @@
                                 </table>
                             </div>
                             <div class="productLogo col-2 d-none d-xl-block align-self-start">
-                                <img class="rounded-5 border border-black border-opacity-50" src="{{ $item['product']->brand_logo }}" alt="brand logo">
+                                <img class="rounded-5 border border-black border-opacity-50" src="{{ $item['product']->manufacturer->logo }}" alt="brand logo">
                             </div>
                         </div>
                     </div>
