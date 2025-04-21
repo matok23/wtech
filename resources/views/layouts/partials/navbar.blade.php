@@ -8,17 +8,15 @@
                     ['name' => 'Bucket hats', 'slug' => 'bucket-hats'],
                     ['name' => 'Caps', 'slug' => 'caps'],
                     ['name' => 'Durags', 'slug' => 'durags'],
-                    ['name' => 'Other', 'slug' => 'other-hats'],
                 ],
             ],
             [
                 'category' => 'Tops',
                 'slug' => 'tops',
                 'subcategories' => [
-                    ['name' => 'T-Shirts', 'slug' => 't-shirts'],
+                    ['name' => 'Shirts', 'slug' => 'shirts'],
                     ['name' => 'Long sleeve', 'slug' => 'long-sleeve'],
                     ['name' => 'Gym', 'slug' => 'gym-tops'],
-                    ['name' => 'Other', 'slug' => 'other-tops'],
                 ],
             ],
             [
@@ -27,7 +25,6 @@
                 'subcategories' => [
                     ['name' => 'Shorts', 'slug' => 'shorts'],
                     ['name' => 'Jeans', 'slug' => 'jeans'],
-                    ['name' => 'Other', 'slug' => 'other-pants'],
                 ],
             ],
             [
@@ -35,11 +32,8 @@
                 'slug' => 'shoes',
                 'subcategories' => [
                     ['name' => 'Running', 'slug' => 'running'],
-                    ['name' => 'Indoor', 'slug' => 'indoor'],
-                    ['name' => 'Leather', 'slug' => 'leather'],
                     ['name' => 'Flip-flops', 'slug' => 'flip-flops'],
                     ['name' => 'Hiking', 'slug' => 'hiking'],
-                    ['name' => 'Other', 'slug' => 'other-shoes'],
                 ],
             ],
             [
@@ -48,18 +42,10 @@
                 'subcategories' => [
                     ['name' => 'Bracelets', 'slug' => 'bracelets'],
                     ['name' => 'Necklaces', 'slug' => 'necklaces'],
-                    ['name' => 'Galaxy gas', 'slug' => 'galaxy-gas'],
                     ['name' => 'Wallets', 'slug' => 'wallets'],
-                    ['name' => 'Other', 'slug' => 'other-accessories'],
                 ],
             ],
-            [
-                'category' => 'Other',
-                'slug' => 'other',
-                'subcategories' => [
-                    ['name' => 'idk yet', 'slug' => 'idk-yet'],
-                ],
-            ],
+    
         ];
     @endphp
 

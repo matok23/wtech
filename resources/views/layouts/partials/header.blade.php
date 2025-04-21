@@ -26,7 +26,6 @@
         </div> --}}
         <a class='btn btn-primary text-decoration-none' href='/index/men'>Men</a>
         <a class='btn btn-primary text-decoration-none' href='/index/women'>Women</a>
-        <a class='btn btn-primary text-decoration-none' href='/index/kids'>Kids</a>
     </div>
 
     <div class="logo">
