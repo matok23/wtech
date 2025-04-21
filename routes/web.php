@@ -33,7 +33,7 @@ Route::get('/index/{category}', [IndexController::class, 'show'])->name('index')
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
-Route::get('/cart/remove/{productId}', [CartController::class, 'removeFromCart'])->name('cart.remove');
+// Route::get('/cart/remove/{productId}', [CartController::class, 'removeFromCart']);
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/checkout', [CheckoutController::class, 'completeOrder'])->name('checkout.complete');
 
@@ -45,6 +45,8 @@ Route::post('/cart/updateCoupon', [CartController::class, 'updateCoupon'])->name
 Route::post('/cart/updateDelivery', [CartController::class, 'updateDelivery'])->name('cart.updateDelivery');
 Route::post('/cart/updatePayment', [CartController::class, 'updatePayment'])->name('cart.updatePayment');
 
+
+Route::delete('cart/remove/{product}/{size}',[CartController::class, 'removeFromCart'])->name('cart.remove');
 
 Route::get('/login', function() {
     return view('login.index');

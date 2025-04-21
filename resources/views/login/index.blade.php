@@ -15,7 +15,7 @@
             <div class="container p-2 ">
                 <div class="row justify-content-center">
                     <div class="col-4 roundedContainer py-2 align-items-center">
-                        <h2>Prihlásenie</h2>
+                        <h2>Login</h2>
 
                         <form class="auth-form" action="{{url('login')}}" method="POST">
                             {{ csrf_field() }}

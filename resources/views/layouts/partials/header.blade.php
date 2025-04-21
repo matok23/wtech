@@ -47,6 +47,7 @@
             </form>
         @else
             <a href="/login" class="btn btn-primary">Login</a>
+            <a href="/register" class="btn btn-primary">Register</a>
         @endif
         <a href="/cart" class="btn btn-primary d-flex align-items-center justify-content-center gap-2">Cart<i class="zmdi zmdi-shopping-cart"></i></a>
     </div>
