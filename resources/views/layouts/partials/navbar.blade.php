@@ -7,7 +7,7 @@
                 'subcategories' => [
                     ['name' => 'Bucket hats', 'slug' => 'bucket-hats'],
                     ['name' => 'Caps', 'slug' => 'caps'],
-                    ['name' => 'Durags', 'slug' => 'durags'],
+                    ['name' => 'Fedoras', 'slug' => 'fedoras'],
                 ],
             ],
             [
@@ -15,7 +15,7 @@
                 'slug' => 'tops',
                 'subcategories' => [
                     ['name' => 'Shirts', 'slug' => 'shirts'],
-                    ['name' => 'Long sleeve', 'slug' => 'long-sleeve'],
+                    ['name' => 'Sweatshirt', 'slug' => 'sweatshirt'],
                     ['name' => 'Gym', 'slug' => 'gym-tops'],
                 ],
             ],
@@ -24,16 +24,15 @@
                 'slug' => 'pants',
                 'subcategories' => [
                     ['name' => 'Shorts', 'slug' => 'shorts'],
-                    ['name' => 'Jeans', 'slug' => 'jeans'],
+                    ['name' => 'Sweatpants', 'slug' => 'sweatpants'],
                 ],
             ],
             [
                 'category' => 'Shoes',
                 'slug' => 'shoes',
                 'subcategories' => [
-                    ['name' => 'Running', 'slug' => 'running'],
-                    ['name' => 'Flip-flops', 'slug' => 'flip-flops'],
-                    ['name' => 'Hiking', 'slug' => 'hiking'],
+                    ['name' => 'Sneakers', 'slug' => 'sneakers'],
+                    ['name' => 'Sandals', 'slug' => 'sandals'],
                 ],
             ],
             [
@@ -42,7 +41,6 @@
                 'subcategories' => [
                     ['name' => 'Bracelets', 'slug' => 'bracelets'],
                     ['name' => 'Necklaces', 'slug' => 'necklaces'],
-                    ['name' => 'Wallets', 'slug' => 'wallets'],
                 ],
             ],
     

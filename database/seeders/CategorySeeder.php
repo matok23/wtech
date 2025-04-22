@@ -86,8 +86,8 @@ class CategorySeeder extends Seeder
         'updated_at'=>now()
     ],  [   
         'id'=>10,
-        'name'=>'Durags',
-        'slug'=>'durags',
+        'name'=>'Fedoras',
+        'slug'=>'fedoras',
         'created_at'=>now(),
         'updated_at'=>now()
     ],
@@ -99,15 +99,15 @@ class CategorySeeder extends Seeder
         'updated_at'=>now()
     ],  [   
         'id'=>12,
-        'name'=>'Long sleeve',
-        'slug'=>'long-sleeve',
+        'name'=>'Sweatshirt',
+        'slug'=>'sweatshirt',
         'created_at'=>now(),
         'updated_at'=>now()
     ],
     [   
         'id'=>13,
         'name'=>'Gym',
-        'slug'=>'gym',
+        'slug'=>'gym-tops',
         'created_at'=>now(),
         'updated_at'=>now()
     ],  [   
@@ -119,50 +119,38 @@ class CategorySeeder extends Seeder
     ],
     [   
         'id'=>15,
-        'name'=>'Jeans',
-        'slug'=>'jeans',
+        'name'=>'Sweatpants',
+        'slug'=>'sweatpants',
         'created_at'=>now(),
         'updated_at'=>now()
     ],  [   
         'id'=>16,
-        'name'=>'Running',
-        'slug'=>'running',
+        'name'=>'Sneakers',
+        'slug'=>'sneakers',
         'created_at'=>now(),
         'updated_at'=>now()
     ],
     [   
         'id'=>17,
-        'name'=>'Flip flops',
-        'slug'=>'flip-flops',
+        'name'=>'Sandals',
+        'slug'=>'sandals',
         'created_at'=>now(),
         'updated_at'=>now()
-    ],  [   
-        'id'=>18,
-        'name'=>'Hiking',
-        'slug'=>'hiking',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],
+    ], 
     [   
-        'id'=>19,
+        'id'=>18,
         'name'=>'Bracelets',
         'slug'=>'bracelets',
         'created_at'=>now(),
         'updated_at'=>now()
     ],  [   
-        'id'=>20,
+        'id'=>19,
         'name'=>'Necklaces',
         'slug'=>'necklaces',
         'created_at'=>now(),
         'updated_at'=>now()
     ],
-    [   
-        'id'=>21,
-        'name'=>'Wallets',
-        'slug'=>'wallets',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ], 
+   
     
     
 
