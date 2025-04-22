@@ -153,5 +153,20 @@ class SizeStockSeeder extends Seeder
     
 
         ]);
+
+        $randsizes=[];
+        for($i=56;$i<=256;$i++){
+            $randNum=rand(1,5);
+            for($j=0;$j<$randNum;$j++){
+                array_push($randsizes,[
+                    'product_id' =>$i,
+                    'size' => 35+$j,
+                    'stock_left' => rand(2,15),
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ]);
+            }
+        }
+        SizeStock::insert($randsizes);
     }
 }

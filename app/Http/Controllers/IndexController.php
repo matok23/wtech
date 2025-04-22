@@ -39,7 +39,7 @@ class IndexController extends Controller
     public function show(string $category)
     {
         $categoryProds = Category::with('products')->where('slug', $category)->firstOrFail();
-        $products = $categoryProds->products()->simplePaginate(10);
+        $products = $categoryProds->products()->simplePaginate(16);
         return view('index.category-view', compact('products', 'category'));
     }
     

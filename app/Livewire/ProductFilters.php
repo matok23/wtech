@@ -69,7 +69,7 @@ class ProductFilters extends Component
                 $query->whereHas('manufacturer',function ($q){$q->whereIn('name',$this->brand);});
             })
             ->when($this->sortPrice, fn ($query) => $query->orderBy('price', $this->sortPrice))
-            ->paginate(10);
+            ->paginate(16);
 
 
         return view('livewire.product-filters',
