@@ -16,7 +16,7 @@
 .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left; /* space-around */
+    justify-content: center; /* space-around */
     overflow-y: scroll;
     /*height: 100vh; /* Full height for scrolling */
     width: 80%;

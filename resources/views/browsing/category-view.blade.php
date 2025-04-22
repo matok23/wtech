@@ -6,7 +6,7 @@
 @endpush
 
 @section('content')
-    <main class="d-flex flex-column min-vh-100">
+    <main class="d-flex flex-column ">
         <header>
             @include('layouts.partials.header')
         </header>
