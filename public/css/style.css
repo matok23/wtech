@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(243, 243, 243);
-    min-width: 800px;
 }
 
 * {
@@ -164,7 +163,6 @@ a.btn.btn-primary:focus {
 
 
 
-
 .left-sidebar {
     width: 17%;
     min-width: 150px;
@@ -270,57 +268,12 @@ footer {
     height: auto; /* Zachová pôvodný pomer strán */
 }
 
-
-    @media (max-width: 500px) {
-        .headerContainer, .authheaderContainer {
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            width: 60%; /* Ensures the header container spans full screen width */
-        }
-    
-        .searchButtons {
-            color: inherit;
-            justify-content: center;
-            margin-top: 10px;
-        }
-    
-        .logo img {
-            height: 60px;
-            width: auto;
-            max-width: 100%; /* Ensures logo width adapts to screen size */
-        }
-    
-
-
-        header {
-           width: 60%;
-
-
-        }
-        .headerContainer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height:auto;
-            width: 100%;
-        }
-
-
-
-
-/*wtf                     ddddddddddddddddddddddddddddddddddddddddddddddd*/
-
-
-
-        .responsive-banner {
-            width: 10%;  /* Zmenší šírku na 80% obrazovky pri mobiloch */
-        }
-
-        footer {
-            background-size: 100% 100%;
-            width:60%;
-        }
-        
-     
+  
+  @media (min-width: 500px) {
+    .left-sidebar {
+      width: 80%;
+      max-width: 300px;
+      margin-bottom: 5px;
     }
+  }
+  

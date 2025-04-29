@@ -14,7 +14,7 @@
             
             <div class="container p-2 ">
                 <div class="row justify-content-center">
-                    <div class="col-4 roundedContainer py-2 align-items-center">
+                    <div class="col-9 col-lg-4 roundedContainer py-2 align-items-center">
                         <h2>Register</h2>
 
                         <form class="auth-form" action="{{url('register')}}" method="POST">

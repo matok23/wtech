@@ -4,7 +4,7 @@
                 <h1 class="text-center">No products found &#128557;</h1>
             </div>
     @else
-        <div class="categorySection row pb-3">
+        <div class="categorySection row pb-3 text-center ">
             @isset($subcategory)
                 <h1>{{ $catName }}</h1>
             @endisset

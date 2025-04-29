@@ -31,8 +31,8 @@
             </div>
 
 
-            <div class="row my-3 justify-content-evenly align-items-start">
-                <div class="col-6 p-2 d-flex flex-column gap-2 roundedContainer">
+            <div class="row my-3 justify-content-evenly align-items-start  gap-2">
+                <div class="col-9 col-md-6 p-2 d-flex flex-column gap-2 roundedContainer">
                     @foreach($cartItems as $item)
                     <div class="cartItem container-fluid text-center p-2">
                         <div class="row justify-content-center justify-content-xl-between">
@@ -66,7 +66,7 @@
                     @endforeach
                 </div>
 
-                <div class="col-5 col-md-4 p-2 roundedContainer">
+                <div class="col-9 col-md-5 p-2 roundedContainer">
                     @if(session('order_success'))
                     <div class="alert alert-success">
                         <strong>{{ session('order_success') }}</strong>

@@ -11,7 +11,7 @@
             @include('layouts.partials.header')
         </header>
 
-        <section class="main-content flex-fill">
+        <section class="main-content flex-fill d-block d-md-flex justify-content-center">
             
             @include('layouts.partials.navbar')
 
@@ -20,8 +20,7 @@
             @endphp
 
             @livewire('product-filters', ['params'=>$params])
-            {{-- ['category'=>$category, 'manufacturers'=>$manufacturers, 'colors'=>$colors, 'sizes'=>$sizes, 'priceMin'=>$priceMin, 'priceMax'=>$priceMax, 'subcategory'=>$subcategory, 'term'=>$term])
-             <livewire:product-filters :category="$category" /> --}}
+        
 
         </section>
 

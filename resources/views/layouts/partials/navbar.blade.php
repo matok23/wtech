@@ -1,4 +1,4 @@
-<nav class="left-sidebar">
+<nav class="left-sidebar container w100">
     @php
         $categoryNames = [
             [

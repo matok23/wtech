@@ -1,4 +1,4 @@
-<div class="footerContent">
+<div class="footerContent flex-column flex-sm-row">
     <div class="contact">
         <p>info@voguepoint.com</p>
         <p>1-800-273-8255</p>
