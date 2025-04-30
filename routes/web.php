@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\AdminController;
 
 
 
@@ -61,6 +62,12 @@ Route::get('/register', function() {
 Route::post('/register', [LoginController::class, 'register']);
 
 Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::middleware(['adminAccess'])->group(function (){
+    Route::get('/admin', [AdminController::class, 'index']);
+    Route::get('/admin/edit/{product}', [AdminController::class, 'edit']);
+    //Route::post('/admin')
+});
 
 // middleware to force login when accessing cart!!!!
 // Route::get('/cart', function() {

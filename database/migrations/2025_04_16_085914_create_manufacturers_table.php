@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('logo',512);
         });
 
-        Schema::table('products' ,function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             $table->foreignId('manufacturer_id')->constrained();
             $table->string('color',255);
         });
@@ -30,5 +30,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('manufacturers');
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('manufacturer_id');
+            $table->dropColumn('color');
+        });
     }
 };

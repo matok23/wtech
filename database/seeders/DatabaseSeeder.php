@@ -13,6 +13,7 @@ use App\Models\SizeStock;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\CartItem;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,6 +28,14 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        $admin=User::create([
+            'name' => 'Adminko malinky',
+            'email' => 'admin@voguepoint.com',
+            'password' => Hash::make('admin123'),
+        ]);
+        $admin->role='admin';
+        $admin->save();
 
         $this->call([
             ManufacturerSeeder::class,
