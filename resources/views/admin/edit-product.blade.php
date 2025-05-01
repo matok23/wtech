@@ -42,17 +42,68 @@
             </div>
         </header>
 
-        <section class="main-content flex-fill d-block d-sm-flex justify-content-center">
+        <section class="main-content flex-fill justify-content-center">
             
+            <div class="container col-11 col-md-5 p-2">
+                    <div class="row justify-content-center sticky-row">
+                        <div class="col-11 col-xl-9 roundedContainer row p-2 d-flex flex-column justify-content-evenly align-items-center gap-2">
+                            <h2>Edit product</h2>
+                            
+                            @if(session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
 
-            <div class="container">
-                <div class="d-flex flex-column justify-content-between">
-                    <a href="/products/{{$product->id}}"><img class="border border-black rounded border-opacity-50" src="{{$product->image}}"></a>
-                    <span>{{$product->name}}</span>
-                    <span class="productPrice"><strong>${{$product->price}}</strong></span>
-                    {{ $product->categories[0] }}
+                            <form method="POST" action="{{ route('products.update', $product->id) }}" class="d-flex flex-column justify-content-evenly align-items-center gap-2">
+                                @csrf
+                                @method('PATCH')
+                                <input type="text" name="name" class="form-control" placeholder="name" value="{{ $product->name }}">
+                                <textarea name="description" class="form-control" placeholder="description">{{ $product->description }}</textarea>
+                                <input type="number" name="price" class="form-control" placeholder="price" value="{{ $product->price }}" step="0.01">
+                                <input type="text" name="color" class="form-control" placeholder="color" value="{{ $product->color }}">
+                                <input type="text" name="image" class="form-control" placeholder="image" value="{{ $product->image }}">
+                                <div class="d-flex justify-content-end align-items-center gap-2 w-100">
+                                    <div class="">Brand:</div>
+                                    <select name="manufacturer_id" class="w-100 form-select">
+                                        @foreach($manufacturers as $manufacturer)
+                                            <option value="{{ $manufacturer->id }}" @if ($product->manufacturer_id===$manufacturer->id) selected @endif>
+                                                {{$manufacturer->name}}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="d-flex justify-content-end align-items-center gap-2 w-100">
+                                    <label class="form-label">Categories:</label>
+
+                                    <div class="w-100 category-select p-2">
+                                        @foreach ($categories as $category)
+                                            <div class="form-check">
+                                                <label for="" class="form-check-label">{{ $category->name }}</label>
+                                                <input class="form-check-input" type="checkbox" name="categories[]" value="{{ $category->id }}" 
+                                                    @if(in_array($category->id, $product->categories->pluck('id')->toArray())) checked @endif>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-success w-50">UPDATE</button>
+                            </form>
+
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                        </div>
+                    </div>
                 </div>
-            </div>
 
         </section>
 

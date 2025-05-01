@@ -65,7 +65,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::middleware(['adminAccess'])->group(function (){
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.dash');
-    Route::get('/admin/edit/{product}', [AdminController::class, 'edit']);
+    Route::get('/admin/edit/{product}', [AdminController::class, 'edit'])->name('admin.edit');
     Route::resource('/products',ProductController::class)->only(['index']);
     //Route::post('/admin')
 });

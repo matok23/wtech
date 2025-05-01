@@ -67,7 +67,10 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        $data = $request->validated();
+        $product->update(array_filter(Arr::only($data, ['name', 'price', 'description', 'image', 'manufacturer_id', 'color']), fn($value) => $value !== '' && $value!==null));
+        $product->categories()->sync($data['categories']);
+        return redirect()->route('admin.edit',$product->id)->with('success','Item updated successfully!');
     }
 
     /**

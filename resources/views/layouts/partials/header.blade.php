@@ -16,6 +16,9 @@
             <div class="btn btn-primary h-100" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="{{ Auth::user()->name }}">
                 <i class="zmdi zmdi-account-circle"></i>
             </div>
+            @if (Auth::user()->role==='admin')
+                <a href="/admin" class="btn btn-primary">Admin dashboard</a>
+            @endif
             <form method="POST" action="{{ url('logout') }}">
                 @csrf
                 <button type="submit" class="btn btn-primary">Logout</button>

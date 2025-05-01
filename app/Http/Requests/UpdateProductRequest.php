@@ -32,7 +32,7 @@ class UpdateProductRequest extends FormRequest
             'image' => 'sometimes|string',
             'manufacturer_id' => 'sometimes|exists:manufacturers,id',
             'color' => 'sometimes|string|max:255',
-            'categories' => 'sometimes:array',
+            'categories' => 'sometimes|array',
             'categories.*' => 'exists:categories,id',
         ];
     }
