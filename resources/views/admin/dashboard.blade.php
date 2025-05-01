@@ -41,6 +41,29 @@
             </div>
         </header>
 
+        <div class="modal fade" id="deleteProductModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Are you sure?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You are about to delete product with id <span id='showProduct'></span>.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">DISMISS</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">CONFIRM</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <form id="deleteForm" method="POST" style="display: none;">
+            @csrf
+            @method('DELETE')
+        </form>
+
         <section class="main-content flex-fill justify-content-center">
             <div class="row justify-content-around w-100">
 
@@ -114,7 +137,8 @@
                                         <h2>{{ $product->name }}</h2>
                                         <div class="d-flex gap-2">
                                             <a href="/admin/edit/{{ $product->id }}" class="btn btn-primary">EDIT</a>
-                                            <button type="button" class="btn btn-danger">DELETE</button>
+                                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal" 
+                                                product-id="{{ $product->id }}" product-name="{{ $product->name }}">DELETE</button>
                                         </div>
                                     </div>
 
@@ -137,5 +161,25 @@
         <footer>
             @include('layouts.partials.footer')
         </footer>
+
+        <script>
+            const deleteBtn=document.getElementById('confirmDeleteBtn');
+            const deleteForm=document.getElementById('deleteForm');
+            const deleteModal=document.getElementById('deleteProductModal');
+            const showProduct=document.getElementById('showProduct');
+            let productId=null;
+            let productName=null;
+
+            deleteModal.addEventListener('show.bs.modal', (ev)=>{
+                productId=ev.relatedTarget.getAttribute('product-id');
+                productName=ev.relatedTarget.getAttribute('product-name');
+                showProduct.innerHTML=productId+' - '+productName;
+            });
+
+            deleteBtn.addEventListener('click', ()=>{
+                deleteForm.action="/products/"+productId;
+                deleteForm.submit();
+            });
+        </script>
     </main>
 @endsection

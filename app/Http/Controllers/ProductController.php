@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Http\Requests\DeleteProductRequest;
 use App\Models\SizeStock;
 use App\Models\Category;
 use Illuminate\Support\Facades\Log;
@@ -72,8 +73,9 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product)
+    public function destroy(DeleteProductRequest $request, Product $product)
     {
-        //
+        $product->delete();
+        return redirect()->route('admin.dash')->with('success','Item deleted successfully!');
     }
 }
