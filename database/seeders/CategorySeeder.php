@@ -31,7 +31,7 @@ class CategorySeeder extends Seeder
             ],
 
 
-  /** kategoria muz zena  */
+            /** kategoria muz zena  */
             
             [   
                 'id'=>3,
@@ -69,94 +69,87 @@ class CategorySeeder extends Seeder
                 'updated_at'=>now()
             ],
 
-     /** kategorie  */
+            /** kategorie  */
 
-     [   
-        'id'=>8,
-        'name'=>'Bucket hats',
-        'slug'=>'bucket-hats',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],
-    [   
-        'id'=>9,
-        'name'=>'Caps',
-        'slug'=>'caps',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],  [   
-        'id'=>10,
-        'name'=>'Fedoras',
-        'slug'=>'fedoras',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],
-    [   
-        'id'=>11,
-        'name'=>'Shirts',
-        'slug'=>'shirts',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],  [   
-        'id'=>12,
-        'name'=>'Sweatshirt',
-        'slug'=>'sweatshirt',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],
-    [   
-        'id'=>13,
-        'name'=>'Gym',
-        'slug'=>'gym-tops',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],  [   
-        'id'=>14,
-        'name'=>'Shorts',
-        'slug'=>'shorts',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],
-    [   
-        'id'=>15,
-        'name'=>'Sweatpants',
-        'slug'=>'sweatpants',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],  [   
-        'id'=>16,
-        'name'=>'Sneakers',
-        'slug'=>'sneakers',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],
-    [   
-        'id'=>17,
-        'name'=>'Sandals',
-        'slug'=>'sandals',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ], 
-    [   
-        'id'=>18,
-        'name'=>'Bracelets',
-        'slug'=>'bracelets',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],  [   
-        'id'=>19,
-        'name'=>'Necklaces',
-        'slug'=>'necklaces',
-        'created_at'=>now(),
-        'updated_at'=>now()
-    ],
-   
-    
-    
-
-
-    /** subkategorie  */
-
+            [   
+                'id'=>8,
+                'name'=>'Bucket hats',
+                'slug'=>'bucket-hats',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],
+            [   
+                'id'=>9,
+                'name'=>'Caps',
+                'slug'=>'caps',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],  [   
+                'id'=>10,
+                'name'=>'Fedoras',
+                'slug'=>'fedoras',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],
+            [   
+                'id'=>11,
+                'name'=>'Shirts',
+                'slug'=>'shirts',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],  [   
+                'id'=>12,
+                'name'=>'Sweatshirt',
+                'slug'=>'sweatshirt',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],
+            [   
+                'id'=>13,
+                'name'=>'Gym',
+                'slug'=>'gym-tops',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],  [   
+                'id'=>14,
+                'name'=>'Shorts',
+                'slug'=>'shorts',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],
+            [   
+                'id'=>15,
+                'name'=>'Sweatpants',
+                'slug'=>'sweatpants',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],  [   
+                'id'=>16,
+                'name'=>'Sneakers',
+                'slug'=>'sneakers',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],
+            [   
+                'id'=>17,
+                'name'=>'Sandals',
+                'slug'=>'sandals',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ], 
+            [   
+                'id'=>18,
+                'name'=>'Bracelets',
+                'slug'=>'bracelets',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],  [   
+                'id'=>19,
+                'name'=>'Necklaces',
+                'slug'=>'necklaces',
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ],
         ]);
     }
 }

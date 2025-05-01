@@ -17,3 +17,8 @@
     top: 5px; /* or any value like 20px */
     z-index: 1020; /* Make sure it stays above other elements */
 }
+
+.category-select {
+    max-height: 150px;
+    overflow-y: auto;
+}

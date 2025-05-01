@@ -11,6 +11,10 @@ class StoreProductRequest extends FormRequest
      */
     public function authorize(): bool
     {
+        $user=$this->user();
+        if($user && $user->role==='admin'){
+            return true;
+        }
         return false;
     }
 
@@ -22,7 +26,14 @@ class StoreProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'description' => 'nullable|string',
+            'image' => 'required|string',
+            'manufacturer_id' => 'required|exists:manufacturers,id',
+            'color' => 'required|string|max:255',
+            'categories' => 'array',
+            'categories.*' => 'exists:categories,id',
         ];
     }
 }

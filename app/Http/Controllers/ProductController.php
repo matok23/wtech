@@ -6,9 +6,10 @@ use App\Models\Product;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
-
 use App\Models\SizeStock;
 use App\Models\Category;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Arr;
 
 class ProductController extends Controller
 {
@@ -37,7 +38,10 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        //
+        $data=$request->validated();
+        $product=Product::create(Arr::only($data,['name','price','description','image','manufacturer_id','color']));
+        $product->categories()->attach($data['categories']);
+        return redirect()->route('admin.dash')->with('success','Item created successfully!');
     }
 
     /**
