@@ -23,41 +23,39 @@
                     <div class="productDetails">
                         <h1>{{$productSingle->name}}</h1>
                         <h5>{{$productSingle->manufacturer->name}}</h5>
-                        <div class="productInfo d-flex align-items-stretch justify-content-between gap-2">
+                        <div class="productInfo d-flex align-items-stretch @unless (count($productSingle->stock)) justify-content-start @else justify-content-between @endunless gap-2">
                             <div class="productPrice d-flex align-items-center"><strong>${{$productSingle->price}}</strong></div>
-                            <div class="sizeSelect d-flex align-items-center gap-2">
-                                <div>Amount:</div>
-                                <!-- Select size is moved into the form below, removed from here -->
-                            </div>
                             <div class="productCart">
                                 <!-- Formulár s POST metódou -->
                                 <form method="POST" action="{{ url('cart/add') }}" class="d-flex align-items-center gap-2">
                                     @csrf
                                     <input type="hidden" name="product_id" value="{{ $productSingle->id }}">
-                                    <input type="number" name="amount" min="1" value="1" step="1" class="form-control w-auto">
                                     
                                     <!-- Select size inside the form -->
-                                    <select name="size" class="h-100 w-auto">
-                                        dd($request->all());
+                                    @unless (count($productSingle->stock))
+                                        <div>Out of stock</div>
+                                    @else
+                                        <input type="number" name="amount" min="1" value="1" step="1" class="form-control w-auto">
+                                        <select name="size" class="h-100 w-auto">
+                                            {{-- dd($request->all()); --}}
 
-                                        <option value="" selected>Select Size</option>
-                                        @foreach($productSingle->stock as $stock)
-                                            <option value="{{ $stock->size }}">
-                                                {{$stock->size}}:
-                                                @if($stock->stock_left <= 5)
-                                                    {{$stock->stock_left}}
-                                                @else
-                                                    >5
-                                                @endif
-                                                left
-                                            </option>
-                                        @endforeach
+                                            <option value="" selected>Select Size</option>
+                                            @foreach($productSingle->stock as $stock)
+                                                <option value="{{ $stock->size }}">
+                                                    {{$stock->size}}:
+                                                    @if($stock->stock_left <= 5)
+                                                        {{$stock->stock_left}}
+                                                    @else
+                                                        >5
+                                                    @endif
+                                                    left
+                                                </option>
+                                            @endforeach
 
-                                    </select>
-                                    
+                                        </select>
+                                        <button type="submit" class="btn btn-primary h-100">Add to cart <i class="zmdi zmdi-shopping-cart-plus"></i></button>
+                                    @endunless
 
-                                    <!-- Button to submit the form -->
-                                    <button type="submit" class="btn btn-primary h-100">Add to cart <i class="zmdi zmdi-shopping-cart-plus"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -105,6 +103,12 @@
         <footer>
             @include('layouts.partials.footer')
         </footer>
+
+        <script>
+            document.querySelector('.productCart input[type=number][name="amount"]').addEventListener('change',ev=>{
+                ev.target.value=Math.max(1,Math.round(ev.target.value))
+            });
+        </script>
     </main>
 
 @endsection

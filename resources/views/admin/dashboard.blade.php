@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <form id="deleteForm" method="POST" style="display: none;">
+        <form id="deleteForm" method="POST" class="d-none">
             @csrf
             @method('DELETE')
         </form>

@@ -101,6 +101,35 @@
                                 </div>
                             @endif
 
+                            <h2>Stock</h2>
+
+                            <form id="deleteForm" method="POST" class="d-none">
+                                @csrf
+                                @method('DELETE')
+                            </form>
+                            
+                            <form method="POST" action="{{ route('products.updateStock', $product->id) }}" class="d-flex flex-column justify-content-evenly align-items-center gap-2">
+                                @csrf
+                                @method('PUT')
+                                <input type="number" hidden name="product_id" value="{{ $product->id }}">
+
+                                <div class="d-flex flex-column justify-content-evenly align-items-center gap-2 w-100" id="stockRows">
+                                    
+                                    @foreach ($product->stock as $stock)
+                                        <div class="d-flex gap-2 w-100">
+                                            <input type="text" value="{{ $stock->size }}" readonly placeholder="size" class="form-control flex-grow-1" name="sizes[]">
+                                            <input type="number" step="1" value="{{ $stock->stock_left }}" placeholder="stock" class="form-control flex-grow-1" name="stocks[]">
+                                            <button type="button" class="btn btn-danger" stock-id="{{ $stock->id }}" name="deleteBtn">DELETE</button>
+                                        </div>
+                                    @endforeach
+
+                                </div>
+                                <div class="d-flex w-100 gap-2">
+                                    <button type="button" class="btn btn-primary w-50" id="stockBtn">ADD</button>
+                                    <button type="submit" class="btn btn-success w-50">UPDATE</button>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
                 </div>
@@ -110,5 +139,31 @@
         <footer>
             @include('layouts.partials.footer')
         </footer>
+
+        <script>
+            const button=document.getElementById('stockBtn');
+            const stockRows=document.getElementById('stockRows');
+            const deleteForm=document.getElementById('deleteForm');
+
+            button.addEventListener('click', ()=>{
+                let newRow=document.createElement('div');
+                newRow.classList.add('d-flex','gap-2', 'w-100');
+                newRow.innerHTML=
+                    '<input type="text" value="" placeholder="size" class="form-control flex-grow-1" name="sizes[]">'+
+                    '<input type="number" step="1" value="" placeholder="stock" class="form-control flex-grow-1" name="stocks[]">'+
+                    '<button type="button" class="btn btn-danger">DELETE</button>'
+                stockRows.appendChild(newRow);
+                newRow.querySelector('button').addEventListener('click',()=>{
+                    newRow.remove();
+                });
+            });
+
+            document.querySelectorAll('button[name="deleteBtn"]').forEach((btn)=>{
+                btn.addEventListener('click', (ev)=>{
+                    deleteForm.action= "/products/stock/" + ev.target.getAttribute('stock-id');
+                    deleteForm.submit();
+                });
+            });
+        </script>
     </main>
 @endsection

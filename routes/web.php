@@ -70,6 +70,9 @@ Route::middleware(['adminAccess'])->group(function (){
     //Route::post('/admin')
 });
 
+Route::put('/products/stock/{id}', [ProductController::class, 'updateStock'])->name('products.updateStock'); //product id
+Route::delete('/products/stock/{stock}', [ProductController::class, 'destroyStock'])->name('products.destroyStock'); //stock id
+
 // middleware to force login when accessing cart!!!!
 // Route::get('/cart', function() {
 //     return view('cart.index');

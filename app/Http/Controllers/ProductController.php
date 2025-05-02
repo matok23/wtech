@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Http\Requests\DeleteProductRequest;
+use App\Http\Requests\UpdateStockRequest;
+use App\Http\Requests\DeleteStockRequest;
 use App\Models\SizeStock;
 use App\Models\Category;
 use Illuminate\Support\Facades\Log;
@@ -73,6 +75,23 @@ class ProductController extends Controller
         return redirect()->route('admin.edit',$product->id)->with('success','Item updated successfully!');
     }
 
+    public function updateStock(UpdateStockRequest $request)
+    {   
+        $data = $request->validated();
+        $sizes = $data['sizes'] ?? [];
+        $stocks = $data['stocks'] ?? [];
+        $stock = array_map(fn($si,$st) => ['size' => $si, 'stock' => $st], $sizes,$stocks);
+
+        foreach($stock as $st){
+            SizeStock::updateOrCreate(
+                ['product_id' => $data['product_id'], 'size' => $st['size']],
+                ['stock_left' => $st['stock']]
+            );
+        }
+
+        return redirect()->route('admin.edit',$data['product_id'])->with('success','Stock updated successfully!');
+    }
+
     /**
      * Remove the specified resource from storage.
      */
@@ -80,5 +99,12 @@ class ProductController extends Controller
     {
         $product->delete();
         return redirect()->route('admin.dash')->with('success','Item deleted successfully!');
+    }
+
+    public function destroyStock(DeleteStockRequest $request, SizeStock $stock)
+    {   
+        $product_id=$stock->product_id;
+        $stock->delete();
+        return redirect()->route('admin.edit',$product_id)->with('success','Stock deleted successfully!');
     }
 }
