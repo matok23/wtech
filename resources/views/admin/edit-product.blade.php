@@ -55,6 +55,16 @@
                                 </div>
                             @endif
 
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
                             <form method="POST" action="{{ route('products.update', $product->id) }}" class="d-flex flex-column justify-content-evenly align-items-center gap-2">
                                 @csrf
                                 @method('PATCH')
@@ -62,7 +72,7 @@
                                 <textarea name="description" class="form-control" placeholder="description">{{ $product->description }}</textarea>
                                 <input type="number" name="price" class="form-control" placeholder="price" value="{{ $product->price }}" step="0.01">
                                 <input type="text" name="color" class="form-control" placeholder="color" value="{{ $product->color }}">
-                                <input type="text" name="image" class="form-control" placeholder="image" value="{{ $product->image }}">
+
                                 <div class="d-flex justify-content-end align-items-center gap-2 w-100">
                                     <div class="">Brand:</div>
                                     <select name="manufacturer_id" class="w-100 form-select">
@@ -91,15 +101,28 @@
                                 <button type="submit" class="btn btn-success w-50">UPDATE</button>
                             </form>
 
-                            @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
+                            <h2>Images</h2>
+
+                            <form method="POST" action="{{ route('products.updateImages', $product->id) }}" enctype="multipart/form-data" class="d-flex flex-column justify-content-evenly align-items-center gap-2">
+                                @csrf
+                                @method('PUT')
+                                {{-- <input type="number" hidden name="product_id" value="{{ $product->id }}"> --}}
+
+                                <div class="d-flex flex-column justify-content-evenly align-items-center gap-2 w-100">
+                                    
+                                    @foreach ($product->images as $image)
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <div>{{ $image->url }}</div>
+                                            <button type="button" class="btn btn-danger" image-id="{{ $image->id }}" name="deleteImgBtn">DELETE</button>
+                                        </div>
+                                    @endforeach
+
                                 </div>
-                            @endif
+                                <div class="d-flex w-100 gap-2">
+                                    <input class="form-control w-50" type="file" multiple name="images[]" class="form-control" accept="image/*" value="{{ old('images[]') }}">
+                                    <button type="submit" class="btn btn-success w-50">UPLOAD</button>
+                                </div>
+                            </form>
 
                             <h2>Stock</h2>
 
@@ -111,7 +134,7 @@
                             <form method="POST" action="{{ route('products.updateStock', $product->id) }}" class="d-flex flex-column justify-content-evenly align-items-center gap-2">
                                 @csrf
                                 @method('PUT')
-                                <input type="number" hidden name="product_id" value="{{ $product->id }}">
+                                {{-- <input type="number" hidden name="product_id" value="{{ $product->id }}"> --}}
 
                                 <div class="d-flex flex-column justify-content-evenly align-items-center gap-2 w-100" id="stockRows">
                                     
@@ -161,6 +184,13 @@
             document.querySelectorAll('button[name="deleteBtn"]').forEach((btn)=>{
                 btn.addEventListener('click', (ev)=>{
                     deleteForm.action= "/products/stock/" + ev.target.getAttribute('stock-id');
+                    deleteForm.submit();
+                });
+            });
+
+            document.querySelectorAll('button[name="deleteImgBtn"]').forEach((btn)=>{
+                btn.addEventListener('click', (ev)=>{
+                    deleteForm.action= "/products/images/" + ev.target.getAttribute('image-id');
                     deleteForm.submit();
                 });
             });

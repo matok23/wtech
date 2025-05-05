@@ -18,7 +18,28 @@
             <div class="col-1 productPageRight">
                 <div class="productContainer roundedContainer">
                     <div class="productImg">
-                        <img src="{{$productSingle->image}}">
+                        {{-- <img src="{{$productSingle->image}}"> --}}
+                        @unless (count($productSingle->images))
+                            <img src="/pictures/unavailable-image.jpg">
+                        @else
+                            <div id="productsCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    @foreach ($productSingle->images as $index=>$image)
+                                        <div class="carousel-item @if($index===0) active @endif">
+                                            <img src="{{ asset('storage/' . $image->url) }}" class="d-block w-100 rounded" alt="">
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productsCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productsCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        @endunless
                     </div>
                     <div class="productDetails">
                         <h1>{{$productSingle->name}}</h1>

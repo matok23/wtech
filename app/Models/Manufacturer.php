@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Manufacturer extends Model
-{
-    function products(){
+{   
+    public function products(){
         return $this->hasMany('App\Models\Product');
     }
 }

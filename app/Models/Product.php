@@ -11,15 +11,19 @@ class Product extends Model
     use HasFactory;
     protected $fillable = ['name', 'price', 'description', 'stock', 'manufacturer_id', 'color', 'image'];
 
-    function manufacturer(){
+    public function manufacturer(){
         return $this->belongsTo('App\Models\Manufacturer');
     }
 
-    function stock(){
+    public function stock(){
         return $this->hasMany('App\Models\SizeStock');
     }
 
-    function categories(){
+    public function categories(){
         return $this->belongsToMany('App\Models\Category')->withTimestamps();
+    }
+
+    public function images(){
+        return $this->hasMany('App\Models\Image');
     }
 }

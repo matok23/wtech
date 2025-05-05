@@ -19,7 +19,7 @@
 
                         <form class="auth-form" action="{{url('login')}}" method="POST">
                             {{ csrf_field() }}
-                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="email" name="email" placeholder="Email" required value="{{ old('email') }}">
                             <input type="password" name="password" placeholder="Heslo" required>
 
                             @if ($errors->any())

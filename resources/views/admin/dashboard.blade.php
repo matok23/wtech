@@ -78,13 +78,18 @@
                                 </div>
                             @endif
 
-                            <form method="POST" action="{{ route('products.store') }}" class="d-flex flex-column justify-content-evenly align-items-center gap-2">
+                            <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data" class="d-flex flex-column justify-content-evenly align-items-center gap-2">
                                 @csrf
                                 <input type="text" name="name" class="form-control" placeholder="name" value="{{ old('name') }}">
                                 <textarea name="description" class="form-control" placeholder="description">{{ old('description') }}</textarea>
                                 <input type="number" name="price" class="form-control" placeholder="price" value="{{ old('price') }}" step="0.01">
                                 <input type="text" name="color" class="form-control" placeholder="color" value="{{ old('color') }}">
-                                <input type="text" name="image" class="form-control" placeholder="image" value="{{ old('image') }}">
+
+                                <div class="d-flex justify-content-end align-items-center gap-2 w-100">
+                                    <div class="">Images:</div>
+                                    <input class="form-control w-100" type="file" multiple name="images[]" class="form-control" accept="image/*" value="{{ old('images[]') }}">
+                                </div>
+                                
                                 <div class="d-flex justify-content-end align-items-center gap-2 w-100">
                                     <div class="">Brand:</div>
                                     <select name="manufacturer_id" class="w-100 form-select">

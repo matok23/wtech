@@ -132,7 +132,7 @@ header {
     outline: none;
 }
 
-button {
+/* button {
     background-color: #8e5bf3b5;
     color: rgb(255, 255, 255);
     border: none;
@@ -144,7 +144,7 @@ button {
 button:hover {
     background-color: #a57ef5b5;
     
-}
+} */
 
 .btn.btn-primary {
     background-color: #b3b3b3;

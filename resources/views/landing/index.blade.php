@@ -17,11 +17,11 @@
         <section class="landingContainer container flex-fill d-flex flex-column justify-content-center">
             <div class="row justify-content-center gap-5">
                 <div class="landImgContainer col-5 px-0">
-                    <a href="/index/women"><img src="https://nyerblobstoreprod.blob.core.windows.net/cms-startpage-public/742184e20d61d0fe2f7def875b06787c.jpg"></a>
+                    <a href="/index/women"><img src="/pictures/landing_women.jpg"></a>
                     <div class="imageOverlay">WOMEN</div>
                 </div>
                 <div class="landImgContainer col-5 px-0">
-                    <a href="/index/men"><img src="https://nyerblobstoreprod.blob.core.windows.net/cms-startpage-public/3cb98237772ff2b55607289ceab61b0e.jpg"></a>
+                    <a href="/index/men"><img src="/pictures/landing_men.jpg"></a>
                     <div class="imageOverlay">MEN</div>
                 </div>
             </div>

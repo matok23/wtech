@@ -30,7 +30,7 @@ class UpdateStockRequest extends FormRequest
             'sizes.*' => 'integer|min:1',
             'stocks' => 'required|array',
             'stocks.*' => 'integer|min:0',
-            'product_id' => 'required|exists:products,id'
+            // 'product_id' => 'required|exists:products,id'
         ];
     }
 }

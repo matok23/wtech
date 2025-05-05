@@ -18,7 +18,7 @@ class AdminController extends Controller
     }
 
     public function edit(Product $product) {
-        $product->load('categories')->load('stock');
+        $product->load('categories')->load('stock')->load('images');
         $manufacturers=Manufacturer::all();
         $categories=Category::all();
         return view('admin.edit-product',compact('product','manufacturers','categories'));

@@ -9,10 +9,14 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Http\Requests\DeleteProductRequest;
 use App\Http\Requests\UpdateStockRequest;
 use App\Http\Requests\DeleteStockRequest;
+use App\Http\Requests\UpdateImagesRequest;
+use App\Http\Requests\DeleteImageRequest;
 use App\Models\SizeStock;
 use App\Models\Category;
+use App\Models\Image;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -42,8 +46,14 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         $data=$request->validated();
-        $product=Product::create(Arr::only($data,['name','price','description','image','manufacturer_id','color']));
+        $product=Product::create(Arr::only($data,['name','price','description','manufacturer_id','color']));
         $product->categories()->attach($data['categories']);
+        foreach($request->file('images') as $image){
+            $path=$image->storeAs('product_images', uniqid() . '.' . $image->getClientOriginalExtension(), 'public');
+            $product->images()->create([
+                'url' => $path,
+            ]);
+        }
         return redirect()->route('admin.dash')->with('success','Item created successfully!');
     }
 
@@ -53,7 +63,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {   
         $products=Product::all();
-        return view('products.product-view',['productSingle'=>$product->load('stock'),'products'=>$products]);
+        return view('products.product-view',['productSingle'=>$product->load('stock')->load('images'),'products'=>$products]);
     }
 
     /**
@@ -75,7 +85,7 @@ class ProductController extends Controller
         return redirect()->route('admin.edit',$product->id)->with('success','Item updated successfully!');
     }
 
-    public function updateStock(UpdateStockRequest $request)
+    public function updateStock(UpdateStockRequest $request, Product $product)
     {   
         $data = $request->validated();
         $sizes = $data['sizes'] ?? [];
@@ -84,19 +94,36 @@ class ProductController extends Controller
 
         foreach($stock as $st){
             SizeStock::updateOrCreate(
-                ['product_id' => $data['product_id'], 'size' => $st['size']],
+                ['product_id' => $product->id, 'size' => $st['size']],
                 ['stock_left' => $st['stock']]
             );
         }
 
-        return redirect()->route('admin.edit',$data['product_id'])->with('success','Stock updated successfully!');
+        return redirect()->route('admin.edit',$product->id)->with('success','Stock updated successfully!');
+    }
+
+    public function updateImages(UpdateImagesRequest $request, Product $product)
+    {
+        $data = $request->validated();
+        foreach($request->file('images') as $image){
+            $path=$image->storeAs('product_images', uniqid() . '.' . $image->getClientOriginalExtension(), 'public');
+            $product->images()->create([
+                'url' => $path,
+            ]);
+        }
+        return redirect()->route('admin.edit',$product->id)->with('success','Images uploaded successfully!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(DeleteProductRequest $request, Product $product)
-    {
+    {   
+        foreach($product->images as $image){
+            if(Storage::disk('public')->exists($image->url)){
+                Storage::disk('public')->delete($image->url);
+            }
+        }
         $product->delete();
         return redirect()->route('admin.dash')->with('success','Item deleted successfully!');
     }
@@ -106,5 +133,15 @@ class ProductController extends Controller
         $product_id=$stock->product_id;
         $stock->delete();
         return redirect()->route('admin.edit',$product_id)->with('success','Stock deleted successfully!');
+    }
+
+    public function destroyImage(DeleteImageRequest $request, Image $image) 
+    {   
+        $product_id=$image->product_id;
+        if(Storage::disk('public')->exists($image->url)){
+            Storage::disk('public')->delete($image->url);
+        }
+        $image->delete();
+        return redirect()->route('admin.edit',$product_id)->with('success','Image deleted successfully!');
     }
 }

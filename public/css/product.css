@@ -63,9 +63,10 @@
 
 .productImg {
     flex: 1 1 0;
-    padding: 10px;
+    /* padding: 10px; */
     justify-content: center;
-    align-items: center;
+    align-items: center;box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
 }
 
 .productImg img {
@@ -73,8 +74,6 @@
     object-fit: cover;
     width: 100%;
     height: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
 }
 
 .productDetails {
@@ -108,4 +107,9 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
+}
+
+div.carousel button span{
+    background-color: grey;
+    border-radius: 30%;
 }
