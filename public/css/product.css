@@ -1,12 +1,5 @@
-.mainContent {
-    display: flex;
-    padding: 20px;
-}
 
-.productPageRight {
-    flex: 1;
-    margin: 0 80px;
-}
+
 
 .suggestedHeader {
     text-align: left;
@@ -62,7 +55,7 @@
 }
 
 .productImg {
-    flex: 1 1 0;
+    /*flex: 1 1 0;*/
     /* padding: 10px; */
     justify-content: center;
     align-items: center;box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -113,3 +106,4 @@ div.carousel button span{
     background-color: grey;
     border-radius: 30%;
 }
+

@@ -6,18 +6,18 @@
 
 @section('content')
 
-    <main class="d-flex flex-column min-vh-100">
+    <main class="d-flex flex-column min-vh-100 gap-2">
         <header>
             @include('layouts.partials.header')
         </header>
 
       
-        <section class="mainContent">
+        <section class="flex-fill d-block d-md-flex justify-content-center ">
             {{-- @include('layouts.partials.navbar') --}}
           
-            <div class="col-1 productPageRight">
-                <div class="productContainer roundedContainer">
-                    <div class="productImg">
+            <div class="productPageRight container ">
+                <div class="productContainer roundedContainer row d-flex justify-content-center gap-2">
+                    <div class="productImg col-11 col-md-5 ">
                         {{-- <img src="{{$productSingle->image}}"> --}}
                         @unless (count($productSingle->images))
                             <img src="/pictures/unavailable-image.jpg">
@@ -41,10 +41,10 @@
                             </div>
                         @endunless
                     </div>
-                    <div class="productDetails">
+                    <div class="productDetails col-11 col-md-5">
                         <h1>{{$productSingle->name}}</h1>
                         <h5>{{$productSingle->manufacturer->name}}</h5>
-                        <div class="productInfo d-flex align-items-stretch @unless (count($productSingle->stock)) justify-content-start @else justify-content-between @endunless gap-2">
+                        <div class="productInfo d-xl-flex  align-items-stretch @unless (count($productSingle->stock)) justify-content-start @else justify-content-between @endunless gap-2 d-block">
                             <div class="productPrice d-flex align-items-center"><strong>${{$productSingle->price}}</strong></div>
                             <div class="productCart">
                                 <!-- Formulár s POST metódou -->
@@ -102,7 +102,7 @@
                     </div>
                 </div>
              
-                <div class="suggestedItemsContainer">
+                <div class="suggestedItemsContainer row">
                     <h2 class="suggestedHeader">
                         Similar items
                     </h2>
