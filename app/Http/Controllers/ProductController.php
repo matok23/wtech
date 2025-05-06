@@ -62,7 +62,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {   
-        $products=Product::all();
+        $products=Product::with('images')->get();
         return view('products.product-view',['productSingle'=>$product->load('stock')->load('images'),'products'=>$products]);
     }
 

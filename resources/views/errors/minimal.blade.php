@@ -22,7 +22,7 @@
         </section>
 
         <footer>
-            @include('layouts.partials.footer');
+            @include('layouts.partials.footer')
         </footer>
     </main>
 @endsection

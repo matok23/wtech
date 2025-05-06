@@ -111,8 +111,8 @@
                                 <div class="d-flex flex-column justify-content-evenly align-items-center gap-2 w-100">
                                     
                                     @foreach ($product->images as $image)
-                                        <div class="d-flex gap-2 w-100 justify-content-between">
-                                            <div>{{ $image->url }}</div>
+                                        <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                            <a target="_blank" href="{{ asset('storage/' . $image->url) }}" class="">{{ $image->url }}</a>
                                             <button type="button" class="btn btn-danger" image-id="{{ $image->id }}" name="deleteImgBtn">DELETE</button>
                                         </div>
                                     @endforeach

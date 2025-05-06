@@ -1,0 +1,2050 @@
+[
+    {
+        "id": 1,
+        "name": "Stripe Lahinch",
+        "description": "The Stripe Lahinch is an updated version of the classic back in the days cotton bucket hat. It has a 2-colour stripe band & a pop color underbrim with matching taped seams. The quintessential bucket hat to protect you from the sun.",
+        "price": 13.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 2,
+        "name": "Stripe Lahinch",
+        "description": "The Stripe Lahinch is an updated version of the classic back in the days cotton bucket hat. It has a 2-colour stripe band & a pop color underbrim with matching taped seams. The quintessential bucket hat to protect you from the sun.",
+        "price": 13.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 3,
+        "name": "Utility Cords Jungle Hat",
+        "description": "The Utility Cords Jungle Hat by Kangol is a cotton canvas wider brim bucket. It features utility loops and a chin cord, so you can always make sure you wherever you go. The cords are finished with a dipped color tip for an added touch of fun. The Utility Cords Jungle Hat will be your new summer-time favorite while you explore your own personal jungles.",
+        "price": 13.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 4,
+        "name": "Cotton Bucket Hat",
+        "description": "The Cotton Bucket by Kangol is made from lightweight twill fabric with poplin Lining & a pop color underbrim & matching the circle logo color. A stylish, portable Bucket hat to protect you from the sun.",
+        "price": 14.99,
+        "manufacturer_id": 3,
+        "color": "black"
+    },
+    {
+        "id": 5,
+        "name": "Bermuda Stripe Bucket",
+        "description": "The Bermuda Stripe Bucket by Kangol is a fresh version of Kangols quintessential Bermuda bucket hat. Featuring a color blocked crown with a stripe around the base & embroidered logo, these details are sure to make this a classic Kangol style.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 6,
+        "name": "Tropic Casual",
+        "description": "The Tropic Casual is a version of the original iconic hat that was on the scene when turntablists, rappers & graffiti writers redefined youth culture & forever changed the world. The Tropic yarn means that the hat is both lightweight & comfortable.",
+        "price": 15.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 7,
+        "name": "Tropic Casual",
+        "description": "The Tropic Casual is a version of the original iconic hat that was on the scene when turntablists, rappers & graffiti writers redefined youth culture & forever changed the world. The Tropic yarn means that the hat is both lightweight & comfortable.",
+        "price": 15.99,
+        "manufacturer_id": 1,
+        "color": "red"
+    },
+    {
+        "id": 8,
+        "name": "Tropic Casual",
+        "description": "The Tropic Casual is a version of the original iconic hat that was on the scene when turntablists, rappers & graffiti writers redefined youth culture & forever changed the world. The Tropic yarn means that the hat is both lightweight & comfortable.",
+        "price": 15.99,
+        "manufacturer_id": 2,
+        "color": "white"
+    },
+    {
+        "id": 9,
+        "name": "Tropic Casual",
+        "description": "The Tropic Casual is a version of the original iconic hat that was on the scene when turntablists, rappers & graffiti writers redefined youth culture & forever changed the world. The Tropic yarn means that the hat is both lightweight & comfortable.",
+        "price": 15.99,
+        "manufacturer_id": 3,
+        "color": "gray"
+    },
+    {
+        "id": 10,
+        "name": "Tropic Casual",
+        "description": "The Tropic Casual is a version of the original iconic hat that was on the scene when turntablists, rappers & graffiti writers redefined youth culture & forever changed the world. The Tropic yarn means that the hat is both lightweight & comfortable.",
+        "price": 15.99,
+        "manufacturer_id": 4,
+        "color": "blue"
+    },
+    {
+        "id": 11,
+        "name": "Tropic Casual",
+        "description": "The Braid Casual takes our beloved Casual style and combines it with new texture, color and feel. A must for any Kangol\u00ae lover, this style uses a lightweight braid which is expertly sewn by our craftspeople and then heat blocked into our classic shape. Weve completed this unique style with our signature Kangol\u00ae Kangaroo embroidery and a knit sweatband for ultimate comfort.",
+        "price": 19.99,
+        "manufacturer_id": 5,
+        "color": "white"
+    },
+    {
+        "id": 12,
+        "name": "Tropic Casual",
+        "description": "The Braid Casual takes our beloved Casual style and combines it with new texture, color and feel. A must for any Kangol\u00ae lover, this style uses a lightweight braid which is expertly sewn by our craftspeople and then heat blocked into our classic shape. Weve completed this unique style with our signature Kangol\u00ae Kangaroo embroidery and a knit sweatband for ultimate comfort.",
+        "price": 19.99,
+        "manufacturer_id": 6,
+        "color": "yellow"
+    },
+    {
+        "id": 13,
+        "name": "Tropic Casual",
+        "description": "The Braid Casual takes our beloved Casual style and combines it with new texture, color and feel. A must for any Kangol\u00ae lover, this style uses a lightweight braid which is expertly sewn by our craftspeople and then heat blocked into our classic shape. Weve completed this unique style with our signature Kangol\u00ae Kangaroo embroidery and a knit sweatband for ultimate comfort.",
+        "price": 19.99,
+        "manufacturer_id": 7,
+        "color": "blue"
+    },
+    {
+        "id": 14,
+        "name": "Washed Casual",
+        "description": "The Washed Casual by Kangol is a lightweight bell-shape style that is ideal for spring & summer.  It will definitely be an everyday go-to for the stylish Kangol\u00ae customer.",
+        "price": 19.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 15,
+        "name": "Washed Casual",
+        "description": "The Washed Casual by Kangol is a lightweight bell-shape style that is ideal for spring & summer.  It will definitely be an everyday go-to for the stylish Kangol\u00ae customer.",
+        "price": 19.99,
+        "manufacturer_id": 2,
+        "color": "red"
+    },
+    {
+        "id": 16,
+        "name": "Washed Bucket Hat",
+        "description": "The Washed Bucket from Kangol is made using lightweight cotton that is great for the spring and summer seasons. Its clean look and classic shape make it a versatile hat that works for different kinds of outfits. The cross hatching in the embroidery adds definition to the kangaroo logo.",
+        "price": 19.99,
+        "manufacturer_id": 3,
+        "color": "blue"
+    },
+    {
+        "id": 17,
+        "name": "Washed Bucket Hat",
+        "description": "The Washed Bucket from Kangol is made using lightweight cotton that is great for the spring and summer seasons. Its clean look and classic shape make it a versatile hat that works for different kinds of outfits. The cross hatching in the embroidery adds definition to the kangaroo logo.",
+        "price": 19.99,
+        "manufacturer_id": 4,
+        "color": "yellow"
+    },
+    {
+        "id": 18,
+        "name": "Washed Bucket Hat",
+        "description": "The Washed Bucket from Kangol is made using lightweight cotton that is great for the spring and summer seasons. Its clean look and classic shape make it a versatile hat that works for different kinds of outfits. The cross hatching in the embroidery adds definition to the kangaroo logo.",
+        "price": 19.99,
+        "manufacturer_id": 5,
+        "color": "pink"
+    },
+    {
+        "id": 19,
+        "name": "Washed Bucket Hat",
+        "description": "The Washed Bucket from Kangol is made using lightweight cotton that is great for the spring and summer seasons. Its clean look and classic shape make it a versatile hat that works for different kinds of outfits. The cross hatching in the embroidery adds definition to the kangaroo logo.",
+        "price": 19.99,
+        "manufacturer_id": 6,
+        "color": "green"
+    },
+    {
+        "id": 20,
+        "name": "Washed Bucket Hat",
+        "description": "The Washed Bucket from Kangol is made using lightweight cotton that is great for the spring and summer seasons. Its clean look and classic shape make it a versatile hat that works for different kinds of outfits. The cross hatching in the embroidery adds definition to the kangaroo logo.",
+        "price": 19.99,
+        "manufacturer_id": 7,
+        "color": "white"
+    },
+    {
+        "id": 21,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 22,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 2,
+        "color": "black"
+    },
+    {
+        "id": 23,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 3,
+        "color": "white"
+    },
+    {
+        "id": 24,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 4,
+        "color": "grey"
+    },
+    {
+        "id": 25,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 1,
+        "color": "red"
+    },
+    {
+        "id": 26,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 5,
+        "color": "pink"
+    },
+    {
+        "id": 27,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 6,
+        "color": "blue"
+    },
+    {
+        "id": 28,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 7,
+        "color": "blue"
+    },
+    {
+        "id": 29,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 30,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 2,
+        "color": "purple"
+    },
+    {
+        "id": 31,
+        "name": "Washed Baseball",
+        "description": "The Washed Baseball Cap by Kangol is a cotton baseball with a vintage fit. It has soft unstructured panels and a leather adjustable back strap. Its clean look & timeless shape make it the perfect hat for all seasons. The cross hatching on the embroidered kangaroo logo adds definition.",
+        "price": 19.99,
+        "manufacturer_id": 3,
+        "color": "pink"
+    },
+    {
+        "id": 32,
+        "name": "Tropic Ventair Spacecap",
+        "description": "The Tropic Ventair Spacecap is Kangols seamless knit baseball hat. The Ventair pattern allows ventilation air flow for ultimate comfort in spring & summer weather.",
+        "price": 11.99,
+        "manufacturer_id": 4,
+        "color": "green"
+    },
+    {
+        "id": 33,
+        "name": "Tropic Ventair Spacecap",
+        "description": "The Tropic Ventair Spacecap is Kangols seamless knit baseball hat. The Ventair pattern allows ventilation air flow for ultimate comfort in spring & summer weather.",
+        "price": 11.99,
+        "manufacturer_id": 5,
+        "color": "red"
+    },
+    {
+        "id": 34,
+        "name": "Tropic Ventair Spacecap",
+        "description": "The Tropic Ventair Spacecap is Kangols seamless knit baseball hat. The Ventair pattern allows ventilation air flow for ultimate comfort in spring & summer weather.",
+        "price": 11.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 35,
+        "name": "Tropic Ventair Spacecap",
+        "description": "The Tropic Ventair Spacecap is Kangols seamless knit baseball hat. The Ventair pattern allows ventilation air flow for ultimate comfort in spring & summer weather.",
+        "price": 11.99,
+        "manufacturer_id": 1,
+        "color": "yellow"
+    },
+    {
+        "id": 36,
+        "name": "Tropic Ventair Spacecap",
+        "description": "The Tropic Ventair Spacecap is Kangols seamless knit baseball hat. The Ventair pattern allows ventilation air flow for ultimate comfort in spring & summer weather.",
+        "price": 11.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 37,
+        "name": "Tropic Ventair Spacecap",
+        "description": "The Tropic Ventair Spacecap is Kangols seamless knit baseball hat. The Ventair pattern allows ventilation air flow for ultimate comfort in spring & summer weather.",
+        "price": 11.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 38,
+        "name": "Seersucker Mesh Trucker",
+        "description": "The Seersucker Mesh Trucker by Kangol is crafted from a seersucker textured poly material and classic mesh back panels. The back of the hat is fully adjustable with a snap tab closure. The cap features Kangols signature Kangaroo logo in a silicone-based print on the front of the cap. Its a modern take on a classic silhouette.",
+        "price": 5.99,
+        "manufacturer_id": 1,
+        "color": "yellow"
+    },
+    {
+        "id": 39,
+        "name": "Seersucker Mesh Trucker",
+        "description": "The Seersucker Mesh Trucker by Kangol is crafted from a seersucker textured poly material and classic mesh back panels. The back of the hat is fully adjustable with a snap tab closure. The cap features Kangols signature Kangaroo logo in a silicone-based print on the front of the cap. Its a modern take on a classic silhouette.",
+        "price": 5.99,
+        "manufacturer_id": 5,
+        "color": "blue"
+    },
+    {
+        "id": 40,
+        "name": "Seersucker Mesh Trucker",
+        "description": "The Seersucker Mesh Trucker by Kangol is crafted from a seersucker textured poly material and classic mesh back panels. The back of the hat is fully adjustable with a snap tab closure. The cap features Kangols signature Kangaroo logo in a silicone-based print on the front of the cap. Its a modern take on a classic silhouette.",
+        "price": 5.99,
+        "manufacturer_id": 6,
+        "color": "black"
+    },
+    {
+        "id": 41,
+        "name": "Mannes Braided Trilby",
+        "description": "The Mannes by Bailey 1922 is a 3 3/4\" Teardrop crown trilby with a 1 5/8\" Snap brim. It features a custom color mixed braid and contrast rope grosgrain band finished with a Comfort sweatband. This easy-to-wear Teardrop Snap brim flatters every face shape.",
+        "price": 51.99,
+        "manufacturer_id": 7,
+        "color": "brown"
+    },
+    {
+        "id": 42,
+        "name": "Mannes Braided Trilby",
+        "description": "The Mannes by Bailey 1922 is a 3 3/4\" Teardrop crown trilby with a 1 5/8\" Snap brim. It features a custom color mixed braid and contrast rope grosgrain band finished with a Comfort sweatband. This easy-to-wear Teardrop Snap brim flatters every face shape.",
+        "price": 51.99,
+        "manufacturer_id": 1,
+        "color": "yellow"
+    },
+    {
+        "id": 43,
+        "name": "Mannes Braided Trilby",
+        "description": "The Mannes by Bailey 1922 is a 3 3/4\" Teardrop crown trilby with a 1 5/8\" Snap brim. It features a custom color mixed braid and contrast rope grosgrain band finished with a Comfort sweatband. This easy-to-wear Teardrop Snap brim flatters every face shape.",
+        "price": 51.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 44,
+        "name": "Mannes Braided Trilby",
+        "description": "The Mannes by Bailey 1922 is a 3 3/4\" Teardrop crown trilby with a 1 5/8\" Snap brim. It features a custom color mixed braid and contrast rope grosgrain band finished with a Comfort sweatband. This easy-to-wear Teardrop Snap brim flatters every face shape.",
+        "price": 51.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 45,
+        "name": "Mannes Braided Trilby",
+        "description": "The Mannes by Bailey 1922 is a 3 3/4\" Teardrop crown trilby with a 1 5/8\" Snap brim. It features a custom color mixed braid and contrast rope grosgrain band finished with a Comfort sweatband. This easy-to-wear Teardrop Snap brim flatters every face shape.",
+        "price": 51.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 46,
+        "name": "Mannes Braided Trilby",
+        "description": "The Mannes by Bailey 1922 is a 3 3/4\" Teardrop crown trilby with a 1 5/8\" Snap brim. It features a custom color mixed braid and contrast rope grosgrain band finished with a Comfort sweatband. This easy-to-wear Teardrop Snap brim flatters every face shape.",
+        "price": 51.99,
+        "manufacturer_id": 2,
+        "color": "white"
+    },
+    {
+        "id": 47,
+        "name": "Mannes Braided Trilby",
+        "description": "The Mannes by Bailey 1922 is a 3 3/4\" Teardrop crown trilby with a 1 5/8\" Snap brim. It features a custom color mixed braid and contrast rope grosgrain band finished with a Comfort sweatband. This easy-to-wear Teardrop Snap brim flatters every face shape.",
+        "price": 51.99,
+        "manufacturer_id": 3,
+        "color": "blue"
+    },
+    {
+        "id": 48,
+        "name": "Blackburn LiteStraw\u00ae Fedora",
+        "description": "The Blackburn LiteStraw\u00ae Fedora by Bailey 1922 is a classic straw fedora.  The LiteStraw\u00ae finish allows the hat to be lightweight, durable, and water repellent.  Due to the nature of the fine fibers used to create the Shantung straw some color variation will occur when dyed. This enhances the beauty and uniqueness of this product.",
+        "price": 32.99,
+        "manufacturer_id": 4,
+        "color": "white"
+    },
+    {
+        "id": 49,
+        "name": "Blackburn LiteStraw\u00ae Fedora",
+        "description": "The Blackburn LiteStraw\u00ae Fedora by Bailey 1922 is a classic straw fedora.  The LiteStraw\u00ae finish allows the hat to be lightweight, durable, and water repellent.  Due to the nature of the fine fibers used to create the Shantung straw some color variation will occur when dyed. This enhances the beauty and uniqueness of this product.",
+        "price": 32.99,
+        "manufacturer_id": 5,
+        "color": "grey"
+    },
+    {
+        "id": 50,
+        "name": "Blackburn LiteStraw\u00ae Fedora",
+        "description": "The Blackburn LiteStraw\u00ae Fedora by Bailey 1922 is a classic straw fedora.  The LiteStraw\u00ae finish allows the hat to be lightweight, durable, and water repellent.  Due to the nature of the fine fibers used to create the Shantung straw some color variation will occur when dyed. This enhances the beauty and uniqueness of this product.",
+        "price": 32.99,
+        "manufacturer_id": 6,
+        "color": "blue"
+    },
+    {
+        "id": 51,
+        "name": "Blackburn LiteStraw\u00ae Fedora",
+        "description": "The Blackburn LiteStraw\u00ae Fedora by Bailey 1922 is a classic straw fedora.  The LiteStraw\u00ae finish allows the hat to be lightweight, durable, and water repellent.  Due to the nature of the fine fibers used to create the Shantung straw some color variation will occur when dyed. This enhances the beauty and uniqueness of this product.",
+        "price": 32.99,
+        "manufacturer_id": 7,
+        "color": "blue"
+    },
+    {
+        "id": 52,
+        "name": "Blackburn LiteStraw\u00ae Fedora",
+        "description": "The Blackburn LiteStraw\u00ae Fedora by Bailey 1922 is a classic straw fedora.  The LiteStraw\u00ae finish allows the hat to be lightweight, durable, and water repellent.  Due to the nature of the fine fibers used to create the Shantung straw some color variation will occur when dyed. This enhances the beauty and uniqueness of this product.",
+        "price": 32.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 53,
+        "name": "Tate Braided Fedora",
+        "description": "Made with 100% polypropylene, the Tate is a spring and summer fedora from the Bailey 1922 Breed group. This braided fedora has a 2\u201d turn up brim and a center dent crown.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 54,
+        "name": "Tate Braided Fedora",
+        "description": "Made with 100% polypropylene, the Tate is a spring and summer fedora from the Bailey 1922 Breed group. This braided fedora has a 2\u201d turn up brim and a center dent crown.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "yellow"
+    },
+    {
+        "id": 55,
+        "name": "Tate Braided Fedora",
+        "description": "Made with 100% polypropylene, the Tate is a spring and summer fedora from the Bailey 1922 Breed group. This braided fedora has a 2\u201d turn up brim and a center dent crown.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 56,
+        "name": "Tate Braided Fedora",
+        "description": "Made with 100% polypropylene, the Tate is a spring and summer fedora from the Bailey 1922 Breed group. This braided fedora has a 2\u201d turn up brim and a center dent crown.",
+        "price": 12.99,
+        "manufacturer_id": 2,
+        "color": "white"
+    },
+    {
+        "id": 57,
+        "name": "Loose Fit Pleated T-shirt",
+        "description": "Loose-fit T-shirt in pleated jersey with a generous, but not oversized silhouette. Ribbed crew neck, dropped shoulders, and a straight-cut hem.",
+        "price": 12.99,
+        "manufacturer_id": 3,
+        "color": "black"
+    },
+    {
+        "id": 58,
+        "name": "Loose Fit Pleated T-shirt",
+        "description": "Loose-fit T-shirt in pleated jersey with a generous, but not oversized silhouette. Ribbed crew neck, dropped shoulders, and a straight-cut hem.",
+        "price": 12.99,
+        "manufacturer_id": 4,
+        "color": "white"
+    },
+    {
+        "id": 59,
+        "name": "Regular-Fit T-Shirt with Collar",
+        "description": "Regular-fit T-shirt in textured, cotton-blend jersey with a comfortable, classic silhouette. Collar and a small, V-shaped opening at neck.",
+        "price": 14.99,
+        "manufacturer_id": 5,
+        "color": "brown"
+    },
+    {
+        "id": 60,
+        "name": "Regular-Fit T-Shirt with Collar",
+        "description": "Regular-fit T-shirt in textured, cotton-blend jersey with a comfortable, classic silhouette. Collar and a small, V-shaped opening at neck.",
+        "price": 14.99,
+        "manufacturer_id": 6,
+        "color": "white"
+    },
+    {
+        "id": 61,
+        "name": "Regular-Fit T-Shirt with Collar",
+        "description": "Regular-fit T-shirt in textured, cotton-blend jersey with a comfortable, classic silhouette. Collar and a small, V-shaped opening at neck.",
+        "price": 14.99,
+        "manufacturer_id": 7,
+        "color": "black"
+    },
+    {
+        "id": 62,
+        "name": "Slim Fit Polo Shirt",
+        "description": "Slim-fit polo shirt in a soft, airy knit with a fitted silhouette. Collar, button placket, short sleeves, and a straight hem.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 63,
+        "name": "Slim Fit Polo Shirt",
+        "description": "Slim-fit polo shirt in a soft, airy knit with a fitted silhouette. Collar, button placket, short sleeves, and a straight hem.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 64,
+        "name": "Slim Fit Polo Shirt",
+        "description": "Slim-fit polo shirt in a soft, airy knit with a fitted silhouette. Collar, button placket, short sleeves, and a straight hem.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 65,
+        "name": "Slim Fit Polo Shirt",
+        "description": "Slim-fit polo shirt in a soft, airy knit with a fitted silhouette. Collar, button placket, short sleeves, and a straight hem.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 66,
+        "name": "Slim Fit Polo Shirt",
+        "description": "Slim-fit polo shirt in a soft, airy knit with a fitted silhouette. Collar, button placket, short sleeves, and a straight hem.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 67,
+        "name": "Loose Fit Printed T-shirt",
+        "description": "Loose-fit T-shirt in medium weight cotton jersey with a printed motif and a generous but not oversized silhouette. Ribbed crew neck, dropped shoulders, and a straight-cut hem.",
+        "price": 7.99,
+        "manufacturer_id": 1,
+        "color": "pink"
+    },
+    {
+        "id": 68,
+        "name": "Loose Fit Printed T-shirt",
+        "description": "Loose-fit T-shirt in medium weight cotton jersey with a printed motif and a generous but not oversized silhouette. Ribbed crew neck, dropped shoulders, and a straight-cut hem.",
+        "price": 7.99,
+        "manufacturer_id": 1,
+        "color": "yellow"
+    },
+    {
+        "id": 69,
+        "name": "Loose Fit Printed T-shirt",
+        "description": "Loose-fit T-shirt in medium weight cotton jersey with a printed motif and a generous but not oversized silhouette. Ribbed crew neck, dropped shoulders, and a straight-cut hem.",
+        "price": 7.99,
+        "manufacturer_id": 2,
+        "color": "white"
+    },
+    {
+        "id": 70,
+        "name": "Loose Fit Printed T-shirt",
+        "description": "Loose-fit T-shirt in medium weight cotton jersey with a printed motif and a generous but not oversized silhouette. Ribbed crew neck, dropped shoulders, and a straight-cut hem.",
+        "price": 7.99,
+        "manufacturer_id": 3,
+        "color": "blue"
+    },
+    {
+        "id": 71,
+        "name": "Loose Fit Printed T-shirt",
+        "description": "Loose-fit T-shirt in medium weight cotton jersey with a printed motif and a generous but not oversized silhouette. Ribbed crew neck, dropped shoulders, and a straight-cut hem.",
+        "price": 7.99,
+        "manufacturer_id": 4,
+        "color": "yellow"
+    },
+    {
+        "id": 72,
+        "name": "Loose Fit Sweatshirt",
+        "description": "Loose-fit sweatshirt in lightweight, cotton-blend fabric with a generous, but not oversized silhouette. Round, ribbed neck, dropped shoulders, and long sleeves. Wide ribbing at cuffs and hem. Soft, brushed inside.",
+        "price": 30.99,
+        "manufacturer_id": 5,
+        "color": "black"
+    },
+    {
+        "id": 73,
+        "name": "Loose Fit Sweatshirt",
+        "description": "Loose-fit sweatshirt in lightweight, cotton-blend fabric with a generous, but not oversized silhouette. Round, ribbed neck, dropped shoulders, and long sleeves. Wide ribbing at cuffs and hem. Soft, brushed inside.",
+        "price": 30.99,
+        "manufacturer_id": 6,
+        "color": "grey"
+    },
+    {
+        "id": 74,
+        "name": "Loose Fit Sweatshirt",
+        "description": "Loose-fit sweatshirt in lightweight, cotton-blend fabric with a generous, but not oversized silhouette. Round, ribbed neck, dropped shoulders, and long sleeves. Wide ribbing at cuffs and hem. Soft, brushed inside.",
+        "price": 30.99,
+        "manufacturer_id": 7,
+        "color": "white"
+    },
+    {
+        "id": 75,
+        "name": "Loose Fit Sweatshirt",
+        "description": "Loose-fit sweatshirt in lightweight, cotton-blend fabric with a generous, but not oversized silhouette. Round, ribbed neck, dropped shoulders, and long sleeves. Wide ribbing at cuffs and hem. Soft, brushed inside.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 76,
+        "name": "Loose Fit Sweatshirt",
+        "description": "Loose-fit sweatshirt in lightweight, cotton-blend fabric with a generous, but not oversized silhouette. Round, ribbed neck, dropped shoulders, and long sleeves. Wide ribbing at cuffs and hem. Soft, brushed inside.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 77,
+        "name": "Loose Fit Sweatshirt",
+        "description": "Loose-fit sweatshirt in lightweight, cotton-blend fabric with a generous, but not oversized silhouette. Round, ribbed neck, dropped shoulders, and long sleeves. Wide ribbing at cuffs and hem. Soft, brushed inside.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "pink"
+    },
+    {
+        "id": 78,
+        "name": "Loose Fit Sweatshirt",
+        "description": "Loose-fit sweatshirt in lightweight, cotton-blend fabric with a generous, but not oversized silhouette. Round, ribbed neck, dropped shoulders, and long sleeves. Wide ribbing at cuffs and hem. Soft, brushed inside.",
+        "price": 70.99,
+        "manufacturer_id": 1,
+        "color": "pink"
+    },
+    {
+        "id": 79,
+        "name": "Loose Fit Sweatshirt",
+        "description": "Loose-fit sweatshirt in lightweight, cotton-blend fabric with a generous, but not oversized silhouette. Round, ribbed neck, dropped shoulders, and long sleeves. Wide ribbing at cuffs and hem. Soft, brushed inside.",
+        "price": 40.99,
+        "manufacturer_id": 2,
+        "color": "green"
+    },
+    {
+        "id": 80,
+        "name": "Loose Fit Sweatshirt",
+        "description": "Loose-fit sweatshirt in lightweight, cotton-blend fabric with a generous, but not oversized silhouette. Round, ribbed neck, dropped shoulders, and long sleeves. Wide ribbing at cuffs and hem. Soft, brushed inside.",
+        "price": 40.99,
+        "manufacturer_id": 3,
+        "color": "yellow"
+    },
+    {
+        "id": 81,
+        "name": "Loose Fit Hoodie",
+        "description": "Loose-fit sweatshirt hoodie in medium weight cotton-blend fabric with a generous, but not oversized silhouette. Jersey-lined, drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket. Wide ribbing at cuffs and hem. Soft, brushed inside",
+        "price": 35.99,
+        "manufacturer_id": 4,
+        "color": "grey"
+    },
+    {
+        "id": 82,
+        "name": "Loose Fit Hoodie",
+        "description": "Loose-fit sweatshirt hoodie in medium weight cotton-blend fabric with a generous, but not oversized silhouette. Jersey-lined, drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket. Wide ribbing at cuffs and hem. Soft, brushed inside",
+        "price": 35.99,
+        "manufacturer_id": 5,
+        "color": "black"
+    },
+    {
+        "id": 83,
+        "name": "Loose Fit Hoodie",
+        "description": "Loose-fit sweatshirt hoodie in medium weight cotton-blend fabric with a generous, but not oversized silhouette. Jersey-lined, drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket. Wide ribbing at cuffs and hem. Soft, brushed inside",
+        "price": 35.99,
+        "manufacturer_id": 6,
+        "color": "brown"
+    },
+    {
+        "id": 84,
+        "name": "Loose Fit Hoodie",
+        "description": "Loose-fit sweatshirt hoodie in medium weight cotton-blend fabric with a generous, but not oversized silhouette. Jersey-lined, drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket. Wide ribbing at cuffs and hem. Soft, brushed inside",
+        "price": 25.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 85,
+        "name": "Loose Fit Hoodie",
+        "description": "Loose-fit sweatshirt hoodie in medium weight cotton-blend fabric with a generous, but not oversized silhouette. Jersey-lined, drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket. Wide ribbing at cuffs and hem. Soft, brushed inside",
+        "price": 25.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 86,
+        "name": "Loose Fit Hoodie",
+        "description": "Loose-fit sweatshirt hoodie in medium weight cotton-blend fabric with a generous, but not oversized silhouette. Jersey-lined, drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket. Wide ribbing at cuffs and hem. Soft, brushed inside",
+        "price": 25.99,
+        "manufacturer_id": 1,
+        "color": "pink"
+    },
+    {
+        "id": 87,
+        "name": "Mid-Length Shorts",
+        "description": "Regular-fit, mid-length sports shorts in functional mesh made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Elasticized, drawstring waistband, side pockets, and a small slit at hems. Layered over liner bike shorts in jersey with an open cell phone leg pocket.",
+        "price": 28.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 88,
+        "name": "Mid-Length 2-in-1 Sports",
+        "description": "Regular-fit, mid-length sports shorts in functional mesh made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Elasticized, drawstring waistband, side pockets, and a small slit at hems. Layered over liner bike shorts in jersey with an open cell phone leg pocket.",
+        "price": 28.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 89,
+        "name": "Mid-Length 2-in-1 Sports",
+        "description": "Regular-fit, mid-length sports shorts in functional mesh made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Elasticized, drawstring waistband, side pockets, and a small slit at hems. Layered over liner bike shorts in jersey with an open cell phone leg pocket.",
+        "price": 28.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 90,
+        "name": "Regular-Fit Sports",
+        "description": "Regular-fit sports tank top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round, ribbed neck and slightly longer hem at back. Four-way stretch for added comfort and freedom of movement.",
+        "price": 8.99,
+        "manufacturer_id": 2,
+        "color": "white"
+    },
+    {
+        "id": 91,
+        "name": "Regular-Fit Sports",
+        "description": "Regular-fit sports tank top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round, ribbed neck and slightly longer hem at back. Four-way stretch for added comfort and freedom of movement.",
+        "price": 8.99,
+        "manufacturer_id": 3,
+        "color": "black"
+    },
+    {
+        "id": 92,
+        "name": "Regular-Fit Sports",
+        "description": "Regular-fit sports tank top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round, ribbed neck and slightly longer hem at back. Four-way stretch for added comfort and freedom of movement.",
+        "price": 8.99,
+        "manufacturer_id": 4,
+        "color": "green"
+    },
+    {
+        "id": 93,
+        "name": "Regular-Fit Sports ",
+        "description": "Regular-fit sports tank top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round, ribbed neck and slightly longer hem at back. Four-way stretch for added comfort and freedom of movement.",
+        "price": 18.99,
+        "manufacturer_id": 5,
+        "color": "blue"
+    },
+    {
+        "id": 94,
+        "name": "Long Sports Shorts",
+        "description": "Long, regular-fit sports shorts in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Covered elastic and concealed drawstring at waistband. Diagonal side pockets, small slit at one side of hems, and four-way stretch for added comfort and freedom of movement.",
+        "price": 23.99,
+        "manufacturer_id": 6,
+        "color": "blue"
+    },
+    {
+        "id": 95,
+        "name": "Long Sports Shorts",
+        "description": "Long, regular-fit sports shorts in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Covered elastic and concealed drawstring at waistband. Diagonal side pockets, small slit at one side of hems, and four-way stretch for added comfort and freedom of movement.",
+        "price": 23.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 96,
+        "name": "Long Sports Shorts",
+        "description": "Long, regular-fit sports shorts in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Covered elastic and concealed drawstring at waistband. Diagonal side pockets, small slit at one side of hems, and four-way stretch for added comfort and freedom of movement.",
+        "price": 23.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 97,
+        "name": "Long Sports Shorts",
+        "description": "Long, regular-fit sports shorts in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Covered elastic and concealed drawstring at waistband. Diagonal side pockets, small slit at one side of hems, and four-way stretch for added comfort and freedom of movement.",
+        "price": 13.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 98,
+        "name": "Double-Layered Sports",
+        "description": "Regular-fit, knee-length sports shorts in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Concealed drawstring and covered elastic at waistband, side pockets, and a slit at outer sides of hems. Lined with bike shorts in jersey with an open leg pocket.",
+        "price": 53.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 99,
+        "name": "Double-Layered Sports",
+        "description": "Regular-fit, knee-length sports shorts in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Concealed drawstring and covered elastic at waistband, side pockets, and a slit at outer sides of hems. Lined with bike shorts in jersey with an open leg pocket.",
+        "price": 53.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 100,
+        "name": "Double-Layered Sports",
+        "description": "Regular-fit, knee-length sports shorts in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Concealed drawstring and covered elastic at waistband, side pockets, and a slit at outer sides of hems. Lined with bike shorts in jersey with an open leg pocket.",
+        "price": 53.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 101,
+        "name": "Regular-Fit Sports",
+        "description": "Regular-fit sports tank top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round, ribbed neck and slightly longer hem at back. Four-way stretch for added comfort and freedom of movement.",
+        "price": 13.99,
+        "manufacturer_id": 2,
+        "color": "white"
+    },
+    {
+        "id": 102,
+        "name": "Regular-Fit Sports",
+        "description": "Regular-fit sports tank top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round, ribbed neck and slightly longer hem at back. Four-way stretch for added comfort and freedom of movement.",
+        "price": 13.99,
+        "manufacturer_id": 3,
+        "color": "green"
+    },
+    {
+        "id": 103,
+        "name": "Fit Tailored Pants",
+        "description": "Slim-fit tailored pants in soft, woven fabric with a fitted silhouette. Zip fly with button, side pockets, and welt back pockets with button. Creased legs.",
+        "price": 31.99,
+        "manufacturer_id": 4,
+        "color": "gray"
+    },
+    {
+        "id": 104,
+        "name": "Fit Tailored Pants",
+        "description": "Slim-fit tailored pants in soft, woven fabric with a fitted silhouette. Zip fly with button, side pockets, and welt back pockets with button. Creased legs.",
+        "price": 31.99,
+        "manufacturer_id": 5,
+        "color": "black"
+    },
+    {
+        "id": 105,
+        "name": "Fit Tailored Pants",
+        "description": "Slim-fit tailored pants in soft, woven fabric with a fitted silhouette. Zip fly with button, side pockets, and welt back pockets with button. Creased legs.",
+        "price": 31.99,
+        "manufacturer_id": 6,
+        "color": "gray"
+    },
+    {
+        "id": 106,
+        "name": "Fit Tailored Pants",
+        "description": "Slim-fit tailored pants in soft, woven fabric with a fitted silhouette. Zip fly with button, side pockets, and welt back pockets with button. Creased legs.",
+        "price": 31.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 107,
+        "name": "Fit Tailored Pants",
+        "description": "Slim-fit tailored pants in soft, woven fabric with a fitted silhouette. Zip fly with button, side pockets, and welt back pockets with button. Creased legs.",
+        "price": 31.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 108,
+        "name": "Fit Tailored Pants",
+        "description": "Slim-fit tailored pants in soft, woven fabric with a fitted silhouette. Zip fly with button, side pockets, and welt back pockets with button. Creased legs.",
+        "price": 31.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 109,
+        "name": "Regular Fit Sweatpants",
+        "description": "Regular-fit, comfortable sweatpants in lightweight, cotton-blend fabric with a classic silhouette. Drawstring and covered elastic at waistband, side-seam pockets, and ribbed hems. Soft, brushed inside.",
+        "price": 11.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 110,
+        "name": "Regular Fit Sweatpants",
+        "description": "Regular-fit, comfortable sweatpants in lightweight, cotton-blend fabric with a classic silhouette. Drawstring and covered elastic at waistband, side-seam pockets, and ribbed hems. Soft, brushed inside.",
+        "price": 11.99,
+        "manufacturer_id": 2,
+        "color": "grey"
+    },
+    {
+        "id": 111,
+        "name": "Regular Fit Sweatpants",
+        "description": "Regular-fit, comfortable sweatpants in lightweight, cotton-blend fabric with a classic silhouette. Drawstring and covered elastic at waistband, side-seam pockets, and ribbed hems. Soft, brushed inside.",
+        "price": 11.99,
+        "manufacturer_id": 3,
+        "color": "beige"
+    },
+    {
+        "id": 112,
+        "name": "Regular Fit Sweatpants",
+        "description": "Regular-fit, comfortable sweatpants in lightweight, cotton-blend fabric with a classic silhouette. Drawstring and covered elastic at waistband, side-seam pockets, and ribbed hems. Soft, brushed inside.",
+        "price": 11.99,
+        "manufacturer_id": 4,
+        "color": "white"
+    },
+    {
+        "id": 113,
+        "name": "Regular Fit Sweatpants",
+        "description": "Regular-fit, comfortable sweatpants in lightweight, cotton-blend fabric with a classic silhouette. Drawstring and covered elastic at waistband, side-seam pockets, and ribbed hems. Soft, brushed inside.",
+        "price": 24.99,
+        "manufacturer_id": 5,
+        "color": "blue"
+    },
+    {
+        "id": 114,
+        "name": "Regular Fit Sweatpants",
+        "description": "Regular-fit, comfortable sweatpants in lightweight, cotton-blend fabric with a classic silhouette. Drawstring and covered elastic at waistband, side-seam pockets, and ribbed hems. Soft, brushed inside.",
+        "price": 24.99,
+        "manufacturer_id": 6,
+        "color": "brown"
+    },
+    {
+        "id": 115,
+        "name": "Slim Fit Twill Pants",
+        "description": "Regular-fit, comfortable sweatpants in lightweight, cotton-blend fabric with a classic silhouette. Drawstring and covered elastic at waistband, side-seam pockets, and ribbed hems. Soft, brushed inside.",
+        "price": 19.99,
+        "manufacturer_id": 2,
+        "color": "white"
+    },
+    {
+        "id": 116,
+        "name": "Slim Fit Twill Pants",
+        "description": "Regular-fit, comfortable sweatpants in lightweight, cotton-blend fabric with a classic silhouette. Drawstring and covered elastic at waistband, side-seam pockets, and ribbed hems. Soft, brushed inside.",
+        "price": 24.99,
+        "manufacturer_id": 3,
+        "color": "blue"
+    },
+    {
+        "id": 117,
+        "name": "Slim Fit Twill Pants",
+        "description": "Regular-fit, comfortable sweatpants in lightweight, cotton-blend fabric with a classic silhouette. Drawstring and covered elastic at waistband, side-seam pockets, and ribbed hems. Soft, brushed inside.",
+        "price": 24.99,
+        "manufacturer_id": 4,
+        "color": "brown"
+    },
+    {
+        "id": 118,
+        "name": "Regular Fit Sweatshorts",
+        "description": "Regular-fit sweatshorts in lightweight, cotton-blend fabric with a comfortable, classic silhouette. Elasticized, drawstring waistband, side pockets, and an open back pocket.",
+        "price": 14.99,
+        "manufacturer_id": 5,
+        "color": "grey"
+    },
+    {
+        "id": 119,
+        "name": "Regular Fit Sweatshorts",
+        "description": "Regular-fit sweatshorts in lightweight, cotton-blend fabric with a comfortable, classic silhouette. Elasticized, drawstring waistband, side pockets, and an open back pocket.",
+        "price": 14.99,
+        "manufacturer_id": 6,
+        "color": "black"
+    },
+    {
+        "id": 120,
+        "name": "Regular Fit Sweatshorts",
+        "description": "Regular-fit sweatshorts in lightweight, cotton-blend fabric with a comfortable, classic silhouette. Elasticized, drawstring waistband, side pockets, and an open back pocket.",
+        "price": 14.99,
+        "manufacturer_id": 7,
+        "color": "beige"
+    },
+    {
+        "id": 121,
+        "name": "Regular Fit Sweatshorts",
+        "description": "Regular-fit sweatshorts in lightweight, cotton-blend fabric with a comfortable, classic silhouette. Elasticized, drawstring waistband, side pockets, and an open back pocket.",
+        "price": 14.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 122,
+        "name": "Regular Fit Sweatshorts",
+        "description": "Regular-fit sweatshorts in lightweight, cotton-blend fabric with a comfortable, classic silhouette. Elasticized, drawstring waistband, side pockets, and an open back pocket.",
+        "price": 14.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 123,
+        "name": "Regular Fit Sweatshorts",
+        "description": "Regular-fit sweatshorts in lightweight, cotton-blend fabric with a comfortable, classic silhouette. Elasticized, drawstring waistband, side pockets, and an open back pocket.",
+        "price": 14.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 124,
+        "name": "Fit Linen-Blend Shorts",
+        "description": "Shorts in an airy, woven cotton and linen blend with a comfortable, classic silhouette. Drawstring and covered elastic at waistband and zip fly with button. Side pockets and a welt back pocket. Cotton and linen blends combine .",
+        "price": 8.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 125,
+        "name": "Fit Linen-Blend Shorts",
+        "description": "Shorts in an airy, woven cotton and linen blend with a comfortable, classic silhouette. Drawstring and covered elastic at waistband and zip fly with button. Side pockets and a welt back pocket. Cotton and linen blends combine .",
+        "price": 8.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 126,
+        "name": "Fit Linen-Blend Shorts",
+        "description": "Shorts in an airy, woven cotton and linen blend with a comfortable, classic silhouette. Drawstring and covered elastic at waistband and zip fly with button. Side pockets and a welt back pocket. Cotton and linen blends combine .",
+        "price": 8.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 127,
+        "name": "Fit Linen-Blend Shorts",
+        "description": "Shorts in an airy, woven cotton and linen blend with a comfortable, classic silhouette. Drawstring and covered elastic at waistband and zip fly with button. Side pockets and a welt back pocket. Cotton and linen blends combine .",
+        "price": 8.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 128,
+        "name": "Fit Linen-Blend Shorts",
+        "description": "Shorts in an airy, woven cotton and linen blend with a comfortable, classic silhouette. Drawstring and covered elastic at waistband and zip fly with button. Side pockets and a welt back pocket. Cotton and linen blends combine .",
+        "price": 8.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 129,
+        "name": "Denim Carpenter Shorts",
+        "description": "Shorts in rigid cotton denim. Baggy fit from seat to hems with plenty of room around thighs. Regular waist and zip fly with button. Side pockets, open back pockets, a two-part patch pocket on one leg, and a hammer loop on other leg. Rounded, knee-length legs.",
+        "price": 58.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 130,
+        "name": "Denim Carpenter Shorts",
+        "description": "Shorts in rigid cotton denim. Baggy fit from seat to hems with plenty of room around thighs. Regular waist and zip fly with button. Side pockets, open back pockets, a two-part patch pocket on one leg, and a hammer loop on other leg. Rounded, knee-length legs.",
+        "price": 58.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 131,
+        "name": "Regular Fit Sweatshorts",
+        "description": "Shorts in rigid cotton denim. Baggy fit from seat to hems with plenty of room around thighs. Regular waist and zip fly with button. Side pockets, open back pockets, a two-part patch pocket on one leg, and a hammer loop on other leg. Rounded, knee-length legs.",
+        "price": 58.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 132,
+        "name": "Regular Fit Sweatshorts",
+        "description": "Shorts in rigid cotton denim. Baggy fit from seat to hems with plenty of room around thighs. Regular waist and zip fly with button. Side pockets, open back pockets, a two-part patch pocket on one leg, and a hammer loop on other leg. Rounded, knee-length legs.",
+        "price": 58.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 133,
+        "name": "Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 35.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 134,
+        "name": "Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 35.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 135,
+        "name": "Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 25.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 136,
+        "name": "Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 25.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 137,
+        "name": "Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 15.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 138,
+        "name": "Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 15.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 139,
+        "name": "Canvas sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 15.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 140,
+        "name": "Canvas sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 15.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 141,
+        "name": "Canvas sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 15.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 142,
+        "name": "Canvas sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 5.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 143,
+        "name": "Canvas sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 45.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 144,
+        "name": "Canvas sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 45.99,
+        "manufacturer_id": 2,
+        "color": "black"
+    },
+    {
+        "id": 145,
+        "name": "Canvas sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 45.99,
+        "manufacturer_id": 3,
+        "color": "white"
+    },
+    {
+        "id": 146,
+        "name": "Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 45.99,
+        "manufacturer_id": 4,
+        "color": "grey"
+    },
+    {
+        "id": 147,
+        "name": "Leather Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 75.99,
+        "manufacturer_id": 5,
+        "color": "white"
+    },
+    {
+        "id": 148,
+        "name": "Leather Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 75.99,
+        "manufacturer_id": 6,
+        "color": "beige"
+    },
+    {
+        "id": 149,
+        "name": "Leather Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 75.99,
+        "manufacturer_id": 7,
+        "color": "beige"
+    },
+    {
+        "id": 150,
+        "name": "Leather Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 75.99,
+        "manufacturer_id": 2,
+        "color": "white"
+    },
+    {
+        "id": 151,
+        "name": "Leather Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 75.99,
+        "manufacturer_id": 3,
+        "color": "black"
+    },
+    {
+        "id": 152,
+        "name": "Leather Sneakers",
+        "description": "Skate shoes in mesh and coated fabric. Padded upper edge, padded tongue, and lacing at front. Loop at back. Terry lining, piqu\u00e9 insoles, and patterned soles. Sole thickness approx. 1 1/2 in.",
+        "price": 75.99,
+        "manufacturer_id": 4,
+        "color": "brown"
+    },
+    {
+        "id": 153,
+        "name": "Leather Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 50.99,
+        "manufacturer_id": 5,
+        "color": "brown"
+    },
+    {
+        "id": 154,
+        "name": "Leather Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 50.99,
+        "manufacturer_id": 6,
+        "color": "brown"
+    },
+    {
+        "id": 155,
+        "name": "Leather Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 50.99,
+        "manufacturer_id": 7,
+        "color": "black"
+    },
+    {
+        "id": 156,
+        "name": "Leather Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 30.99,
+        "manufacturer_id": 2,
+        "color": "brown"
+    },
+    {
+        "id": 157,
+        "name": "Leather Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 12.99,
+        "manufacturer_id": 3,
+        "color": "brown"
+    },
+    {
+        "id": 158,
+        "name": "Leather Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 12.99,
+        "manufacturer_id": 4,
+        "color": "black"
+    },
+    {
+        "id": 159,
+        "name": "Leather Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 12.99,
+        "manufacturer_id": 5,
+        "color": "beige"
+    },
+    {
+        "id": 160,
+        "name": "Leather Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 12.99,
+        "manufacturer_id": 6,
+        "color": "brown"
+    },
+    {
+        "id": 161,
+        "name": "Slide Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 162,
+        "name": "Slide Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 163,
+        "name": "Suede  Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 164,
+        "name": "Suede  Sandals",
+        "description": "Sandals in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 165,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 166,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "gold"
+    },
+    {
+        "id": 167,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "gold"
+    },
+    {
+        "id": 168,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 169,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 150.99,
+        "manufacturer_id": 1,
+        "color": "gold"
+    },
+    {
+        "id": 170,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 171,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 172,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 173,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 174,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 175,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 180.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 176,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 180.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 177,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 180.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 178,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 100.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 179,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "gold"
+    },
+    {
+        "id": 180,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "gold"
+    },
+    {
+        "id": 181,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 182,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 183,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 184,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 185,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 200.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 186,
+        "name": "Necklace",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 90.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 187,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 90.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 188,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 90.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 189,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "red"
+    },
+    {
+        "id": 190,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 191,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 7.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 192,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 7.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 193,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 7.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 194,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 17.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 195,
+        "name": "Bracelet",
+        "description": "A sleek studded chain meets a heart-shaped clasp in this versatile bracelet thats ideal for creating a personalised, stylish look.",
+        "price": 17.99,
+        "manufacturer_id": 1,
+        "color": "silver"
+    },
+    {
+        "id": 196,
+        "name": "Cropped Microfiber Tank Top",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 17.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 197,
+        "name": "Cropped Microfiber Tank Top",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 17.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 198,
+        "name": "Cropped Microfiber Tank Top",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 199,
+        "name": "Cropped Microfiber Tank Top",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 67.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 200,
+        "name": "Cropped Microfiber Tank Top",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 67.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 201,
+        "name": "Top with Shoulder Pads",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 7.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 202,
+        "name": "Top with Shoulder Pads",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 7.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 203,
+        "name": "Top with Shoulder Pads",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 7.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 204,
+        "name": "Top with Shoulder Pads",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 70.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 205,
+        "name": "Top with Shoulder Pads",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 70.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 206,
+        "name": "Top with Shoulder Pads",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 70.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 207,
+        "name": "Top with Shoulder Pads",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 70.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 208,
+        "name": "2-pack T-shirts",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 70.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 209,
+        "name": "2-pack T-shirts",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 210,
+        "name": "2-pack T-shirts",
+        "description": "Cropped, fitted tank top in soft microfiber. Lined at front.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 211,
+        "name": "Oversized Sweatshirt",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 212,
+        "name": "Oversized Sweatshirt",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 50.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 213,
+        "name": "Oversized Sweatshirt",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "gray"
+    },
+    {
+        "id": 214,
+        "name": "Oversized Sweatshirt",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "gray"
+    },
+    {
+        "id": 215,
+        "name": "Oversized Sweatshirt",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 216,
+        "name": "Oversized Sweatshirt",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 90.99,
+        "manufacturer_id": 1,
+        "color": "yellow"
+    },
+    {
+        "id": 217,
+        "name": "Oversized Sweatshirt",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 90.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 218,
+        "name": "2-piece Sweatsuit",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 90.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 219,
+        "name": "2-piece Sweatsuit",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 90.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 220,
+        "name": "2-piece Sweatsuit",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 221,
+        "name": "2-piece Sweatsuit",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 222,
+        "name": "2-piece Sweatsuit",
+        "description": "Oversized sweatshirt with a soft, brushed inside. Round neckline, dropped shoulders, and long sleeves. Ribbing at neckline, cuffs, and hem.",
+        "price": 60.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 223,
+        "name": "horts with SoftMove",
+        "description": "Biking shorts in functional fabric made with SoftMove\u2122 for the ultimate in softness and comfort plus contouring support, and DryMove\u2122 to wick away moisture from skin. High waist and wide waistband panel.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "yellow"
+    },
+    {
+        "id": 224,
+        "name": "horts with SoftMove",
+        "description": "Biking shorts in functional fabric made with SoftMove\u2122 for the ultimate in softness and comfort plus contouring support, and DryMove\u2122 to wick away moisture from skin. High waist and wide waistband panel.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 225,
+        "name": "horts with SoftMove",
+        "description": "Biking shorts in functional fabric made with SoftMove\u2122 for the ultimate in softness and comfort plus contouring support, and DryMove\u2122 to wick away moisture from skin. High waist and wide waistband panel.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 226,
+        "name": "horts with SoftMove",
+        "description": "Biking shorts in functional fabric made with SoftMove\u2122 for the ultimate in softness and comfort plus contouring support, and DryMove\u2122 to wick away moisture from skin. High waist and wide waistband panel.",
+        "price": 20.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 227,
+        "name": "Sports Crop Top",
+        "description": "Short, slim-fit sports top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round neckline and short sleeves.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 228,
+        "name": "Sports Crop Top",
+        "description": "Short, slim-fit sports top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round neckline and short sleeves.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 229,
+        "name": "Sports Crop Top",
+        "description": "Short, slim-fit sports top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round neckline and short sleeves.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 230,
+        "name": "Sports Crop Top",
+        "description": "Short, slim-fit sports top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round neckline and short sleeves.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 231,
+        "name": "Sports Crop Top",
+        "description": "Short, slim-fit sports top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round neckline and short sleeves.",
+        "price": 10.99,
+        "manufacturer_id": 1,
+        "color": "yellow"
+    },
+    {
+        "id": 232,
+        "name": "Sports Crop Top",
+        "description": "Short, slim-fit sports top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round neckline and short sleeves.",
+        "price": 30.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 233,
+        "name": "Sports Crop Top",
+        "description": "Short, slim-fit sports top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round neckline and short sleeves.",
+        "price": 30.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 234,
+        "name": "Sports Crop Top",
+        "description": "Short, slim-fit sports top in functional fabric made with DryMove\u2122 to wick away moisture from skin and keep you comfortably dry while moving. Round neckline and short sleeves.",
+        "price": 30.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 235,
+        "name": "Linen-Blend Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 22.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 236,
+        "name": "Linen-Blend Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 22.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 237,
+        "name": "Linen-Blend Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 238,
+        "name": "Linen-Blend Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 239,
+        "name": "Linen-Blend Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "brown"
+    },
+    {
+        "id": 240,
+        "name": "Denim Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 241,
+        "name": "Denim Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 242,
+        "name": "Denim Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 32.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 243,
+        "name": "Denim Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 32.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 244,
+        "name": "Denim Shorts",
+        "description": "Dressy, loose-fit shorts in an airy, woven linen blend. High waist, covered elastic at back of waistband, and zip fly with concealed button and hook-and-bar fastener. Diagonal side pockets, pleats at front, and creases at front and back.",
+        "price": 32.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 245,
+        "name": "Linen-Blend Pants",
+        "description": "Loose-fit pants in an airy, woven linen blend. High waist, elasticized waistband with narrow drawstring, and discreet side pockets. Straight legs.",
+        "price": 32.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 246,
+        "name": "Linen-Blend Pants",
+        "description": "Loose-fit pants in an airy, woven linen blend. High waist, elasticized waistband with narrow drawstring, and discreet side pockets. Straight legs.",
+        "price": 32.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 247,
+        "name": "Linen-Blend Pants",
+        "description": "Loose-fit pants in an airy, woven linen blend. High waist, elasticized waistband with narrow drawstring, and discreet side pockets. Straight legs.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "grey"
+    },
+    {
+        "id": 248,
+        "name": "Linen-Blend Pants",
+        "description": "Loose-fit pants in an airy, woven linen blend. High waist, elasticized waistband with narrow drawstring, and discreet side pockets. Straight legs.",
+        "price": 12.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    },
+    {
+        "id": 249,
+        "name": "Linen-Blend Pants",
+        "description": "Loose-fit pants in an airy, woven linen blend. High waist, elasticized waistband with narrow drawstring, and discreet side pockets. Straight legs.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "blue"
+    },
+    {
+        "id": 250,
+        "name": "Linen-Blend Pants",
+        "description": "Loose-fit pants in an airy, woven linen blend. High waist, elasticized waistband with narrow drawstring, and discreet side pockets. Straight legs.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "white"
+    },
+    {
+        "id": 251,
+        "name": "Linen-Blend Pants",
+        "description": "Loose-fit pants in an airy, woven linen blend. High waist, elasticized waistband with narrow drawstring, and discreet side pockets. Straight legs.",
+        "price": 80.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 252,
+        "name": "Linen-Blend Pants",
+        "description": "Loose-fit pants in an airy, woven linen blend. High waist, elasticized waistband with narrow drawstring, and discreet side pockets. Straight legs.",
+        "price": 60.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 253,
+        "name": "Low-waist Twill Pants",
+        "description": "Pants in cotton twill. Low waist, zip fly with button, mock front pockets, and regular back pockets. Wide legs.",
+        "price": 60.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 254,
+        "name": "Low-waist Twill Pants",
+        "description": "Pants in cotton twill. Low waist, zip fly with button, mock front pockets, and regular back pockets. Wide legs.",
+        "price": 6.99,
+        "manufacturer_id": 1,
+        "color": "black"
+    },
+    {
+        "id": 255,
+        "name": "Low-waist Twill Pants",
+        "description": "Pants in cotton twill. Low waist, zip fly with button, mock front pockets, and regular back pockets. Wide legs.",
+        "price": 6.99,
+        "manufacturer_id": 1,
+        "color": "beige"
+    },
+    {
+        "id": 256,
+        "name": "Low-waist Twill Pants",
+        "description": "Pants in cotton twill. Low waist, zip fly with button, mock front pockets, and regular back pockets. Wide legs.",
+        "price": 6.99,
+        "manufacturer_id": 1,
+        "color": "green"
+    }
+]

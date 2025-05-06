@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             ManufacturerSeeder::class,
-            ProductSeeder::class,
+            ProductSeederNew::class,
             CategorySeeder::class,
             CategoryProductSeeder::class,
             SizeStockSeeder::class,
