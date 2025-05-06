@@ -37,7 +37,10 @@
                     <div class="cartItem container-fluid text-center p-2">
                         <div class="row justify-content-center justify-content-xl-between">
                             <div class="col-4 d-none d-xl-block align-self-center">
-                                <a href="#"><img class="border border-black border-opacity-50 rounded" src="{{ $item['product']->image }}" alt="product image"></a>
+                                <a href="#">
+                                    <img class="border border-black border-opacity-50 rounded" alt="product image"
+                                        @if(count($item['product']->images)) src="{{asset('storage/' . $item['product']->images[0]->url)}}" @else src="/pictures/unavailable-image.jpg" @endif>
+                                </a>
                             </div>
                             <div class="col-10 col-xl-5 text-start d-flex flex-column justify-content-evenly gap-2">
                                 <table>

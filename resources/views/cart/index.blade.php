@@ -49,7 +49,10 @@
                             <div class="cartItem container-fluid text-center p-2">
                                 <div class="row justify-content-center justify-content-xl-between">
                                     <div class="col-4 d-none d-xl-block align-self-center">
-                                        <a href="/products/{{ $item->product->id }}"><img class="border border-black border-opacity-50 rounded" src="{{ $item->product->image }}"></a>
+                                        <a href="/products/{{ $item->product->id }}">
+                                            <img class="border border-black border-opacity-50 rounded"
+                                                @if(count($item->product->images)) src="{{asset('storage/' . $item->product->images[0]->url)}}" @else src="/pictures/unavailable-image.jpg" @endif>
+                                        </a>
                                     </div>
                                     <div class="col-9 col-xl-5 text-start d-flex flex-column justify-content-evenly gap-2">
                                         <table>
@@ -76,7 +79,7 @@
                                         <form action="{{ route('cart.remove', ['product' => $item->product_id, 'size' => $item->size]) }}" method="POST" class="w-100">
                                             @csrf
                                             @method('DELETE')
-                                            <button class="p-1 w-100 text-white border-0 rounded" type="submit">
+                                            <button class="p-1 w-100 text-white border-0 rounded btn btn-danger" type="submit">
                                                 <i class="zmdi zmdi-delete fs-4"></i>
                                             </button>
                                         </form>
