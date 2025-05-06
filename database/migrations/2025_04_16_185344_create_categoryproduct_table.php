@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name',255);
             $table->string('slug',255)->unique();
+            $table->string('type',255)->nullable()->default(NULL);
         });
 
         Schema::create('category_product', function (Blueprint $table) {

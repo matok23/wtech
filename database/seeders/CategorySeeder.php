@@ -19,6 +19,7 @@ class CategorySeeder extends Seeder
                 'id'=>1,
                 'name'=>'Women',
                 'slug'=>'women',
+                'type'=>'gender',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -26,6 +27,7 @@ class CategorySeeder extends Seeder
                 'id'=>2,
                 'name'=>'Men',
                 'slug'=>'men',
+                'type'=>'gender',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -37,6 +39,7 @@ class CategorySeeder extends Seeder
                 'id'=>3,
                 'name'=>'Hats',
                 'slug'=>'hats',
+                'type'=>'category',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -44,6 +47,7 @@ class CategorySeeder extends Seeder
                 'id'=>4,
                 'name'=>'Tops',
                 'slug'=>'tops',
+                'type'=>'category',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -51,6 +55,7 @@ class CategorySeeder extends Seeder
                 'id'=>5,
                 'name'=>'Pants',
                 'slug'=>'pants',
+                'type'=>'category',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -58,6 +63,7 @@ class CategorySeeder extends Seeder
                 'id'=>6,
                 'name'=>'Shoes',
                 'slug'=>'shoes',
+                'type'=>'category',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -65,6 +71,7 @@ class CategorySeeder extends Seeder
                 'id'=>7,
                 'name'=>'Accessories',
                 'slug'=>'accessories',
+                'type'=>'category',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -75,6 +82,7 @@ class CategorySeeder extends Seeder
                 'id'=>8,
                 'name'=>'Bucket hats',
                 'slug'=>'bucket-hats',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -82,12 +90,14 @@ class CategorySeeder extends Seeder
                 'id'=>9,
                 'name'=>'Caps',
                 'slug'=>'caps',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],  [   
                 'id'=>10,
                 'name'=>'Fedoras',
                 'slug'=>'fedoras',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -95,12 +105,14 @@ class CategorySeeder extends Seeder
                 'id'=>11,
                 'name'=>'Shirts',
                 'slug'=>'shirts',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],  [   
                 'id'=>12,
                 'name'=>'Sweatshirt',
                 'slug'=>'sweatshirt',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -108,12 +120,14 @@ class CategorySeeder extends Seeder
                 'id'=>13,
                 'name'=>'Gym',
                 'slug'=>'gym-tops',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],  [   
                 'id'=>14,
                 'name'=>'Shorts',
                 'slug'=>'shorts',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -121,12 +135,14 @@ class CategorySeeder extends Seeder
                 'id'=>15,
                 'name'=>'Sweatpants',
                 'slug'=>'sweatpants',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],  [   
                 'id'=>16,
                 'name'=>'Sneakers',
                 'slug'=>'sneakers',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],
@@ -134,6 +150,7 @@ class CategorySeeder extends Seeder
                 'id'=>17,
                 'name'=>'Sandals',
                 'slug'=>'sandals',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ], 
@@ -141,12 +158,14 @@ class CategorySeeder extends Seeder
                 'id'=>18,
                 'name'=>'Bracelets',
                 'slug'=>'bracelets',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],  [   
                 'id'=>19,
                 'name'=>'Necklaces',
                 'slug'=>'necklaces',
+                'type'=>'subcategory',
                 'created_at'=>now(),
                 'updated_at'=>now()
             ],

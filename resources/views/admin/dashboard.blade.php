@@ -134,6 +134,12 @@
                 </div>
 
                 <div class="container col-11 col-md-5 d-flex flex-column gap-2 p-2">
+                    <div class="row justify-content-center">
+                        <div class="col-11 col-xl-9 p-2 d-flex justify-content-center gap-2">
+                            <input type="text" placeholder="Search..." class="searchbar h-100" id="searchBarAdmin">
+                            @if(request()->query('term')) <a class="btn btn-primary" href="/admin">CLEAR</a> @endif
+                        </div>
+                    </div>
                     @foreach ($products as $product)
                         <div class="row justify-content-center">
                             <div class="col-11 col-xl-9 roundedContainer p-2 product">
@@ -186,6 +192,13 @@
                 deleteForm.action="/products/"+productId;
                 deleteForm.submit();
             });
+
+            document.getElementById('searchBarAdmin').addEventListener('change',(ev)=>{
+                ev.preventDefault();
+                window.location.href="/admin?term=" + ev.target.value;
+            });
+
+            
         </script>
     </main>
 @endsection

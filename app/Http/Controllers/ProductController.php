@@ -62,7 +62,16 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {   
-        $products=Product::with('images')->get();
+        $subcategory=$product->categories()->where('type','subcategory')->first();
+        $gender=$product->categories()->where('type','gender')->first();
+        $products=Product::with('images')
+        ->when($gender,function($query) use ($gender){
+            $query->whereHas('categories',function($q) use ($gender){$q->where('slug',$gender->slug);});
+        })
+        ->when($subcategory,function($query) use ($subcategory){
+            $query->whereHas('categories',function($q) use ($subcategory){$q->where('slug',$subcategory->slug);});
+        })
+        ->limit(10)->get();
         return view('products.product-view',['productSingle'=>$product->load('stock')->load('images'),'products'=>$products]);
     }
 
