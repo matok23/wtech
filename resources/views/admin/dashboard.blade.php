@@ -148,7 +148,8 @@
                                     </div>
 
                                     <div class="col-7 text-end">
-                                        <img class="border border-black border-opacity-50 rounded" src="{{ $product->image }}" alt="">
+                                        <img class="border border-black border-opacity-50 rounded" alt=""
+                                            @if(count($product->images)) src="{{asset('storage/' . $product->images[0]->url)}}" @else src="/pictures/unavailable-image.jpg" @endif>
                                     </div>
                                 </div>
                             </div>

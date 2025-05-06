@@ -111,7 +111,7 @@
                         @foreach($products as $product)
                             <div class="suggested-item d-flex flex-column justify-content-between">
                                 <a href="/products/{{$product->id}}"><img class="border border-black rounded border-opacity-50"
-                                    @if(count($product->images)) src="{{asset('storage/' . $product->images[0]->url)}}" @else src="" @endif>
+                                    @if(count($product->images)) src="{{asset('storage/' . $product->images[0]->url)}}" @else src="/pictures/unavailable-image.jpg" @endif>
                                 </a>
                                 <span>{{$product->name}}</span>
                                 <span class="productPrice"><strong>${{$product->price}}</strong></span>

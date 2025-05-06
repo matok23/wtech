@@ -32,7 +32,7 @@
                                 </div>
                             @endif
 
-                            <button type="submit" class="submit-btn">Prihlásiť</button>
+                            <button type="submit" class="submit-btn">Login</button>
                         </form>
 
                     </div>

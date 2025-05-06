@@ -31,16 +31,33 @@ class ProductSeederNew extends Seeder
             ]);
         }
 
+        $files = Storage::disk('public')->allFiles('product_images');
+        Storage::disk('public')->delete($files); 
+
         foreach($images as $index=>$image){
-            $imageData = file_get_contents($image->url);
-            $extension = pathinfo(parse_url($image->url, PHP_URL_PATH), PATHINFO_EXTENSION) ?: 'jpg';
-            $filename = 'product_images/' . uniqid() . '.' . $extension;
-            Storage::disk('public')->put($filename, $imageData);
-            
-            Image::create([
-                'product_id'=>$image->product_id,
-                'url'=>$filename,
-            ]);
+            $imageData=null;
+
+            for($i=0;$i<3 && !$imageData;$i++){
+                $imageData = @file_get_contents($image->url);
+                if(!$imageData){
+                    usleep(500000);
+                }
+            }
+
+            if($imageData){
+                $extension = pathinfo(parse_url($image->url, PHP_URL_PATH), PATHINFO_EXTENSION) ?: 'jpg';
+                $filename = 'product_images/' . uniqid() . '.' . $extension;
+                Storage::disk('public')->put($filename, $imageData);
+                
+                Image::create([
+                    'product_id'=>$image->product_id,
+                    'url'=>$filename,
+                ]);
+            }
+
+            else{
+                \Log::error("Failed to download image {$image->url} for product {$image->product_id}");
+            }
         }
     }
 }

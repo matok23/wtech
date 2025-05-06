@@ -105,3 +105,17 @@
 .dropdown-content input {
     margin-right: 5px;
 }
+
+button {
+    background-color: #8e5bf3b5;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #a57ef5b5;
+    
+}

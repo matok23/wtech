@@ -69,6 +69,7 @@ class ProductFilters extends Component
                 $query->whereHas('manufacturer',function ($q){$q->whereIn('name',$this->brand);});
             })
             ->when($this->sortPrice, fn ($query) => $query->orderBy('price', $this->sortPrice))
+            ->with('images')
             ->paginate(16);
 
 
