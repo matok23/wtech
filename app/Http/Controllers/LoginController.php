@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-use App\Http\Controllers\Exception;
 
 class LoginController extends Controller
 {
@@ -47,7 +46,7 @@ class LoginController extends Controller
                 'password' => Hash::make($credentials['password']),
             ]);
         }
-        catch(Exception $e) {
+        catch(\Exception $e) {
             return back()->withErrors([
                 'email' => 'Registration not successful',
             ])->withInput();

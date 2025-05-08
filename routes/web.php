@@ -56,7 +56,22 @@ Route::get('/login', function() {
 
 Route::post('/login', [LoginController::class, 'login']);
 
-// middleware to force login when accessing cart!!!!
-// Route::get('/cart', function() {
-//     return view('cart.index');
-// })->middleware('isloggedin');
+Route::get('/register', function() {
+    return view('register.index');
+});
+
+Route::post('/register', [LoginController::class, 'register']);
+
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::middleware(['adminAccess'])->group(function (){
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.dash');
+    Route::get('/admin/edit/{product}', [AdminController::class, 'edit'])->name('admin.edit');
+    Route::resource('/products',ProductController::class)->only(['index']);
+    //Route::post('/admin')
+});
+
+Route::put('/products/stock/{product}', [ProductController::class, 'updateStock'])->name('products.updateStock');
+Route::put('/products/images/{product}', [ProductController::class, 'updateImages'])->name('products.updateImages');
+Route::delete('/products/stock/{stock}', [ProductController::class, 'destroyStock'])->name('products.destroyStock');
+Route::delete('/products/images/{image}', [ProductController::class, 'destroyImage'])->name('products.destroyImage');
