@@ -4,14 +4,14 @@
     <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
     <style>
         .info-box {
-            background-color: rgba(0, 128, 0, 0.1); /* Zelené priesvitné pozadie */
-            border: 2px solid rgba(0, 128, 0, 0.3); /* Zelený okraj */
+            background-color: rgba(0, 128, 0, 0.1); 
+            border: 2px solid rgba(0, 128, 0, 0.3); 
             border-radius: 8px;
             margin-bottom: 10px;
         }
 
         .info-box strong {
-            color: #006400; /* Zelená farba pre text */
+            color: #006400;
         }
     </style>
 @endpush
@@ -76,6 +76,11 @@
                     </div>
                     @endif
                     <div class="p-2"><h3>Your total: ${{ number_format($total, 2) }}</h3></div>
+                    
+                    
+                    
+                    
+                    
                     <hr>
                     <div class="d-flex flex-column gap-2 p-2">
                         <div class="d-flex flex-column gap-2 justify-content-between align-items-center px-2">
@@ -106,6 +111,11 @@
                                     <label for="postal_code" class="form-label">Postal Code</label>
                                     <input type="text" id="postal_code" name="postal_code" class="form-control form-control-sm" required>
                                 </div>
+
+
+
+
+                                
                                 <div class="info-box">
                                     <p><strong>Coupon:</strong> {{ session('coupon', 'No coupon applied') }}</p>
                                 </div>

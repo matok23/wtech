@@ -70,8 +70,23 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Amount</td>
-                                                    <td><input type="number" min="1" value="{{ $item->amount }}" step="1"></td>  {{-- Oprava prístupu k množstvu --}}
+                                                    <td>
+                                                        <form method="POST" action="{{ route('cart.updateQuantity') }}" class="d-flex align-items-center gap-2">
+                                                            @csrf
+                                                            <input type="hidden" name="product_id" value="{{ $item->product_id }}">
+                                                            <input type="hidden" name="size" value="{{ $item->size }}">
+                                                            <input type="number"
+                                                                   name="amount"
+                                                                   min="1"
+                                                                   max="{{ $item->product->stock }}"
+                                                                   value="{{ $item->amount }}"
+                                                                   class="form-control"
+                                                                   style="max-width: 80px;">
+                                                            <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
+                                                        </form>
+                                                    </td>
                                                 </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
@@ -98,9 +113,7 @@
                                     @foreach(session('order_products') as $product)
                                         <li>
                                             <strong>{{ $product['name'] }}</strong>: ordered {{ $product['ordered'] }}, 
-                                            {{-- <span style="color: {{ $product['stock_left'] == 0 ? 'red' : 'green' }}">
-                                                stock left: {{ $product['stock_left'] }}
-                                            </span> --}}
+                            
                                         </li>
                                     @endforeach
                                 </ul>
@@ -111,6 +124,8 @@
 
                 <div class="col-9 col-md-5 p-2 roundedContainer">
             
+
+
                     <hr>
                     <div class="d-flex flex-column gap-2 p-2">
                         <div class="d-flex justify-content-between align-items-center px-2">
@@ -177,62 +192,71 @@
                         // Otvor formulár pre doručenie
                         const deliveryOutput = document.getElementById('deliveryOutput');
                         deliveryOutput.classList.remove('d-none');
-                        const selectedDelivery = "{{ session('deliveryMethod.method', 'GLS') }}"; // Predvolená hodnota je 'GLS', ak nie je v session
+                        const selectedDelivery = "{{ session('deliveryMethod.method', '') }}";
 
                         deliveryOutput.innerHTML = `
-                            <label for="deliverySelect" class="form-label mt-2">Choose delivery method:</label>
-                            <select class="form-select" id="deliverySelect" name="delivery">
-                                <option value="GLS" ${selectedDelivery === 'GLS' ? 'selected' : ''}>GLS</option>
-                                <option value="POSTA" ${selectedDelivery === 'POSTA' ? 'selected' : ''}>Pošta</option>
-                                <option value="POBOCKA" ${selectedDelivery === 'POBOCKA' ? 'selected' : ''}>Na pobočke</option>
-                            </select>
-                        `;
+                        <select class="form-select" id="deliverySelect" name="delivery">
+                           <option value="" selected disabled>-- vyberte spôsob doručenia --</option>
+                            <option value="DHL" ${selectedDelivery === 'DHL' ? 'selected' : ''}>DHL</option>
+                            <option value="GLS" ${selectedDelivery === 'GLS' ? 'selected' : ''}>GLS</option>
+                            <option value="Na pobočke" ${selectedDelivery === 'Na pobočke' ? 'selected' : ''}>Na pobočke</option>
+                        </select>
+                    `;
 
+                
                         // Uložíme doručenie do session cez AJAX
                         const select = document.getElementById('deliverySelect');
-                        select.addEventListener('change', () => {
-                            fetch('{{ route('cart.updateDelivery') }}', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                                },
-                                body: JSON.stringify({
-                                    delivery: select.value
-                                })
-                            });
+                       select.addEventListener('change', () => {
+                        fetch('{{ route('cart.updateDelivery') }}', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                            },
+                            body: JSON.stringify({
+                                delivery: select.value
+                            })
+                        }).then(() => {
+                            // Zobraz vybranú možnosť ihneď po zmene
+                            deliveryOutput.innerHTML += `<div class="mt-2 text-success">Zvolený spôsob: <strong>${select.options[select.selectedIndex].text}</strong></div>`;
                         });
+                    });
+
                     });
 
                     paymentBtn.addEventListener('click', () => {
                         // Otvor formulár pre platbu
                         const paymentOutput = document.getElementById('paymentOutput');
                         paymentOutput.classList.remove('d-none');
-                        const selectedPayment = "{{ session('paymentMethod.method', 'DOBIERKA') }}"; // Predvolená hodnota je 'DOBIERKA', ak nie je v session
+                        const selectedPayment = "{{ session('paymentMethod.method', '') }}";
 
                         paymentOutput.innerHTML = `
-                            <label for="paymentSelect" class="form-label mt-2">Choose payment method:</label>
-                            <select class="form-select" id="paymentSelect" name="payment">
-                                <option value="DOBIERKA" ${selectedPayment === 'DOBIERKA' ? 'selected' : ''}>Na dobierku</option>
-                                <option value="APPLE PAY" ${selectedPayment === 'APPLE PAY' ? 'selected' : ''}>Apple Pay</option>
-                                <option value="VISA" ${selectedPayment === 'VISA' ? 'selected' : ''}>Visa</option>
-                            </select>
-                        `;
+                        <select class="form-select" id="paymentSelect" name="payment">
+                            <option value="" selected disabled>-- vyberte spôsob platby --</option>
+                            <option value="DOBIERKA" ${selectedPayment === 'DOBIERKA' ? 'selected' : ''}>Na dobierku</option>
+                            <option value="APPLE PAY" ${selectedPayment === 'APPLE PAY' ? 'selected' : ''}>Apple Pay</option>
+                            <option value="VISA" ${selectedPayment === 'VISA' ? 'selected' : ''}>Visa</option>
+                        </select>
+                    `;
+
 
                         // Uložíme platbu do session cez AJAX
                         const select = document.getElementById('paymentSelect');
                         select.addEventListener('change', () => {
-                            fetch('{{ route('cart.updatePayment') }}', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                                },
-                                body: JSON.stringify({
-                                    payment: select.value
-                                })
-                            });
+                        fetch('{{ route('cart.updatePayment') }}', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                            },
+                            body: JSON.stringify({
+                                payment: select.value
+                            })
+                        }).then(() => {
+                            paymentOutput.innerHTML += `<div class="mt-2 text-success">Zvolená platba: <strong>${select.options[select.selectedIndex].text}</strong></div>`;
                         });
+                    });
+
                     });
                 });
             </script>

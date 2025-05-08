@@ -87,13 +87,9 @@
                                     {{ session('success') }}
                                 </div>
                             @endif
-                            @if ($errors->any())
-                                <div class="alert alert-danger mt-2">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
+                            @if(session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
                                 </div>
                             @endif
                             <h3>Product description</h3>

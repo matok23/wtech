@@ -153,4 +153,8 @@ class ProductController extends Controller
         $image->delete();
         return redirect()->route('admin.edit',$product_id)->with('success','Image deleted successfully!');
     }
+
+
+
+    
 }

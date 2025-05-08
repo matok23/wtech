@@ -9,10 +9,13 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\CartItem;
 use Illuminate\Support\Facades\Auth;
+use App\Models\SizeStock;
+
 
 
 class CartController extends Controller
 {
+
     public function add(Request $request)
     {
         $validated = $request->validate([
@@ -20,24 +23,37 @@ class CartController extends Controller
             'amount' => 'required|integer|min:1',
             'size' => 'required|integer'
         ]);
-
+    
         $userId = Auth::id();
         $sessionId = session()->getId();
-
-        // Načítaj produkt so všetkými jeho veľkosťami
-        $product = Product::with('stock')->findOrFail($validated['product_id']);
-        
+    
+        // Načítaj zásobu pre daný produkt a veľkosť
+        $stockItem = SizeStock::where('product_id', $validated['product_id'])
+            ->where('size', $validated['size'])
+            ->first();
+    
+        if (!$stockItem) {
+            return redirect()->back()->with('error', 'Niečo sa pokazilo!');
+        }
+    
+        // Získaj existujúci CartItem alebo vytvor nový
         $cartItem = CartItem::firstOrNew([
             'product_id' => $validated['product_id'],
             'user_id' => $userId,
             'session_id' => $userId ? null : $sessionId,
             'size' => $validated['size'],
         ]);
-
-        $cartItem->amount += $validated['amount'];
+    
+        $newTotal = $cartItem->amount + $validated['amount'];
+    
+        if ($newTotal > $stockItem->stock_left) {
+            return back()->with('error', 'Na sklade je len ' . $stockItem->stock_left . ' ks v tejto veľkosti.');
+        }
+    
+        $cartItem->amount = $newTotal;
         $cartItem->save();
-
-        return back()->with('success', 'Product added to cart.');
+    
+        return back()->with('success', 'Produkt bol pridaný do košíka.');
     }
     
     public function index()
@@ -71,6 +87,48 @@ class CartController extends Controller
         return redirect()->route('cart.index');
     }
 
+    public function updateQuantity(Request $request)
+    {
+        $validated = $request->validate([
+            'product_id' => 'required|exists:products,id',
+            'size' => 'required|integer',
+            'amount' => 'required|integer|min:1'
+        ]);
+    
+        $userId = Auth::id();
+        $sessionId = session()->getId();
+    
+        $query = CartItem::where('product_id', $validated['product_id'])
+                         ->where('size', $validated['size']);
+    
+        if ($userId) {
+            $query->where('user_id', $userId);
+        } else {
+            $query->where('session_id', $sessionId);
+        }
+    
+        $cartItem = $query->first();
+    
+        if (!$cartItem) {
+            return back()->with('error', 'Produkt sa v košíku nenašiel.');
+        }
+    
+        // Skontroluj, či máme toľko skladom
+        $stockItem = SizeStock::where('product_id', $validated['product_id'])
+                              ->where('size', $validated['size'])
+                              ->first();
+    
+        if ($validated['amount'] > $stockItem->stock_left) {
+            return back()->with('error', 'Na sklade je len ' . $stockItem->stock_left . ' ks.');
+        }
+    
+        $cartItem->amount = $validated['amount'];
+        $cartItem->save();
+    
+        return back()->with('success', 'Množstvo bolo aktualizované.');
+    }
+    
+    
 
 
     // CartController.php
