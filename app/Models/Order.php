@@ -10,6 +10,7 @@ class Order extends Model
     protected $fillable = [
         'user_id',
         'status',
+        'session_id',
         // sem pridaj ďalšie, ktoré povoľuješ
     ];
     

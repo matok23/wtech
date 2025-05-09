@@ -86,33 +86,36 @@
                         <div class="d-flex flex-column gap-2 justify-content-between align-items-center px-2">
                             <div class="mb-0 text-start"><strong>User Information</strong></div>
                             <form action="{{ route('checkout.complete') }}" method="POST">
-                                @csrf
-                                <div class="mb-2">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" id="name" name="name" class="form-control form-control-sm" required>
-                                </div>
-                                <div class="mb-2">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" id="email" name="email" class="form-control form-control-sm" required>
-                                </div>
-                                <div class="mb-2">
-                                    <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" class="form-control form-control-sm" required>
-                                </div>
-                                <div class="mb-2">
-                                    <label for="address" class="form-label">Street/Number</label>
-                                    <input type="text" id="address" name="address" class="form-control form-control-sm" required>
-                                </div>
-                                <div class="mb-2">
-                                    <label for="city" class="form-label">City</label>
-                                    <input type="text" id="city" name="city" class="form-control form-control-sm" required>
-                                </div>
-                                <div class="mb-2">
-                                    <label for="postal_code" class="form-label">Postal Code</label>
-                                    <input type="text" id="postal_code" name="postal_code" class="form-control form-control-sm" required>
-                                </div>
-
-
+                            @csrf
+                            <div class="mb-2">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-control form-control-sm" 
+                                    pattern="[A-Za-zÁ-Žá-ž\s\-]{2,50}" title="Iba písmená, medzery a pomlčky, 2-50 znakov" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-control form-control-sm" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control form-control-sm" 
+                                    pattern="[0-9+]{9,15}" title="Iba čísla a plus, 9-15 znakov" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="address" class="form-label">Street/Number</label>
+                                <input type="text" id="address" name="address" class="form-control form-control-sm" 
+                                    pattern="[A-Za-z0-9\s\/\.\-]{3,100}" title="Ulica a číslo, 3-100 znakov" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" id="city" name="city" class="form-control form-control-sm" 
+                                    pattern="[A-Za-zÁ-Žá-ž\s\-]{2,50}" title="Iba písmená, medzery a pomlčky" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="postal_code" class="form-label">Postal Code</label>
+                                <input type="text" id="postal_code" name="postal_code" class="form-control form-control-sm" 
+                                    pattern="[0-9]{5}" maxlength="5" title="5-ciferné PSČ" required>
+                            </div>
 
 
                                 

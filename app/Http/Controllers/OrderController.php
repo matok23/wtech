@@ -17,71 +17,72 @@ use App\Models\SizeStock;
 class OrderController extends Controller
 {
     public function checkout(Request $request)
-    {
-        // Skontrolujeme, či je používateľ prihlásený
-        // if (!Auth::check()) {
-        //     return response()->json(['error' => 'User not authenticated'], 401);
-        // }
-    
-        // Začneme transakciu, aby sme zabezpečili, že všetky operácie prebehnú úspešne.
+{
+    $userId = Auth::id(); // null ak nie je prihlásený
+    $sessionId = session()->getId();
 
-        $userId = Auth::id();
-        $sessionId = session()->getId();
+    // Načítaj položky z košíka podľa user_id alebo session_id
+    $cartItems = CartItem::where(function ($query) use ($userId, $sessionId) {
+        if ($userId) {
+            $query->where('user_id', $userId);
+        } else {
+            $query->where('session_id', $sessionId);
+        }
+    })->get();
 
-        // Načítaj všetky položky v košíku so všetkými veľkosťami
-        $cartItems = CartItem::where(function ($query) use ($userId, $sessionId) {
-            $query->when($userId, fn ($q) => $q->where('user_id', $userId))
-                ->when(!$userId, fn ($q) => $q->where('session_id', $sessionId));
-        })->get();
+    if ($cartItems->isEmpty()) {
+        return response()->json(['error' => 'Cart is empty'], 400);
+    }
 
-        DB::beginTransaction();
-    
-        try {
-            // 1. Vytvorenie objednávky
-            $order = Order::create([
-                'user_id' => Auth::user()->id,  // Ak je používateľ prihlásený
-                'status' => 'pending', // alebo akýkoľvek iný status
-            ]);
-    
-            // 2. Získame položky z košíka
-            // $cartItems = CartItem::where('user_id', Auth::user()->id)->get();
-    
-            // 3. Pripravíme dáta pre `order_items`
-            $orderItems = [];
-            foreach ($cartItems as $cartItem) {
-                $orderItems[] = [
-                    'amount' => $cartItem->amount,
-                    'product_id' => $cartItem->product_id,
-                    'order_id' => $order->id,
-                    'size' => $cartItem->size, // Pridáme veľkosť k položke objednávky
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-    
-                // Získame zásoby pre konkrétnu veľkosť produktu
-                $sizeStock = SizeStock::where('product_id', $cartItem->product_id)
-                                      ->where('size', $cartItem->size) // Predpokladám, že veľkosť je k dispozícii v košíku
-                                      ->first();
-    
-                // Znížime počet kusov na sklade pre konkrétnu veľkosť
-                if ($sizeStock) {
-                    $sizeStock->stock_left -= $cartItem->amount;
-                    $sizeStock->save();
-                } else {
-                    DB::rollBack();
-                    return response()->json(['error' => 'Product size not found'], 500);
-                }
+    DB::beginTransaction();
+
+    try {
+        // 1. Vytvor objednávku
+        $order = Order::create([
+    'user_id' => $userId, // null if guest
+    'session_id' => $sessionId,
+    'status' => 'pending',
+]);
+
+        $orderItems = [];
+        foreach ($cartItems as $cartItem) {
+            $orderItems[] = [
+                'amount' => $cartItem->amount,
+                'product_id' => $cartItem->product_id,
+                'order_id' => $order->id,
+                'size' => $cartItem->size,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+
+            $sizeStock = SizeStock::where('product_id', $cartItem->product_id)
+                                  ->where('size', $cartItem->size)
+                                  ->first();
+
+            if ($sizeStock && $sizeStock->stock_left >= $cartItem->amount) {
+                $sizeStock->stock_left -= $cartItem->amount;
+                $sizeStock->save();
+            } else {
+                DB::rollBack();
+                return response()->json(['error' => 'Insufficient stock for product size'], 500);
             }
-    
-            // 5. Pridáme položky do `order_items` v dávke
-            OrderItem::insert($orderItems);
-    
-            // 6. Odstránime položky z košíka
-            CartItem::where('user_id', Auth::user()->id)->delete();
-    
-            // Uložíme transakciu
-            DB::commit();
-    
+        }
+
+        OrderItem::insert($orderItems);
+
+        // Vymaž položky z košíka podľa toho, kto objednáva
+        CartItem::where(function ($query) use ($userId, $sessionId) {
+            if ($userId) {
+                $query->where('user_id', $userId);
+            } else {
+                $query->where('session_id', $sessionId);
+            }
+        })->delete();
+
+        DB::commit();
+
+
+
             // Získame info o produktoch a zásobách
             $productSummaries = [];
             foreach ($orderItems as $item) {
@@ -105,56 +106,24 @@ class OrderController extends Controller
                 }
             }
     
-            // Flashni dáta do session
-            session()->flash('order_success', 'Your order has been placed successfully!');
-            session()->flash('order_products', $productSummaries);
-    
-            return redirect()->route('cart.index'); // alebo checkout.complete
-        } catch (\Exception $e) {
-            DB::rollBack();
-            return response()->json([
-                'error' => 'Something went wrong.',
-                'message' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ], 500);
-        }
+
+
+        
+        session()->flash('order_success', 'Your order has been placed successfully!');
+    session()->flash('order_success', 'Your order has been placed successfully!');
+    session()->flash('order_products', $productSummaries); // <-- doplnené
+
+return redirect()->route('cart.index');
+    } catch (\Exception $e) {
+        DB::rollBack();
+        return response()->json([
+            'error' => 'Something went wrong.',
+            'message' => $e->getMessage(),
+            'trace' => $e->getTraceAsString()
+        ], 500);
     }
-    public function completeOrder(Request $request)
-{
-    // Validate and process order logic
-    $validated = $request->validate([
-        'name' => 'required|string',
-        'email' => 'required|email',
-        'phone' => 'required|string',
-        'address' => 'required|string',
-        'city' => 'required|string',
-        'postal_code' => 'required|string',
-    ]);
-
-    // Process the order, e.g., create an order, reduce stock, etc.
-    // This is just an example, adapt it based on your business logic.
-
-    // Example of saving order
-    $order = Order::create([
-        'user_id' => auth()->id(),
-        'name' => $validated['name'],
-        'email' => $validated['email'],
-        'phone' => $validated['phone'],
-        'address' => $validated['address'],
-        'city' => $validated['city'],
-        'postal_code' => $validated['postal_code'],
-        'total' => session('total'),
-    ]);
-
-    // After processing the order, set a success message
-    session()->flash('order_success', 'Your order has been successfully placed!');
-
-    // Clear cart after successful order
-    Cart::clear();
-
-    // Redirect back to the checkout page with the success message
-    return redirect()->route('checkout');
 }
+
 
     
 }
