@@ -7,12 +7,12 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Product;
 use App\Models\Image;
+use Illuminate\Support\Facades\Log; 
+
 
 class ProductSeederNew extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+  
     public function run(): void
     {
         $jsonString = file_get_contents(database_path('data/products.json'));
@@ -56,7 +56,7 @@ class ProductSeederNew extends Seeder
             }
 
             else{
-                \Log::error("Failed to download image {$image->url} for product {$image->product_id}");
+                Log::error("Failed to download image {$image->url} for product {$image->product_id}");
             }
         }
     }

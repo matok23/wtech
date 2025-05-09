@@ -106,7 +106,6 @@
                             <form method="POST" action="{{ route('products.updateImages', $product->id) }}" enctype="multipart/form-data" class="d-flex flex-column justify-content-evenly align-items-center gap-2">
                                 @csrf
                                 @method('PUT')
-                                {{-- <input type="number" hidden name="product_id" value="{{ $product->id }}"> --}}
 
                                 <div class="d-flex flex-column justify-content-evenly align-items-center gap-2 w-100">
                                     
@@ -134,7 +133,6 @@
                             <form method="POST" action="{{ route('products.updateStock', $product->id) }}" class="d-flex flex-column justify-content-evenly align-items-center gap-2">
                                 @csrf
                                 @method('PUT')
-                                {{-- <input type="number" hidden name="product_id" value="{{ $product->id }}"> --}}
 
                                 <div class="d-flex flex-column justify-content-evenly align-items-center gap-2 w-100" id="stockRows">
                                     

@@ -1,16 +1,11 @@
 <?php
-
-// app/Http/Controllers/CartController.php
-
 namespace App\Http\Controllers;
-
 
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\CartItem;
 use Illuminate\Support\Facades\Auth;
 use App\Models\SizeStock;
-
 
 
 class CartController extends Controller
@@ -62,7 +57,7 @@ class CartController extends Controller
         $sessionId = session()->getId();
 
         // Načítaj všetky položky v košíku so všetkými veľkosťami
-        $cartItems = CartItem::with('product.stock')  // Použi 'stock', nie 'size'
+        $cartItems = CartItem::with('product.stock')  
             ->where(function ($query) use ($userId, $sessionId) {
                 $query->when($userId, fn ($q) => $q->where('user_id', $userId))
                     ->when(!$userId, fn ($q) => $q->where('session_id', $sessionId));
@@ -130,8 +125,7 @@ class CartController extends Controller
     
     
 
-
-    // CartController.php
+    
 public function updateCoupon(Request $request)
 {
     session()->put('coupon', $request->input('coupon'));

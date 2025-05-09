@@ -13,12 +13,10 @@
 
       
         <section class="flex-fill d-block d-md-flex justify-content-center ">
-            {{-- @include('layouts.partials.navbar') --}}
           
             <div class="productPageRight container ">
                 <div class="productContainer roundedContainer row d-flex justify-content-center gap-2">
                     <div class="productImg col-11 col-md-5 ">
-                        {{-- <img src="{{$productSingle->image}}"> --}}
                         @unless (count($productSingle->images))
                             <img src="/pictures/unavailable-image.jpg">
                         @else
@@ -58,7 +56,6 @@
                                     @else
                                         <input type="number" name="amount" min="1" value="1" step="1" class="form-control w-auto">
                                         <select name="size" class="h-100 w-auto">
-                                            {{-- dd($request->all()); --}}
 
                                             <option value="" selected>Select Size</option>
                                             @foreach($productSingle->stock as $stock)
@@ -111,7 +108,6 @@
                                 </a>
                                 <span>{{$product->name}}</span>
                                 <span class="productPrice"><strong>${{$product->price}}</strong></span>
-                                {{-- <button><i class="zmdi zmdi-shopping-cart-plus"></i></button> add this back !!!--}}
                             </div>
                         @endforeach
                     </div>

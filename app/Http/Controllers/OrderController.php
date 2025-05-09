@@ -18,7 +18,7 @@ class OrderController extends Controller
 {
     public function checkout(Request $request)
 {
-    $userId = Auth::id(); // null ak nie je prihlásený
+    $userId = Auth::id(); 
     $sessionId = session()->getId();
 
     // Načítaj položky z košíka podľa user_id alebo session_id
@@ -39,7 +39,7 @@ class OrderController extends Controller
     try {
         // 1. Vytvor objednávku
         $order = Order::create([
-    'user_id' => $userId, // null if guest
+    'user_id' => $userId, 
     'session_id' => $sessionId,
     'status' => 'pending',
 ]);
@@ -81,19 +81,15 @@ class OrderController extends Controller
 
         DB::commit();
 
-
-
             // Získame info o produktoch a zásobách
             $productSummaries = [];
             foreach ($orderItems as $item) {
-                // Získame produkt podľa product_id
                 $product = Product::find($item['product_id']);
                 
-                // Skontrolujeme, či produkt existuje
                 if ($product) {
                     // Získame zásoby pre konkrétnu veľkosť produktu
                     $sizeStock = SizeStock::where('product_id', $item['product_id'])
-                                          ->where('size', $item['size'])  // Teraz máme správnu veľkosť
+                                          ->where('size', $item['size'])  
                                           ->first();
     
                     $productSummaries[] = [
@@ -107,22 +103,21 @@ class OrderController extends Controller
             }
     
 
-
         
         session()->flash('order_success', 'Your order has been placed successfully!');
-    session()->flash('order_success', 'Your order has been placed successfully!');
-    session()->flash('order_products', $productSummaries); // <-- doplnené
+        session()->flash('order_success', 'Your order has been placed successfully!');
+        session()->flash('order_products', $productSummaries);
 
-return redirect()->route('cart.index');
-    } catch (\Exception $e) {
-        DB::rollBack();
-        return response()->json([
-            'error' => 'Something went wrong.',
-            'message' => $e->getMessage(),
-            'trace' => $e->getTraceAsString()
-        ], 500);
-    }
-}
+        return redirect()->route('cart.index');
+            } catch (\Exception $e) {
+                DB::rollBack();
+                return response()->json([
+                    'error' => 'Something went wrong.',
+                    'message' => $e->getMessage(),
+                    'trace' => $e->getTraceAsString()
+                ], 500);
+            }
+        }
 
 
     

@@ -15,12 +15,8 @@ return new class extends Migration
     $table->id();
     $table->timestamps();
     $table->string('status', 255);
-
-    // Definuj user_id ako nullable bez reťazenia ->constrained() hneď
     $table->unsignedBigInteger('user_id')->nullable();
     $table->string('session_id')->nullable();
-
-    // Pridaj constraint dodatočne
     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 });
 

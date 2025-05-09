@@ -37,14 +37,11 @@ class ProductFilters extends Component
         $this->term=$params['term'];
         $this->subcategory=$params['subcategory'];
         $this->catName=$params['catName'];
-
-        // $this->price=$params['priceMax'];
     }
 
     public function render()
     {   
-        // $categoryProds=Category::with('products')->where('slug',$this->category)->firstOrFail();
-        // $products=$categoryProds->products()
+        
         $productsQuery=Product::query()
         ->when(!empty($this->category), function ($query){
             $query->whereHas('categories',function($q){$q->where('slug',$this->category);});

@@ -11,7 +11,6 @@ class Order extends Model
         'user_id',
         'status',
         'session_id',
-        // sem pridaj ďalšie, ktoré povoľuješ
     ];
     
     public function user(){

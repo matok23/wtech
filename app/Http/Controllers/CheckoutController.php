@@ -11,16 +11,13 @@ use Illuminate\Support\Facades\Log;
 
 class CheckoutController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+   
     public function index()
     {
         $userId = Auth::id();
         $sessionId = session()->getId();
 
         if ($userId) {
-            // For authenticated users
             $cartItems = CartItem::with('product')
                 ->where('user_id', $userId)
                 ->get()
@@ -37,7 +34,6 @@ class CheckoutController extends Controller
                     ];
                 });
         } else {
-            // For guest users
             $cartItems = CartItem::with('product')
                 ->where('session_id', $sessionId)
                 ->get()
@@ -55,8 +51,7 @@ class CheckoutController extends Controller
                 });
         }
 
-        // Calculate total price
-        // dd($cartItems);
+  
         if(!count($cartItems)){
             return back()->with('message','No items in cart');
         }
@@ -79,73 +74,41 @@ public function completeOrder(Request $request)
     $request->session()->put('deliveryMethod', $deliveryMethod);
     $request->session()->put('paymentMethod', $paymentMethod);
 
-
-    
-    // Spracovanie objednávky
-    // Tu môžete pridať logiku na uloženie objednávky, zníženie zásob a podobne.
-
-    // Vytvorte flash správu pre úspešnú objednávku
     $request->session()->flash('order_success', 'Your order has been successfully placed!');
 
-    // Log for debugging
-    Log::info('Order success message flashed: ' . $request->session()->get('order_success'));
-
-    // Presmerovanie na stránku prehliadania produktov
     return redirect()->route('checkout');
 }
 
 
-
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         //
     }
 
 
-
-
-
-
-    
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(string $id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+  
     public function update(Request $request, string $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         //

@@ -17,7 +17,7 @@
                     Swal.fire({
                         icon: 'success',
                         title: 'Objednávka bola úspešná!',
-                        text: '{{ session('order_success') }}', // Here session is correctly passed
+                        text: '{{ session('order_success') }}', 
                         confirmButtonText: 'Pokračovať',
                     });
                 });
@@ -44,7 +44,7 @@
         
             <div class="row my-3 justify-content-evenly align-items-start gap-2">
                 <div class="col-9 col-md-6 p-2 d-flex flex-column gap-2 roundedContainer">
-                    @if(count($cartItems))  {{-- Zmeň 'cart' na 'cartItems' --}}
+                    @if(count($cartItems))  
                         @foreach($cartItems as $item)
                             <div class="cartItem container-fluid text-center p-2">
                                 <div class="row justify-content-center justify-content-xl-between">
@@ -60,7 +60,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td>Price</td>
-                                                    <td><strong class="productPrice">${{ $item->product->price }}</strong></td>  {{-- Oprava prístupu k cene --}}
+                                                    <td><strong class="productPrice">${{ $item->product->price }}</strong></td> 
                                                 </tr>
                                                 <tr>
                                                     <td>Size</td>

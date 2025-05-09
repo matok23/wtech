@@ -20,29 +20,21 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+  
     public function index()
     {
-        // $products=Product::all();
         $products=Product::with(['manufacturer','stock','categories'])->get();
         $sizestock=SizeStock::with('product')->get();
         $categories=Category::with('products')->get();
-        return view('products.index',compact('products','sizestock','categories')); //->with(['sizestock'=>$sizestock->load('product')]);
+        return view('products.index',compact('products','sizestock','categories')); 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+  
     public function store(StoreProductRequest $request)
     {
         $data=$request->validated();
@@ -57,9 +49,7 @@ class ProductController extends Controller
         return redirect()->route('admin.dash')->with('success','Item created successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     */
+ 
     public function show(Product $product)
     {   
         $subcategory=$product->categories()->where('type','subcategory')->first();
@@ -83,9 +73,6 @@ class ProductController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UpdateProductRequest $request, Product $product)
     {
         $data = $request->validated();
@@ -123,9 +110,7 @@ class ProductController extends Controller
         return redirect()->route('admin.edit',$product->id)->with('success','Images uploaded successfully!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(DeleteProductRequest $request, Product $product)
     {   
         foreach($product->images as $image){

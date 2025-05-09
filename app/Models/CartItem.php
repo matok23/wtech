@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class CartItem extends Model
 {
 
-   // Specify the fields that can be mass-assigned
    protected $fillable = ['amount', 'product_id', 'user_id', 'session_id', 'size'];
 
 

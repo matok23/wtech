@@ -29,5 +29,5 @@
         </footer>
     </main>
 
-    @livewireScripts {{-- (['nprogress' => false]) --}}
+    @livewireScripts 
 @endsection
